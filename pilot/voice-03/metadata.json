@@ -1,0 +1,17 @@
+{
+  "name": "Thieuthattha - Casual",
+  "voice_id": "VnlraNGkeLNUIQm7PPQ7",
+  "public_owner_id": "38ad5edef16cf8491c789caf545660381486e0acdf6bb7899e9f2bfd8532d24f",
+  "primary_language": "vi",
+  "rank": 3,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/19fd6cab37114025bbb1fdcd3877d23c/voices/VnlraNGkeLNUIQm7PPQ7/71ecc016-391e-4f0f-80a5-d1cb122a5186.mp3",
+  "usage_character_count_1y": 74567,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-03",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "14656bf9751ada5d54a0abac79a9ee8dde70ab7b2513de1b2f578486b4c8bf57",
+  "original_duration": 4.8,
+  "status": "preview_downloaded"
+}

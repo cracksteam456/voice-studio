@@ -1,0 +1,17 @@
+{
+  "name": "Trieu Duong - Deep, Calm and Resonant",
+  "voice_id": "UsgbMVmY3U59ijwK5mdh",
+  "public_owner_id": "93ae4e172cf1ef9b1a2e8ec7da1bc2d041d5913d5fa93852e42dc3e6c4ae7b1d",
+  "primary_language": "vi",
+  "rank": 8,
+  "preview_url": "https://api.us.elevenlabs.io/v1/voices/UsgbMVmY3U59ijwK5mdh/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJhODZjMjc1ZmQyMTk0ZjcwOTFkMGMyNjdmYWVmYmRhYyIsImZpbGVuYW1lIjoiZjkwMGEwNDAtMGFiZS00N2RiLWFlYjQtYzIwYjYzMDU2NDMzLm1wMyIsInRpbWVzdGFtcCI6MTc5NDkwOTYwMDAwMDAwMH0%3D",
+  "usage_character_count_1y": 167322071,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-08",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "7b9992cecf7ca79dce62cc989642bf506f26010f5f654e310e0bf04dc0cba634",
+  "original_duration": 3.291425,
+  "status": "preview_downloaded"
+}

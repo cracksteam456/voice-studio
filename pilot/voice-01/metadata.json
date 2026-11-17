@@ -1,0 +1,17 @@
+{
+  "name": "Tuan Anh - Deep & Powerful Vietnamese",
+  "voice_id": "47rM9DW5VmjOw23BVHWi",
+  "public_owner_id": "a754c5fd4e5a50305d5e8e8aa356b03e6aeb7c63f4e906334d2e07023680a973",
+  "primary_language": "vi",
+  "rank": 1,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/8b673ecd50964d0c9a44fd4be3ee4e75/voices/47rM9DW5VmjOw23BVHWi/k5S2vEYnPfG1H9GBorFI.mp3",
+  "usage_character_count_1y": 18049361,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-01",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "ca771233a725a4b64ef4c22f8de73aa1baeac7c590fa69fa8e59a8466f2b7814",
+  "original_duration": 7.758313,
+  "status": "preview_downloaded"
+}

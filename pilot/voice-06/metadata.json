@@ -1,0 +1,17 @@
+{
+  "name": "Thảo - Soft, Calm and Gentle",
+  "voice_id": "558B1EcdabtcSdleer40",
+  "public_owner_id": "f456d3ede4a8033c711858c1dd921b89dfb93bffab789be9a29759a2fddf3b6a",
+  "primary_language": "vi",
+  "rank": 6,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/user/DxkgIq1vnwhTYa8uL32YhmxjMou2/voices/558B1EcdabtcSdleer40/3gFzJJf8SfUG0fPjLHVQ.mp3",
+  "usage_character_count_1y": 23837974,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-06",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "9d041e6f19efe96afc53aadb2cd98954f04ff9118f0642252139c88eba63a78b",
+  "original_duration": 7.340375,
+  "status": "preview_downloaded"
+}

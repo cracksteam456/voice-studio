@@ -1,0 +1,412 @@
+[
+  {
+    "name": "Tuan Anh - Deep & Powerful Vietnamese",
+    "folder": "voice-01",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 7.48,
+        "text": "Chào bạn, tôi là Tuấn Anh. Với chất giọng chầm ấm và đầy nội lực, tôi sẽ mang đến sự sống động và chiều sâu cho mọi kịch bản của bạn. Hãy chọn tôi nhé!"
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 5.97,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 5.98,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 5.62,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 5.64,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Mai Anh - Vietnamese News Anchor",
+    "folder": "voice-02",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 7.34,
+        "text": "Xin kính chào quý vị! 7 giờ sáng, phố phường đã rộn ràng. Một tin vui vừa đến, nhưng câu chuyện phía sau còn thú vị hơn."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.06,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.04,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.57,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.61,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Thieuthattha - Casual",
+    "folder": "voice-03",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 4.58,
+        "text": "Khoai đất lã, mạ đất quen, làm việc gì cũng cần hiểu đất, hiểu người."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.1,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.28,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.81,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.77,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Quang Toan - Deep Vietnamese Storyteller",
+    "folder": "voice-04",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 6.8,
+        "text": "Xin chào, tôi là Toàn. Đây là giọng đọc tiếng Việt trầm ấm, rõ ràng và tự nhiên, phù hợp cho thuyết minh và kể chuyện."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 6.82,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 6.85,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.41,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.43,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Ba Luc - Warm, Clear, Storytelling",
+    "folder": "voice-05",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 6.62,
+        "text": "Bạn làm video lịch sử, văn hóa, hoạt hình, podcast, kênh kể chuyện cho YouTube, TikTok hay nền tảng khác."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.41,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.27,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.96,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.93,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Thảo - Soft, Calm and Gentle",
+    "folder": "voice-06",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 7.3,
+        "text": "Tôi bước lên gác xếp Ánh sáng rơi từ ô cửa nhỏ Xiên vào bụi như những sợi chỉ bạc"
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 10.08,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 9.33,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 9.03,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 9.39,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Giang - Podcast",
+    "folder": "voice-07",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 6.06,
+        "text": "Cảm ơn vì đã ghé qua, hy vọng giọng nói này sẽ đồng hành cùng bạn trong những câu chuyện bạn gửi tới người nghe."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 6.43,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 6.44,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.04,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.04,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Trieu Duong - Deep, Calm and Resonant",
+    "folder": "voice-08",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 3.14,
+        "text": "Người ta là hỏa đất, học ăn học nói, học gói học mỡ."
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.33,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.35,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.87,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.86,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Hạ Vi - Calm & Trustworthy",
+    "folder": "voice-09",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 7.2,
+        "text": "Dân miền Tây, ai mà hông lớn lên với câu cao quen thuộc Gió đưa cây cải về trời Râu ram ở lại, chịu lời đắng cay"
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.43,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.46,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.94,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.94,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  },
+  {
+    "name": "Gia Huy - Southern TV Host",
+    "folder": "voice-10",
+    "references": [
+      {
+        "start": 0.0,
+        "end": 8.76,
+        "text": "Kính chào quý vị! Sáng nay, thành phố bất ngờ đón cơn mưa lớn, đường phố vẫn nhộn nhịp, nhưng điều gì đang được quan tâm? Mời quý vị theo dõi!"
+      }
+    ],
+    "checks": [
+      {
+        "file": "ref-1-text-1-seed-42.wav",
+        "duration": 7.19,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-1-seed-123.wav",
+        "duration": 7.19,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-42.wav",
+        "duration": 6.71,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      },
+      {
+        "file": "ref-1-text-2-seed-123.wav",
+        "duration": 6.71,
+        "sample_rate": 24000,
+        "channels": 1,
+        "valid": true
+      }
+    ]
+  }
+]

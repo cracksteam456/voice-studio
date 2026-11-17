@@ -1,0 +1,17 @@
+{
+  "name": "Giang - Podcast",
+  "voice_id": "CQAD6iKxS73fEAGjSwt5",
+  "public_owner_id": "558052bb2b6b8782ebdcef34783117b6ac96d0a0ffe084bddb8327aabe89f50b",
+  "primary_language": "vi",
+  "rank": 7,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/56decef8b5a648b7ab29b17eefba2fcd/voices/CQAD6iKxS73fEAGjSwt5/UmsJG3aeWYxO76OE1zmv.mp3",
+  "usage_character_count_1y": 10976516,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-07",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "1081140fc17140e7aec3ef1a8f35c001b124fced00638316e3e417c4ee91e482",
+  "original_duration": 6.164875,
+  "status": "preview_downloaded"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Hạ Vi - Calm & Trustworthy",
+  "voice_id": "iSV1G4KvpGE3D8qzAzwG",
+  "public_owner_id": "ba70ff5aac7f11e730cda7c068d118d4449b292e3db81e433ec3d5640c455871",
+  "primary_language": "vi",
+  "rank": 9,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/3020b36341374893b5e081711e4812e8/voices/iSV1G4KvpGE3D8qzAzwG/uL97ZUIacQXPSGfrR4j1.mp3",
+  "usage_character_count_1y": 3880576,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-09",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "29684a3120d5889694b02be551e27559efac0736fbac40e926559143317c57c7",
+  "original_duration": 7.653875,
+  "status": "preview_downloaded"
+}

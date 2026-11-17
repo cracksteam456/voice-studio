@@ -1,0 +1,17 @@
+{
+  "name": "Quang Toan - Deep Vietnamese Storyteller",
+  "voice_id": "ZsjEJaLQy3sgvwxicmDx",
+  "public_owner_id": "5c3a5371161ed2a7a4b3ed617dad7247ff46a4c9a2d4f9e7af18fb635e971dc6",
+  "primary_language": "vi",
+  "rank": 4,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/d34501e492854e51876b1e466f1e9254/voices/ZsjEJaLQy3sgvwxicmDx/ArqPV7irBkPMVFekCK5q.mp3",
+  "usage_character_count_1y": 19959890,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-04",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "2267c80fee37b744c4a4be06fdebacf2bee15f45e1776b9a8c7499e4d5db30c0",
+  "original_duration": 7.000813,
+  "status": "preview_downloaded"
+}

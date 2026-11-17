@@ -14,3 +14,7 @@ outputs/
 *.pt
 *.safetensors
 *.zip
+pilot/**/preview.*
+pilot/**/reference*.txt
+pilot/results/
+pilot/**/transcription.json

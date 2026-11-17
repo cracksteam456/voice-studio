@@ -1,0 +1,17 @@
+{
+  "name": "Mai Anh - Vietnamese News Anchor",
+  "voice_id": "Hq7udsaTAvCBrAg8DSP2",
+  "public_owner_id": "910f350f80b4d4588bfed5d10db52fc5fd690d510c75ee425f7056d8670a6ef7",
+  "primary_language": "vi",
+  "rank": 2,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/488d3fc4c4a0413693686c63387fc0a5/voices/Hq7udsaTAvCBrAg8DSP2/xgeIyK0bPA26T74thTHr.mp3",
+  "usage_character_count_1y": 964146,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-02",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "039c529da3c9631e5da4531861c1f9c9905083f8e33780f7a4c3d7313d58538d",
+  "original_duration": 9.168938,
+  "status": "preview_downloaded"
+}

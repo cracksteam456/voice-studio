@@ -1,0 +1,17 @@
+{
+  "name": "Gia Huy - Southern TV Host",
+  "voice_id": "2gohBomXaprQ214IIpWp",
+  "public_owner_id": "e9297c45a8602324cb5e70cf43f14f94f245baede48bba48c1cc69de19654cf5",
+  "primary_language": "vi",
+  "rank": 10,
+  "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/4c2c3bf588984b89a5ce0b460f707550/voices/2gohBomXaprQ214IIpWp/TxtKDNPQFtWpgEs4MWjc.mp3",
+  "usage_character_count_1y": 74888,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-10",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "3ad8a5f1421ed37c23249f7d1c7b46d2724e04434e31ea80971e3e445d1022d6",
+  "original_duration": 8.986063,
+  "status": "preview_downloaded"
+}

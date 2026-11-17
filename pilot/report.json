@@ -1,0 +1,623 @@
+{
+  "package_version": "0.2.1",
+  "model": "k2-fsa/OmniVoice",
+  "sample_rate": 24000,
+  "model_revision": null,
+  "generation_config": {
+    "num_step": 32,
+    "guidance_scale": 1.8,
+    "t_shift": 0.1,
+    "layer_penalty_factor": 5.0,
+    "position_temperature": 5.0,
+    "class_temperature": 0.2,
+    "denoise": true,
+    "preprocess_prompt": true,
+    "postprocess_output": true,
+    "audio_chunk_duration": 15.0,
+    "audio_chunk_threshold": 30.0,
+    "pad_duration": 0.1,
+    "fade_duration": 0.1
+  },
+  "gpu": "Tesla T4",
+  "texts": [
+    "Hôm nay, chúng ta tìm hiểu cách âm thanh truyền qua không khí. Mỗi dao động nhỏ đều có thể mang theo một thông điệp.",
+    "Nếu Mặt Trăng biến mất, điều gì sẽ xảy ra với thủy triều? Hãy cùng xem những thay đổi đầu tiên trên Trái Đất."
+  ],
+  "seeds": [
+    42,
+    123
+  ],
+  "clone_permission": "unknown",
+  "voices": [
+    {
+      "name": "Tuan Anh - Deep & Powerful Vietnamese",
+      "voice_id": "47rM9DW5VmjOw23BVHWi",
+      "public_owner_id": "a754c5fd4e5a50305d5e8e8aa356b03e6aeb7c63f4e906334d2e07023680a973",
+      "primary_language": "vi",
+      "rank": 1,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/8b673ecd50964d0c9a44fd4be3ee4e75/voices/47rM9DW5VmjOw23BVHWi/k5S2vEYnPfG1H9GBorFI.mp3",
+      "usage_character_count_1y": 18049361,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-01",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "ca771233a725a4b64ef4c22f8de73aa1baeac7c590fa69fa8e59a8466f2b7814",
+      "original_duration": 7.758313,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 5.97,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.6546273300000394
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 5.98,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.6280952099999695
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 5.62,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.570134965999955
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 5.64,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.5943576199999825
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 7.48,
+          "text": "Chào bạn, tôi là Tuấn Anh. Với chất giọng chầm ấm và đầy nội lực, tôi sẽ mang đến sự sống động và chiều sâu cho mọi kịch bản của bạn. Hãy chọn tôi nhé!"
+        }
+      ]
+    },
+    {
+      "name": "Mai Anh - Vietnamese News Anchor",
+      "voice_id": "Hq7udsaTAvCBrAg8DSP2",
+      "public_owner_id": "910f350f80b4d4588bfed5d10db52fc5fd690d510c75ee425f7056d8670a6ef7",
+      "primary_language": "vi",
+      "rank": 2,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/488d3fc4c4a0413693686c63387fc0a5/voices/Hq7udsaTAvCBrAg8DSP2/xgeIyK0bPA26T74thTHr.mp3",
+      "usage_character_count_1y": 964146,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-02",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "039c529da3c9631e5da4531861c1f9c9905083f8e33780f7a4c3d7313d58538d",
+      "original_duration": 9.168938,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.06,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.742528806999985
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.04,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.747988388999943
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.57,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.7154266610000377
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.61,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.7338473710000244
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 7.34,
+          "text": "Xin kính chào quý vị! 7 giờ sáng, phố phường đã rộn ràng. Một tin vui vừa đến, nhưng câu chuyện phía sau còn thú vị hơn."
+        }
+      ]
+    },
+    {
+      "name": "Thieuthattha - Casual",
+      "voice_id": "VnlraNGkeLNUIQm7PPQ7",
+      "public_owner_id": "38ad5edef16cf8491c789caf545660381486e0acdf6bb7899e9f2bfd8532d24f",
+      "primary_language": "vi",
+      "rank": 3,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/19fd6cab37114025bbb1fdcd3877d23c/voices/VnlraNGkeLNUIQm7PPQ7/71ecc016-391e-4f0f-80a5-d1cb122a5186.mp3",
+      "usage_character_count_1y": 74567,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-03",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "14656bf9751ada5d54a0abac79a9ee8dde70ab7b2513de1b2f578486b4c8bf57",
+      "original_duration": 4.8,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.1,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.3923241850000068
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.28,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.387847629000021
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.81,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.349825029000044
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.77,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.3555069170000706
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 4.58,
+          "text": "Khoai đất lã, mạ đất quen, làm việc gì cũng cần hiểu đất, hiểu người."
+        }
+      ]
+    },
+    {
+      "name": "Quang Toan - Deep Vietnamese Storyteller",
+      "voice_id": "ZsjEJaLQy3sgvwxicmDx",
+      "public_owner_id": "5c3a5371161ed2a7a4b3ed617dad7247ff46a4c9a2d4f9e7af18fb635e971dc6",
+      "primary_language": "vi",
+      "rank": 4,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/d34501e492854e51876b1e466f1e9254/voices/ZsjEJaLQy3sgvwxicmDx/ArqPV7irBkPMVFekCK5q.mp3",
+      "usage_character_count_1y": 19959890,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-04",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "2267c80fee37b744c4a4be06fdebacf2bee15f45e1776b9a8c7499e4d5db30c0",
+      "original_duration": 7.000813,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 6.82,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.7486398980000786
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 6.85,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.755008908000036
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.41,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.714472188000059
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.43,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.7272533570001087
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 6.8,
+          "text": "Xin chào, tôi là Toàn. Đây là giọng đọc tiếng Việt trầm ấm, rõ ràng và tự nhiên, phù hợp cho thuyết minh và kể chuyện."
+        }
+      ]
+    },
+    {
+      "name": "Ba Luc - Warm, Clear, Storytelling",
+      "voice_id": "KJmTHSk3TjHp87WObL98",
+      "public_owner_id": "d313f0d270a4cb5ff44c22e4ee308206a3801e424de4e377bb203c7e6d6d92ba",
+      "primary_language": "vi",
+      "rank": 5,
+      "preview_url": "https://api.us.elevenlabs.io/v1/voices/KJmTHSk3TjHp87WObL98/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJlNjQ2Y2Q0NjVhYmU0M2ZmODY4ZTAxOTFiZmE4NDcyYyIsImZpbGVuYW1lIjoiTU0zZWRYUTZDcFNKYTBweUpsQ3IubXAzIiwidGltZXN0YW1wIjoxNzk0OTA5NjAwMDAwMDAwfQ%3D%3D",
+      "usage_character_count_1y": 10713635,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-05",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "beb9f93b4d9ae457a48520af44b86ca816dedbff1f2102466950c0ca080a5147",
+      "original_duration": 9.7175,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.41,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.826725316999955
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.27,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.8507169129999284
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.96,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.7999330640000153
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.93,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.80891960200006
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 6.62,
+          "text": "Bạn làm video lịch sử, văn hóa, hoạt hình, podcast, kênh kể chuyện cho YouTube, TikTok hay nền tảng khác."
+        }
+      ]
+    },
+    {
+      "name": "Thảo - Soft, Calm and Gentle",
+      "voice_id": "558B1EcdabtcSdleer40",
+      "public_owner_id": "f456d3ede4a8033c711858c1dd921b89dfb93bffab789be9a29759a2fddf3b6a",
+      "primary_language": "vi",
+      "rank": 6,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/user/DxkgIq1vnwhTYa8uL32YhmxjMou2/voices/558B1EcdabtcSdleer40/3gFzJJf8SfUG0fPjLHVQ.mp3",
+      "usage_character_count_1y": 23837974,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-06",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "9d041e6f19efe96afc53aadb2cd98954f04ff9118f0642252139c88eba63a78b",
+      "original_duration": 7.340375,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 10.08,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 3.4193406770000365
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 9.33,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 3.453850158000023
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 9.03,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 3.386612025999966
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 9.39,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 3.411410835999959
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 7.3,
+          "text": "Tôi bước lên gác xếp Ánh sáng rơi từ ô cửa nhỏ Xiên vào bụi như những sợi chỉ bạc"
+        }
+      ]
+    },
+    {
+      "name": "Giang - Podcast",
+      "voice_id": "CQAD6iKxS73fEAGjSwt5",
+      "public_owner_id": "558052bb2b6b8782ebdcef34783117b6ac96d0a0ffe084bddb8327aabe89f50b",
+      "primary_language": "vi",
+      "rank": 7,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/56decef8b5a648b7ab29b17eefba2fcd/voices/CQAD6iKxS73fEAGjSwt5/UmsJG3aeWYxO76OE1zmv.mp3",
+      "usage_character_count_1y": 10976516,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-07",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "1081140fc17140e7aec3ef1a8f35c001b124fced00638316e3e417c4ee91e482",
+      "original_duration": 6.164875,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 6.43,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.6095241030000125
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 6.44,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.64227524599994
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.04,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.60844315199995
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.04,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.6239360929999975
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 6.06,
+          "text": "Cảm ơn vì đã ghé qua, hy vọng giọng nói này sẽ đồng hành cùng bạn trong những câu chuyện bạn gửi tới người nghe."
+        }
+      ]
+    },
+    {
+      "name": "Trieu Duong - Deep, Calm and Resonant",
+      "voice_id": "UsgbMVmY3U59ijwK5mdh",
+      "public_owner_id": "93ae4e172cf1ef9b1a2e8ec7da1bc2d041d5913d5fa93852e42dc3e6c4ae7b1d",
+      "primary_language": "vi",
+      "rank": 8,
+      "preview_url": "https://api.us.elevenlabs.io/v1/voices/UsgbMVmY3U59ijwK5mdh/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJhODZjMjc1ZmQyMTk0ZjcwOTFkMGMyNjdmYWVmYmRhYyIsImZpbGVuYW1lIjoiZjkwMGEwNDAtMGFiZS00N2RiLWFlYjQtYzIwYjYzMDU2NDMzLm1wMyIsInRpbWVzdGFtcCI6MTc5NDkwOTYwMDAwMDAwMH0%3D",
+      "usage_character_count_1y": 167322071,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-08",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "7b9992cecf7ca79dce62cc989642bf506f26010f5f654e310e0bf04dc0cba634",
+      "original_duration": 3.291425,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.33,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 2.245549323000091
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.35,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 2.260754664999922
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.87,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 2.2230430799999112
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.86,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 2.2382906479999747
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 3.14,
+          "text": "Người ta là hỏa đất, học ăn học nói, học gói học mỡ."
+        }
+      ]
+    },
+    {
+      "name": "Hạ Vi - Calm & Trustworthy",
+      "voice_id": "iSV1G4KvpGE3D8qzAzwG",
+      "public_owner_id": "ba70ff5aac7f11e730cda7c068d118d4449b292e3db81e433ec3d5640c455871",
+      "primary_language": "vi",
+      "rank": 9,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/3020b36341374893b5e081711e4812e8/voices/iSV1G4KvpGE3D8qzAzwG/uL97ZUIacQXPSGfrR4j1.mp3",
+      "usage_character_count_1y": 3880576,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-09",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "29684a3120d5889694b02be551e27559efac0736fbac40e926559143317c57c7",
+      "original_duration": 7.653875,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.43,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 3.4284651450000183
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.46,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 3.432796956000061
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.94,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 3.313267232000044
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.94,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 3.24461146200008
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 7.2,
+          "text": "Dân miền Tây, ai mà hông lớn lên với câu cao quen thuộc Gió đưa cây cải về trời Râu ram ở lại, chịu lời đắng cay"
+        }
+      ]
+    },
+    {
+      "name": "Gia Huy - Southern TV Host",
+      "voice_id": "2gohBomXaprQ214IIpWp",
+      "public_owner_id": "e9297c45a8602324cb5e70cf43f14f94f245baede48bba48c1cc69de19654cf5",
+      "primary_language": "vi",
+      "rank": 10,
+      "preview_url": "https://storage.googleapis.com/eleven-public-prod/database/workspace/4c2c3bf588984b89a5ce0b460f707550/voices/2gohBomXaprQ214IIpWp/TxtKDNPQFtWpgEs4MWjc.mp3",
+      "usage_character_count_1y": 74888,
+      "clone_permission": "unknown",
+      "audio_quality": "not_auditioned",
+      "folder": "voice-10",
+      "quality_status": "not_auditioned",
+      "reference_selection": "pending_asr_sentence_boundaries",
+      "original_sha256": "3ad8a5f1421ed37c23249f7d1c7b46d2724e04434e31ea80971e3e445d1022d6",
+      "original_duration": 8.986063,
+      "status": "generated_needs_listening",
+      "outputs": [
+        {
+          "file": "ref-1-text-1-seed-42.wav",
+          "duration": 7.19,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 42,
+          "processing_seconds": 3.539142149999975
+        },
+        {
+          "file": "ref-1-text-1-seed-123.wav",
+          "duration": 7.19,
+          "reference": 1,
+          "text_index": 1,
+          "seed": 123,
+          "processing_seconds": 3.5029395340000065
+        },
+        {
+          "file": "ref-1-text-2-seed-42.wav",
+          "duration": 6.71,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 42,
+          "processing_seconds": 3.4359895110000025
+        },
+        {
+          "file": "ref-1-text-2-seed-123.wav",
+          "duration": 6.71,
+          "reference": 1,
+          "text_index": 2,
+          "seed": 123,
+          "processing_seconds": 3.396414482999944
+        }
+      ],
+      "reference_review": "needs_listening",
+      "references": [
+        {
+          "start": 0.0,
+          "end": 8.76,
+          "text": "Kính chào quý vị! Sáng nay, thành phố bất ngờ đón cơn mưa lớn, đường phố vẫn nhộn nhịp, nhưng điều gì đang được quan tâm? Mời quý vị theo dõi!"
+        }
+      ]
+    }
+  ]
+}

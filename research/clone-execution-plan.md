@@ -6,6 +6,8 @@ Từ catalog 2.274 giọng đã kiểm kê, xây thư viện mẫu được phé
 
 ## Trạng thái ban đầu
 
+**Cập nhật sau thực thi:** đợt thử 10 giọng đã hoàn tất 40 WAV và kiểm tra ASR. Xem [báo cáo thực tế](pilot-results.md). Các mục dưới đây mô tả trạng thái trước khi chạy; tiêu chí quyền sử dụng và đánh giá nghe vẫn chưa hoàn tất. Đợt kỹ thuật chưa được coi là phê duyệt phát hành giọng.
+
 - Snapshot: `20261117T103929553845Z`.
 - 1.000 kết quả cho mỗi query Trending toàn cầu, usage toàn cầu và Trending có preview tiếng Việt; hợp lại còn 2.274 ID duy nhất.
 - 361 bản ghi trong nhóm tiếng Việt có tiếng Việt là ngôn ngữ chính.

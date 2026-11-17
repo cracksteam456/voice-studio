@@ -1,0 +1,17 @@
+{
+  "name": "Ba Luc - Warm, Clear, Storytelling",
+  "voice_id": "KJmTHSk3TjHp87WObL98",
+  "public_owner_id": "d313f0d270a4cb5ff44c22e4ee308206a3801e424de4e377bb203c7e6d6d92ba",
+  "primary_language": "vi",
+  "rank": 5,
+  "preview_url": "https://api.us.elevenlabs.io/v1/voices/KJmTHSk3TjHp87WObL98/previews/audio?payload=eyJ2b2ljZV9zb3VyY2UiOiJjdXN0b20iLCJ3b3Jrc3BhY2VfaWQiOiJlNjQ2Y2Q0NjVhYmU0M2ZmODY4ZTAxOTFiZmE4NDcyYyIsImZpbGVuYW1lIjoiTU0zZWRYUTZDcFNKYTBweUpsQ3IubXAzIiwidGltZXN0YW1wIjoxNzk0OTA5NjAwMDAwMDAwfQ%3D%3D",
+  "usage_character_count_1y": 10713635,
+  "clone_permission": "unknown",
+  "audio_quality": "not_auditioned",
+  "folder": "voice-05",
+  "quality_status": "not_auditioned",
+  "reference_selection": "pending_asr_sentence_boundaries",
+  "original_sha256": "beb9f93b4d9ae457a48520af44b86ca816dedbff1f2102466950c0ca080a5147",
+  "original_duration": 9.7175,
+  "status": "preview_downloaded"
+}

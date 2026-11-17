@@ -15,8 +15,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-01",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Mai Anh - Vietnamese News Anchor",
@@ -34,8 +40,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-02",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Thieuthattha - Casual",
@@ -53,8 +65,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-03",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Quang Toan - Deep Vietnamese Storyteller",
@@ -72,8 +90,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-04",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Ba Luc - Warm, Clear, Storytelling",
@@ -91,8 +115,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-05",
+      "outputs": 4,
+      "wer": 0.02040816326530612,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Thảo - Soft, Calm and Gentle",
@@ -110,8 +140,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-06",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Giang - Podcast",
@@ -129,8 +165,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-07",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Trieu Duong - Deep, Calm and Resonant",
@@ -148,8 +190,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-08",
+      "outputs": 4,
+      "wer": 0.02040816326530612,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Hạ Vi - Calm & Trustworthy",
@@ -167,8 +215,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-09",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Gia Huy - Southern TV Host",
@@ -186,8 +240,14 @@
     "permission_evidence": null,
     "reference_audio": null,
     "reference_text": null,
-    "review_status": "needs_permission",
-    "evaluation": null
+    "review_status": "generated_needs_listening",
+    "evaluation": {
+      "pilot_folder": "voice-10",
+      "outputs": 4,
+      "wer": 0.030612244897959183,
+      "speaker_similarity": null,
+      "human_review": false
+    }
   },
   {
     "name": "Trường - Calm & Clear Educator",

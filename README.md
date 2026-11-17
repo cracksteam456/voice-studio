@@ -19,6 +19,10 @@ Notebook chứa toàn bộ code giao diện nên không cần tải file `voice_
 
 ## Kế hoạch clone
 
+Đợt thử kỹ thuật đã chạy: **10 giọng, 40 WAV**, Whisper kiểm tra đủ 40 file. Xem [báo cáo đợt thử](research/pilot-results.md). Chưa chấm độ giống giọng bằng nghe và chưa xác minh quyền clone ngoài ElevenLabs. Audio thử nghiệm giữ cục bộ, không đưa vào GitHub.
+
+[Notebook thử nghiệm](colab_clone_pilot.ipynb) gồm bước nạp model, tạo câu thử và kiểm tra transcript. Chạy `python prepare_clone_pilot.py` để chuẩn bị lại từ shortlist; tác vụ này tải 10 preview. Chạy `python build_pilot_review.py` sau khi tải/extract kết quả vào `pilot/results/` để tạo trang nghe so sánh cục bộ.
+
 Đọc [kế hoạch thực thi](research/clone-execution-plan.md). Mục tiêu thí điểm 10 giọng có quyền clone, mỗi giọng hai reference × hai đoạn đầu ra × hai seed, rồi mở rộng theo đợt.
 
 - [Chiến lược danh mục](research/voice-sample-strategy.md)
@@ -44,7 +48,7 @@ Công cụ chỉ gọi GET API Voice Library chính thức, lưu 3 danh sách v�
 ## Kiểm tra
 
 ```text
-python -m unittest test_voice_studio.py test_collect_catalog.py
+python -m unittest test_voice_studio.py test_collect_catalog.py test_clone_pilot.py
 ```
 
 Các test CPU kiểm tra chia đoạn, input tùy chọn, phân trang và xử lý key. Tạo giọng cần runtime Colab và GPU. Đã thử giọng Nam công nghệ, Minh Anh, tải reference riêng và xuất WAV/MP3/ZIP trong phiên Colab trước; chưa thử đủ 7 giọng hoặc mọi ngôn ngữ.
