@@ -15,7 +15,9 @@
       "path": "audio\\a4\\a4c37669fc3e1cb1e6d603f8120759eb15fd09eb8e2c91a4487daa387af30874.wav",
       "bytes": 953900,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/01-Viraj - Rich_ Confident and Expressive-3AMU7jXQuQa3oRvRqUmb.wav",
+    "sample_sha256": "a4c37669fc3e1cb1e6d603f8120759eb15fd09eb8e2c91a4487daa387af30874"
   },
   {
     "name": "Morgan - Deep, Powerful, and Confident",
@@ -33,7 +35,9 @@
       "path": "audio\\ea\\ea95aaee1224ee47d6ac6a717da43b0c897cda6f173833c87e08097cf5145c38.mp3",
       "bytes": 127522,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/02-Morgan - Deep_ Powerful_ and Confident-SAxJUlDKRc79XAyeWyMu.mp3",
+    "sample_sha256": "ea95aaee1224ee47d6ac6a717da43b0c897cda6f173833c87e08097cf5145c38"
   },
   {
     "name": "Patrick - An engaging audiobook narrator",
@@ -51,7 +55,9 @@
       "path": "audio\\17\\17efe7ec94aef58c14b02d39b4d9cd5fb7a164cf52d4d2715cf00154b5baaa9b.mp3",
       "bytes": 192480,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/03-Patrick - An engaging audiobook narrator-zs057lc0shdaAFXkm2Fm.mp3",
+    "sample_sha256": "17efe7ec94aef58c14b02d39b4d9cd5fb7a164cf52d4d2715cf00154b5baaa9b"
   },
   {
     "name": "Will - Deep, Smooth and Affectionate",
@@ -69,7 +75,9 @@
       "path": "audio\\7e\\7e70bdfda0df9f51b61312da0cc27c6eaf38be2724c3e1b1aab4993ffbd5e54f.mp3",
       "bytes": 151648,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/04-Will - Deep_ Smooth and Affectionate-CstacWqMhJQlnfLPxRG4.mp3",
+    "sample_sha256": "7e70bdfda0df9f51b61312da0cc27c6eaf38be2724c3e1b1aab4993ffbd5e54f"
   },
   {
     "name": "Lara - Natural, Relatable & Engaging",
@@ -87,7 +95,9 @@
       "path": "audio\\ac\\ac963a45a3ad5553fae8a003ab31de2ee52584d551e7bc0e2b92d01fc3bbb94b.mp3",
       "bytes": 125735,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/05-Lara - Natural_ Relatable _ Engaging-vChnJZ1Cu89g2XXumPfT.mp3",
+    "sample_sha256": "ac963a45a3ad5553fae8a003ab31de2ee52584d551e7bc0e2b92d01fc3bbb94b"
   },
   {
     "name": "Bunty - Warm and Clear",
@@ -105,7 +115,9 @@
       "path": "audio\\fc\\fcd84f94c2a139433389a08bfa7087a7312cbc03231ae86bbce776959cba5916.wav",
       "bytes": 969260,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/06-Bunty - Warm and Clear-omLr0bN17lYIC1JWLSYV.wav",
+    "sample_sha256": "fcd84f94c2a139433389a08bfa7087a7312cbc03231ae86bbce776959cba5916"
   },
   {
     "name": "Daniel - Warm, Clear & Dynamic Guide",
@@ -123,7 +135,9 @@
       "path": "audio\\0a\\0a0789aed420ce109756f62c8ec98bb88f4e6b07f16ab667a3d9a1be1c749b88.mp3",
       "bytes": 120719,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/07-Daniel - Warm_ Clear _ Dynamic Guide-ynTHHllfDmGsZ3G8QJt9.mp3",
+    "sample_sha256": "0a0789aed420ce109756f62c8ec98bb88f4e6b07f16ab667a3d9a1be1c749b88"
   },
   {
     "name": "Jon - Children's Storyteller",
@@ -141,7 +155,9 @@
       "path": "audio\\39\\3991c3aeb2a19fbb6dcf324c4e96f8f93bc60b441b3e0ed74db56b9076e384f0.mp3",
       "bytes": 118501,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/08-Jon - Children_s Storyteller-JYUzXNeyCPmymMkfcicu.mp3",
+    "sample_sha256": "3991c3aeb2a19fbb6dcf324c4e96f8f93bc60b441b3e0ed74db56b9076e384f0"
   },
   {
     "name": "Monika Sogam - Premium Hindi Commercial",
@@ -159,7 +175,9 @@
       "path": "audio\\73\\73918dafc504c2f628551ce1500298e4e8bacd992d4d3769a3af0723e9031aa0.mp3",
       "bytes": 190391,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/09-Monika Sogam - Premium Hindi Commercial-f1abxvIEijusskcPWE5x.mp3",
+    "sample_sha256": "73918dafc504c2f628551ce1500298e4e8bacd992d4d3769a3af0723e9031aa0"
   },
   {
     "name": "Ayush M - Deep Mythology Narrator",
@@ -177,7 +195,9 @@
       "path": "audio\\cf\\cff7c3bfb2e0ba0eb6c437dc703dc35ce2494bdd23aed8c99dfa892ef87dd227.wav",
       "bytes": 923180,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/10-Ayush M - Deep Mythology Narrator-HqRQSXEwwdjbY3dgUSzb.wav",
+    "sample_sha256": "cff7c3bfb2e0ba0eb6c437dc703dc35ce2494bdd23aed8c99dfa892ef87dd227"
   },
   {
     "name": "Monika Sogam - Lead Qualification Agent",
@@ -195,7 +215,9 @@
       "path": "audio\\c3\\c396baf615f5c1918a4bde1c133bf8354fe7e70b18265537f37da4c75564979e.mp3",
       "bytes": 126442,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/11-Monika Sogam - Lead Qualification Agent-zmh5xhBvMzqR4ZlXgcgL.mp3",
+    "sample_sha256": "c396baf615f5c1918a4bde1c133bf8354fe7e70b18265537f37da4c75564979e"
   },
   {
     "name": "Killian - Clear, Warm, Upbeat & Friendly",
@@ -213,7 +235,9 @@
       "path": "audio\\0a\\0aa9bd02d8455d53d4f758dd8850f3fc3cab5cad9b8f76a633bfd985a6c24ed6.mp3",
       "bytes": 123934,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/12-Killian - Clear_ Warm_ Upbeat _ Friendly-Whez8hBysHW6IVGRgjGA.mp3",
+    "sample_sha256": "0aa9bd02d8455d53d4f758dd8850f3fc3cab5cad9b8f76a633bfd985a6c24ed6"
   },
   {
     "name": "Roberto - Rich, Clear and Enunciated",
@@ -231,7 +255,9 @@
       "path": "audio\\62\\626ea8ac03eed30c96c04534fee849b24e46221df3efa15a6cb88ae06ebcf0cb.mp3",
       "bytes": 102400,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/13-Roberto - Rich_ Clear and Enunciated-hqEPCg9GXahfwPfWiK84.mp3",
+    "sample_sha256": "626ea8ac03eed30c96c04534fee849b24e46221df3efa15a6cb88ae06ebcf0cb"
   },
   {
     "name": "Clara - Reassuring Care Coordinator",
@@ -249,7 +275,9 @@
       "path": "audio\\79\\79daf369d660bfc01da9dc6f4438b94796ec60dd6bf90d140dedefc849bb4f29.mp3",
       "bytes": 135219,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/14-Clara - Reassuring Care Coordinator-cuTixVvCOWFxeH3oGE9m.mp3",
+    "sample_sha256": "79daf369d660bfc01da9dc6f4438b94796ec60dd6bf90d140dedefc849bb4f29"
   },
   {
     "name": "Jerry B. - Authentic, Clear & Engaging",
@@ -267,7 +295,9 @@
       "path": "audio\\a3\\a3fa01b99e618678313dbbe95fe647d0513753837a6d659c2aaa7374cb0cc936.mp3",
       "bytes": 116122,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/15-Jerry B. - Authentic_ Clear _ Engaging-J9NvviOEdVm6E7Hwdpdj.mp3",
+    "sample_sha256": "a3fa01b99e618678313dbbe95fe647d0513753837a6d659c2aaa7374cb0cc936"
   },
   {
     "name": "Anika - Sweet, Lively and Warm",
@@ -285,7 +315,9 @@
       "path": "audio\\a1\\a156ca0e4572897ccd9bf86beeaaea5cc101dd58ffac6f08d3a3068ba0ffa02f.wav",
       "bytes": 1061420,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/16-Anika - Sweet_ Lively and Warm-RABOvaPec1ymXz02oDQi.wav",
+    "sample_sha256": "a156ca0e4572897ccd9bf86beeaaea5cc101dd58ffac6f08d3a3068ba0ffa02f"
   },
   {
     "name": "Zephlyn - Calm, Neutral and Measured",
@@ -303,7 +335,9 @@
       "path": "audio\\b8\\b8a9db4373834d7d625abe1cee5f9439eb67d96ae026ec115582c57d7f62c372.mp3",
       "bytes": 177770,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/17-Zephlyn - Calm_ Neutral and Measured-3mAVBNEqop5UbHtD8oxQ.mp3",
+    "sample_sha256": "b8a9db4373834d7d625abe1cee5f9439eb67d96ae026ec115582c57d7f62c372"
   },
   {
     "name": "Hugo - Deep French Storyteller",
@@ -321,7 +355,9 @@
       "path": "audio\\e8\\e81d341f8ffb431ed03b8c2e87d267fa19d2c3ec5879bee08e263150d65125a6.mp3",
       "bytes": 144414,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/18-Hugo - Deep French Storyteller-6DEjyaHWnTHsvXM5Byys.mp3",
+    "sample_sha256": "e81d341f8ffb431ed03b8c2e87d267fa19d2c3ec5879bee08e263150d65125a6"
   },
   {
     "name": "Kai - Clean, Modern, Global",
@@ -339,7 +375,9 @@
       "path": "audio\\33\\33a92ebcdea6be74f0b8b4d89ae60e7bbe69b22e40c85b8226f20e0c6538dd6b.mp3",
       "bytes": 123645,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/19-Kai - Clean_ Modern_ Global-hfqsl1OMbiWsgPpht3el.mp3",
+    "sample_sha256": "33a92ebcdea6be74f0b8b4d89ae60e7bbe69b22e40c85b8226f20e0c6538dd6b"
   },
   {
     "name": "Jax - Bold, Confident, Gritty Narrator",
@@ -357,7 +395,9 @@
       "path": "audio\\21\\21b3feeed20e713afed66177a2ccb11ad205d9b42b38668f8384dd9094577468.mp3",
       "bytes": 199167,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/20-Jax - Bold_ Confident_ Gritty Narrator-w1ovTGXs1yF9qRmr8AO9.mp3",
+    "sample_sha256": "21b3feeed20e713afed66177a2ccb11ad205d9b42b38668f8384dd9094577468"
   },
   {
     "name": "Joseff Novak - Calm and Professional",
@@ -375,7 +415,9 @@
       "path": "audio\\6c\\6c919b44dbe6b7d14d4e9bdffbe76d3f00196248118a13231f7243ed25f84936.mp3",
       "bytes": 106206,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/21-Joseff Novak - Calm and Professional-3TStB8f3X3To0Uj5R7RK.mp3",
+    "sample_sha256": "6c919b44dbe6b7d14d4e9bdffbe76d3f00196248118a13231f7243ed25f84936"
   },
   {
     "name": "Kyle - Engaging, Confident, Authentic",
@@ -393,7 +435,9 @@
       "path": "audio\\35\\35411db950e3d37ab77bace77e34e7bebfef6be2a186057d8243d8fa0d839d57.mp3",
       "bytes": 135219,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/22-Kyle - Engaging_ Confident_ Authentic-JyzM229ZjDtptOZjn48b.mp3",
+    "sample_sha256": "35411db950e3d37ab77bace77e34e7bebfef6be2a186057d8243d8fa0d839d57"
   },
   {
     "name": "Marcos The Agent",
@@ -411,7 +455,9 @@
       "path": "audio\\20\\20e76734059188428cd53d6f97402637dd122a20270495d06cd0e4f894ac871f.mp3",
       "bytes": 145494,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/23-Marcos The Agent-eEyWolF7iBpMA65GbtAm.mp3",
+    "sample_sha256": "20e76734059188428cd53d6f97402637dd122a20270495d06cd0e4f894ac871f"
   },
   {
     "name": "Dahlia - Vintage Romantic Hollywood Star",
@@ -429,7 +475,9 @@
       "path": "audio\\12\\12d7f41c4576d781ddee7c2cb07f3247d0df975d5f9a5dc6a2458648fd457fed.mp3",
       "bytes": 168656,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/24-Dahlia - Vintage Romantic Hollywood Star-JaagUurP1dmW3WscoJ79.mp3",
+    "sample_sha256": "12d7f41c4576d781ddee7c2cb07f3247d0df975d5f9a5dc6a2458648fd457fed"
   },
   {
     "name": "Arturo Casares - Smooth, Rich and Tender",
@@ -447,7 +495,9 @@
       "path": "audio\\c7\\c7ffb2bf27958a279c5101244ff49fdd2b3f5394f1fdf4d78b8423e4c948ff6e.mp3",
       "bytes": 174334,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/25-Arturo Casares - Smooth_ Rich and Tender-N2HSRirbsHTZ8DE2WqjB.mp3",
+    "sample_sha256": "c7ffb2bf27958a279c5101244ff49fdd2b3f5394f1fdf4d78b8423e4c948ff6e"
   },
   {
     "name": "Bunty – Smart Friendly Assistant",
@@ -465,7 +515,9 @@
       "path": "audio\\98\\98f0e922941f66736f165d59c446e68afa387b545b0e2c123b7c569ce9977333.wav",
       "bytes": 930860,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/26-Bunty _ Smart Friendly Assistant-ibbx9zDYGvLgtYzRbqqG.wav",
+    "sample_sha256": "98f0e922941f66736f165d59c446e68afa387b545b0e2c123b7c569ce9977333"
   },
   {
     "name": "Fernanda - Gentle, Approachable, Thoughtful",
@@ -483,7 +535,9 @@
       "path": "audio\\6e\\6e0e5d2cb569cd36155e38376a2c6f6075a2122060685d6cf4c42a327a15f683.mp3",
       "bytes": 127696,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/27-Fernanda - Gentle_ Approachable_ Thoughtful-4GKdbc9GdbAJeZWRtLST.mp3",
+    "sample_sha256": "6e0e5d2cb569cd36155e38376a2c6f6075a2122060685d6cf4c42a327a15f683"
   },
   {
     "name": "Nico - History & Documentary",
@@ -501,7 +555,9 @@
       "path": "audio\\e9\\e91a1055133ec831bd794b7cd7011ce823b719cc74088c2ddaa9c8d8f2a670a3.mp3",
       "bytes": 125188,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/28-Nico - History _ Documentary-FXn3GKRRt9FCEyTbrkaL.mp3",
+    "sample_sha256": "e91a1055133ec831bd794b7cd7011ce823b719cc74088c2ddaa9c8d8f2a670a3"
   },
   {
     "name": "Shivank - Deep, Breathy and Suspense",
@@ -519,7 +575,9 @@
       "path": "audio\\d6\\d6ef77c08b0cab9768eee5ab6e31e8bdb8cf207d60b007b525240edafc49291d.mp3",
       "bytes": 242879,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/29-Shivank - Deep_ Breathy and Suspense-wbOlq3nIga8HKqcDhASI.mp3",
+    "sample_sha256": "d6ef77c08b0cab9768eee5ab6e31e8bdb8cf207d60b007b525240edafc49291d"
   },
   {
     "name": "Serena - Heartfelt Indonesian",
@@ -537,7 +595,9 @@
       "path": "audio\\33\\33497f64c3339f0ed18bb40b023cdb2764f8a1153abd7bc217f5d96d5d2a2dad.mp3",
       "bytes": 177433,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/30-Serena - Heartfelt Indonesian-fpsPI3vlnQ0anCTPiHk5.mp3",
+    "sample_sha256": "33497f64c3339f0ed18bb40b023cdb2764f8a1153abd7bc217f5d96d5d2a2dad"
   },
   {
     "name": "Lulu - warm, cozy & easy to listen to ",
@@ -555,7 +615,9 @@
       "path": "audio\\29\\2985e9c43587293c9a2e44321a9235ad46a20a4e22cbf8fefa81734e24305b97.mp3",
       "bytes": 149566,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/31-Lulu - warm_ cozy _ easy to listen to-itMkRQx56fOF4CJe1D0C.mp3",
+    "sample_sha256": "2985e9c43587293c9a2e44321a9235ad46a20a4e22cbf8fefa81734e24305b97"
   },
   {
     "name": "Adam - Articulate Engineering Professor",
@@ -573,7 +635,9 @@
       "path": "audio\\95\\951c705b5a625eadd2c3f8f5c6df3bb9bbe85c5420b3589b129fe6671bd02032.wav",
       "bytes": 454700,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/32-Adam - Articulate Engineering Professor-QIhD5ivPGEoYZQDocuHI.wav",
+    "sample_sha256": "951c705b5a625eadd2c3f8f5c6df3bb9bbe85c5420b3589b129fe6671bd02032"
   },
   {
     "name": "Bunty - Funny Best Friend",
@@ -591,7 +655,9 @@
       "path": "audio\\99\\994542644e4e27c3eb2cd5a52be34dcf6ea2f6e166aac761057e6656330a841e.wav",
       "bytes": 800300,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/33-Bunty - Funny Best Friend-7b9mYhmnp0y2qSH1FnBL.wav",
+    "sample_sha256": "994542644e4e27c3eb2cd5a52be34dcf6ea2f6e166aac761057e6656330a841e"
   },
   {
     "name": "Harper 2.0",
@@ -609,7 +675,9 @@
       "path": "audio\\b2\\b21a4414e988f3da0d1ee74586b64f04b35e862d6649675c4567c71dfe188c95.mp3",
       "bytes": 178095,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/34-Harper 2.0-QLAlOeRuLwKX0skeTR7R.mp3",
+    "sample_sha256": "b21a4414e988f3da0d1ee74586b64f04b35e862d6649675c4567c71dfe188c95"
   },
   {
     "name": "Marie - Young & Optimistic",
@@ -627,7 +695,9 @@
       "path": "audio\\20\\2070574b57b172b005db4674b06a11785919b7f78fbb218caec6d3e179b135be.mp3",
       "bytes": 143997,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/35-Marie - Young _ Optimistic-ijbjxuucMt4vnA0kA9IO.mp3",
+    "sample_sha256": "2070574b57b172b005db4674b06a11785919b7f78fbb218caec6d3e179b135be"
   },
   {
     "name": "Gerardo -  Cool Latin American voice",
@@ -645,7 +715,9 @@
       "path": "audio\\1f\\1f8346fdbe3f456da986741826d33034e8a0102c97fa1b0bfca5a12ed55e997e.mp3",
       "bytes": 196485,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/36-Gerardo -  Cool Latin American voice-NDcVpQJv7Naa7ZKrqtEk.mp3",
+    "sample_sha256": "1f8346fdbe3f456da986741826d33034e8a0102c97fa1b0bfca5a12ed55e997e"
   },
   {
     "name": "Adam Stone - Smooth and Relaxed",
@@ -663,7 +735,9 @@
       "path": "audio\\6b\\6b52ad7eba5141b71819fd2bd60779fe1392ceb384cb0656f07856a15cbeb7a9.mp3",
       "bytes": 102445,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/37-Adam Stone - Smooth and Relaxed-auq43ws1oslv0tO4BDa7.mp3",
+    "sample_sha256": "6b52ad7eba5141b71819fd2bd60779fe1392ceb384cb0656f07856a15cbeb7a9"
   },
   {
     "name": "Lily - Warm British Audiobook Narrator",
@@ -681,7 +755,9 @@
       "path": "audio\\41\\4111cf4f2dd536fcc35563923ba2e79c53ba6d17fd2822addec3fbe52aeba425.mp3",
       "bytes": 108713,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/38-Lily - Warm British Audiobook Narrator-3XD5qTvPWht0mpTnYXY0.mp3",
+    "sample_sha256": "4111cf4f2dd536fcc35563923ba2e79c53ba6d17fd2822addec3fbe52aeba425"
   },
   {
     "name": "Lucas - Natural, Calm and Steady",
@@ -699,7 +775,9 @@
       "path": "audio\\e7\\e72b6bd0adf854b835dcece432ce396e655a0f1ce23f58f869a4032447ffe26a.mp3",
       "bytes": 145494,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/39-Lucas - Natural_ Calm and Steady-SVgp5d1fyFQRW1eQbwkq.mp3",
+    "sample_sha256": "e72b6bd0adf854b835dcece432ce396e655a0f1ce23f58f869a4032447ffe26a"
   },
   {
     "name": "Daniel - Corporate Narration",
@@ -717,7 +795,9 @@
       "path": "audio\\ac\\aceff19b1c59ddd1b227dbbeec11daf04ab3b4bfdd47a0c71d7067e10aa9c1e8.mp3",
       "bytes": 173080,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/40-Daniel - Corporate Narration-jdKpAe6rxAe99tFGbsAc.mp3",
+    "sample_sha256": "aceff19b1c59ddd1b227dbbeec11daf04ab3b4bfdd47a0c71d7067e10aa9c1e8"
   },
   {
     "name": "Dilara - Warm, Natural, Conversational",
@@ -735,7 +815,9 @@
       "path": "audio\\00\\0059eb434b8fb61ef026597c2c0c49f6b2e9fd29bc269b27626f1d7a483cd2d5.mp3",
       "bytes": 169910,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/41-Dilara - Warm_ Natural_ Conversational-D2dHiTSPRx6l2bhKGmyJ.mp3",
+    "sample_sha256": "0059eb434b8fb61ef026597c2c0c49f6b2e9fd29bc269b27626f1d7a483cd2d5"
   },
   {
     "name": "Jesse - Conversational & Relatable Male",
@@ -753,7 +835,9 @@
       "path": "audio\\18\\188508cc80ae89e8f4c0efd8df88206dcf941c69680803e5f2ba9ed4ca1d9b95.mp3",
       "bytes": 176308,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/42-Jesse - Conversational _ Relatable Male-kyu5ji11Ocj3MIcc9vdQ.mp3",
+    "sample_sha256": "188508cc80ae89e8f4c0efd8df88206dcf941c69680803e5f2ba9ed4ca1d9b95"
   },
   {
     "name": "Marie - Warm, Expressive and Captivating",
@@ -771,7 +855,9 @@
       "path": "audio\\cc\\ccb5a1967feb4fece971fc041d3b6f7503b82bb6a2416d87f14525503a4a2d01.mp3",
       "bytes": 113684,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/43-Marie - Warm_ Expressive and Captivating-sANWqF1bCMzR6eyZbCGw.mp3",
+    "sample_sha256": "ccb5a1967feb4fece971fc041d3b6f7503b82bb6a2416d87f14525503a4a2d01"
   },
   {
     "name": "William - Soothing and Calm",
@@ -789,7 +875,9 @@
       "path": "audio\\e1\\e1f423c1ce83548da8af60d9982cd034007e16eedb5c1362428dc40e72958f87.mp3",
       "bytes": 184782,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/44-William - Soothing and Calm-oae6GCCzwoEbfc5FHdEu.mp3",
+    "sample_sha256": "e1f423c1ce83548da8af60d9982cd034007e16eedb5c1362428dc40e72958f87"
   },
   {
     "name": "Maya - British Explainers & Learning",
@@ -807,7 +895,9 @@
       "path": "audio\\5a\\5a0fd4d1ba34febd5a5978fae7e998ec662da5295c6f8c0424c71fc4e23d5166.mp3",
       "bytes": 156953,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/45-Maya - British Explainers _ Learning-zzAIcrq5pp7webLI6ptl.mp3",
+    "sample_sha256": "5a0fd4d1ba34febd5a5978fae7e998ec662da5295c6f8c0424c71fc4e23d5166"
   },
   {
     "name": "Odom - Upbeat, Energetic, Playful",
@@ -825,7 +915,9 @@
       "path": "audio\\d8\\d80b6bec0fc7ea72937d480f93b3bf18c470a9705c60b9e8cd8704e9e49c3e11.mp3",
       "bytes": 187882,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/46-Odom - Upbeat_ Energetic_ Playful-7zoixx2reelPHqsL6WsW.mp3",
+    "sample_sha256": "d80b6bec0fc7ea72937d480f93b3bf18c470a9705c60b9e8cd8704e9e49c3e11"
   },
   {
     "name": "Donovan - Articulate, Strong and Deep",
@@ -843,7 +935,9 @@
       "path": "audio\\52\\52b2d041a9c9b13ed8068a5dc5dd9e9216acd11f9eb25c3a74efd78ef9c4a163.mp3",
       "bytes": 118745,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/47-Donovan - Articulate_ Strong and Deep-DMyrgzQFny3JI1Y1paM5.mp3",
+    "sample_sha256": "52b2d041a9c9b13ed8068a5dc5dd9e9216acd11f9eb25c3a74efd78ef9c4a163"
   },
   {
     "name": "Carla - Calm, Seductive and Enigmatic",
@@ -861,7 +955,9 @@
       "path": "audio\\37\\37226a7792d5c694bf47d6d7994aef2ad97993845d23e5cd036da990662e09bd.mp3",
       "bytes": 209327,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/48-Carla - Calm_ Seductive and Enigmatic-ZP7ctTmcovXNUmOj695o.mp3",
+    "sample_sha256": "37226a7792d5c694bf47d6d7994aef2ad97993845d23e5cd036da990662e09bd"
   },
   {
     "name": "Oscar - Fluid pitch, easy to listen",
@@ -879,7 +975,9 @@
       "path": "audio\\6c\\6c4267a9b91e8e344c9a24dad156ee80dbcdd6a2feed42603c0b9925913a5e82.mp3",
       "bytes": 157089,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/49-Oscar - Fluid pitch_ easy to listen-3mmJ2Z5SLZ9OkeZZcv5p.mp3",
+    "sample_sha256": "6c4267a9b91e8e344c9a24dad156ee80dbcdd6a2feed42603c0b9925913a5e82"
   },
   {
     "name": "Skylar - Viral Zillennial Voice",
@@ -897,7 +995,9 @@
       "path": "audio\\0f\\0f4160ef8476adba60f46a1320ad8b0b72036c1dcde438e9873024be09504e14.mp3",
       "bytes": 117491,
       "error": null
-    }
+    },
+    "sample_file": "trending_global_50/50-Skylar - Viral Zillennial Voice-MeDfWn0QGAwSljXBLc2G.mp3",
+    "sample_sha256": "0f4160ef8476adba60f46a1320ad8b0b72036c1dcde438e9873024be09504e14"
   },
   {
     "name": "Young Jamal",
@@ -915,7 +1015,9 @@
       "path": "audio\\bc\\bcc1d40cdd7f16d1638c053be290e0fa3d8eea8534c316dfeeb35e4c27bfefac.mp3",
       "bytes": 85263,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/01-Young Jamal-6OzrBCQf8cjERkYgzSg8.mp3",
+    "sample_sha256": "bcc1d40cdd7f16d1638c053be290e0fa3d8eea8534c316dfeeb35e4c27bfefac"
   },
   {
     "name": "Mark - Natural Conversations",
@@ -933,7 +1035,9 @@
       "path": "audio\\6f\\6f6dd95b622febe5f2bd08632268fdc19f75c15c1396bf7d62abdcb0c2c28c6e.mp3",
       "bytes": 102400,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/02-Mark - Natural Conversations-UgBBYS2sOqTuMpoF3BR0.mp3",
+    "sample_sha256": "6f6dd95b622febe5f2bd08632268fdc19f75c15c1396bf7d62abdcb0c2c28c6e"
   },
   {
     "name": "Brittney - Social Media Voice - Fun, Youthful & Informative",
@@ -951,7 +1055,9 @@
       "path": "audio\\c3\\c3f9542f339bdd7a1292b6bf32686e2ea33614e6b3939ff0f9b86a9c1dc45888.mp3",
       "bytes": 134164,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/03-Brittney - Social Media Voice - Fun_ Youthful _ Informative-kPzsL2i3teMYv0FxEYQ6.mp3",
+    "sample_sha256": "c3f9542f339bdd7a1292b6bf32686e2ea33614e6b3939ff0f9b86a9c1dc45888"
   },
   {
     "name": "Cristina Campos - Friendly and Soft",
@@ -969,7 +1075,9 @@
       "path": "audio\\c9\\c9333d6c5793b6fa678eb77346cf0f529d681eba2d661bab1be94ec18d18f231.mp3",
       "bytes": 155898,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/04-Cristina Campos - Friendly and Soft-CaJslL1xziwefCeTNzHv.mp3",
+    "sample_sha256": "c9333d6c5793b6fa678eb77346cf0f529d681eba2d661bab1be94ec18d18f231"
   },
   {
     "name": "Hope - upbeat and clear",
@@ -987,7 +1095,9 @@
       "path": "audio\\e7\\e7970bc09ba8039875b38597df0f75d149c8b1eccb617f3916a88f139db3b057.mp3",
       "bytes": 98638,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/05-Hope - upbeat and clear-tnSpp4vdxKPjI9w0GnoV.mp3",
+    "sample_sha256": "e7970bc09ba8039875b38597df0f75d149c8b1eccb617f3916a88f139db3b057"
   },
   {
     "name": "Fernando Martínez - Rapid, Persuasive",
@@ -1005,7 +1115,9 @@
       "path": "audio\\be\\beab0e2c9271df93809a722a4e036aa8c820c85e72b594c16978acb86f6d2786.mp3",
       "bytes": 106161,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/06-Fernando Martínez - Rapid_ Persuasive-dlGxemPxFMTY7iXagmOj.mp3",
+    "sample_sha256": "beab0e2c9271df93809a722a4e036aa8c820c85e72b594c16978acb86f6d2786"
   },
   {
     "name": "Allison - Inviting and Velvety",
@@ -1023,7 +1135,9 @@
       "path": "audio\\4d\\4d76f57f6a1dc3853425d2a789df72e09ca0f58fff611a4f9edcc3f74c3b1e4a.mp3",
       "bytes": 150883,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/07-Allison - Inviting and Velvety-Se2Vw1WbHmGbBbyWTuu4.mp3",
+    "sample_sha256": "4d76f57f6a1dc3853425d2a789df72e09ca0f58fff611a4f9edcc3f74c3b1e4a"
   },
   {
     "name": "Zara - Soft, Professional and Gentle",
@@ -1041,7 +1155,9 @@
       "path": "audio\\8f\\8f81718a33d07c2dd902dbfa39a91721f98c67b4f9585f09ce5492c0d5dd3216.wav",
       "bytes": 854060,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/08-Zara - Soft_ Professional and Gentle-OtEfb2LVzIE45wdYe54M.wav",
+    "sample_sha256": "8f81718a33d07c2dd902dbfa39a91721f98c67b4f9585f09ce5492c0d5dd3216"
   },
   {
     "name": "Hope - Natural, Clear and Calm",
@@ -1059,7 +1175,9 @@
       "path": "audio\\fc\\fc6ee47922fa6e39662be78c0262b31d77c65489461b7b0ae37b5563d9b33ac7.mp3",
       "bytes": 84427,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/09-Hope - Natural_ Clear and Calm-OYTbf65OHHFELVut7v2H.mp3",
+    "sample_sha256": "fc6ee47922fa6e39662be78c0262b31d77c65489461b7b0ae37b5563d9b33ac7"
   },
   {
     "name": "Zara - The Warm, Real-World Conversationalist",
@@ -1077,7 +1195,9 @@
       "path": "audio\\ae\\ae671cf9536a4a9f43ff43a484404ccbb755422a842fdeb1fd4b9cf87d32882e.mp3",
       "bytes": 98683,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/10-Zara - The Warm_ Real-World Conversationalist-jqcCZkN6Knx8BJ5TBdYR.mp3",
+    "sample_sha256": "ae671cf9536a4a9f43ff43a484404ccbb755422a842fdeb1fd4b9cf87d32882e"
   },
   {
     "name": "Jon - Warm & Grounded Storyteller",
@@ -1095,7 +1215,9 @@
       "path": "audio\\f8\\f83ba72f28b022a42e3c541e6a124da7abe90e99945d727a06aba7a17c191e21.mp3",
       "bytes": 140479,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/11-Jon - Warm _ Grounded Storyteller-MFZUKuGQUsGJPQjTS4wC.mp3",
+    "sample_sha256": "f83ba72f28b022a42e3c541e6a124da7abe90e99945d727a06aba7a17c191e21"
   },
   {
     "name": "Norah - Warm, Friendly and Clear",
@@ -1113,7 +1235,9 @@
       "path": "audio\\90\\9092982e9a376f1ecbbcf5fc167646855266d663ee586eabc47481a5d5e9ecad.mp3",
       "bytes": 144125,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/12-Norah - Warm_ Friendly and Clear-kcQkGnn0HAT2JRDQ4Ljp.mp3",
+    "sample_sha256": "9092982e9a376f1ecbbcf5fc167646855266d663ee586eabc47481a5d5e9ecad"
   },
   {
     "name": "Susi - Effortless and Confident",
@@ -1131,7 +1255,9 @@
       "path": "audio\\60\\606cdf02a7da3063f24138f44b619c42954a9c684565814132fafb3de3e7172f.mp3",
       "bytes": 34290,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/13-Susi - Effortless and Confident-v3V1d2rk6528UrLKRuy8.mp3",
+    "sample_sha256": "606cdf02a7da3063f24138f44b619c42954a9c684565814132fafb3de3e7172f"
   },
   {
     "name": "Jessica Anne Bogart - Chatty and Friendly",
@@ -1149,7 +1275,9 @@
       "path": "audio\\93\\93bebb30fff06c992d63baa9f2cb57badfde83e27bdf33a5d6ff5f2e2c5dfd76.mp3",
       "bytes": 110759,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/14-Jessica Anne Bogart - Chatty and Friendly-g6xIsTj2HwM6VR4iXFCw.mp3",
+    "sample_sha256": "93bebb30fff06c992d63baa9f2cb57badfde83e27bdf33a5d6ff5f2e2c5dfd76"
   },
   {
     "name": "Hope - Bubbly, Gossipy and Girly",
@@ -1167,7 +1295,9 @@
       "path": "audio\\1d\\1d3462d716cc07373aa1b7e9ff01edefad5a310cae77f90ee3225cf740aafc6c.mp3",
       "bytes": 188544,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/15-Hope - Bubbly_ Gossipy and Girly-uYXf8XasLslADfZ2MB4u.mp3",
+    "sample_sha256": "1d3462d716cc07373aa1b7e9ff01edefad5a310cae77f90ee3225cf740aafc6c"
   },
   {
     "name": "Sia - Friendly, Helpful and Reassuring",
@@ -1185,7 +1315,9 @@
       "path": "audio\\78\\789b773457b6033f1d1c1a41818b9b27d57f7eb4e2c7fab2155448a72ba188be.wav",
       "bytes": 615980,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/16-Sia - Friendly_ Helpful and Reassuring-KYiVPerWcenyBTIvWbfY.wav",
+    "sample_sha256": "789b773457b6033f1d1c1a41818b9b27d57f7eb4e2c7fab2155448a72ba188be"
   },
   {
     "name": "Gökçe Deniz - Joyful, Friendly and Warm",
@@ -1203,7 +1335,9 @@
       "path": "audio\\35\\3536c839fe307d609a0e896880a8da84ed0201b6e1f3dbc032562ffb839caede.mp3",
       "bytes": 72769,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/17-Gökçe Deniz - Joyful_ Friendly and Warm-oPC5I9GKjMReiaM29gjY.mp3",
+    "sample_sha256": "3536c839fe307d609a0e896880a8da84ed0201b6e1f3dbc032562ffb839caede"
   },
   {
     "name": "Amelia - Enthusiastic and Expressive",
@@ -1221,7 +1355,9 @@
       "path": "audio\\a3\\a34a42887b8d8ea00bece575327526dd7631288de203a43c0e7b1cc65f6bf90c.mp3",
       "bytes": 173035,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/18-Amelia - Enthusiastic and Expressive-ZF6FPAbjXT4488VcRRnw.mp3",
+    "sample_sha256": "a34a42887b8d8ea00bece575327526dd7631288de203a43c0e7b1cc65f6bf90c"
   },
   {
     "name": "Gabriel Ripley - Facetious, Quick-Spoken",
@@ -1239,7 +1375,9 @@
       "path": "audio\\3c\\3cb70bb2f35daa46d3bae1d75ba0e42954c6a2372d2f96f836aa47b5214ff183.mp3",
       "bytes": 71934,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/19-Gabriel Ripley - Facetious_ Quick-Spoken-o2zd9K5QOO7ppTb04Lx0.mp3",
+    "sample_sha256": "3cb70bb2f35daa46d3bae1d75ba0e42954c6a2372d2f96f836aa47b5214ff183"
   },
   {
     "name": "Bunty - Punchy, Crisp and Reel King",
@@ -1257,7 +1395,9 @@
       "path": "audio\\96\\96e5bb95b742569c6777ec208f1afc4df3e6953b5ea0765af6817827d38ceb3f.wav",
       "bytes": 615690,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/20-Bunty - Punchy_ Crisp and Reel King-FZkK3TvQ0pjyDmT8fzIW.wav",
+    "sample_sha256": "96e5bb95b742569c6777ec208f1afc4df3e6953b5ea0765af6817827d38ceb3f"
   },
   {
     "name": "Peter",
@@ -1275,7 +1415,9 @@
       "path": "audio\\cc\\ccc708408674641f35954814a9ba35cf3846b048bce5ed703cc17ba22d85ba2f.mp3",
       "bytes": 83218,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/21-Peter-ZthjuvLPty3kTMaNKVKb.mp3",
+    "sample_sha256": "ccc708408674641f35954814a9ba35cf3846b048bce5ed703cc17ba22d85ba2f"
   },
   {
     "name": "Andrew Griffin - Football Commentator",
@@ -1293,7 +1435,9 @@
       "path": "audio\\2b\\2b66c727594e657e606727e46da80691118d071db273bdfed63d7048f28de607.mp3",
       "bytes": 24259,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/22-Andrew Griffin - Football Commentator-SF9uvIlY93SJRMdV5jeP.mp3",
+    "sample_sha256": "2b66c727594e657e606727e46da80691118d071db273bdfed63d7048f28de607"
   },
   {
     "name": "Spuds Oxley - Grandpa ",
@@ -1311,7 +1455,9 @@
       "path": "audio\\e0\\e09253de529f8b2a817af2e55c54979e1109954c89289c120b743f370012a8d5.mp3",
       "bytes": 201874,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/23-Spuds Oxley - Grandpa-NOpBlnGInO9m6vDvFkFC.mp3",
+    "sample_sha256": "e09253de529f8b2a817af2e55c54979e1109954c89289c120b743f370012a8d5"
   },
   {
     "name": "Samara X - Smooth Classy British",
@@ -1329,7 +1475,9 @@
       "path": "audio\\8d\\8d60010123ca1d4a63aadd8695bba85a786d9ad8b517eb37f10035ff75701560.mp3",
       "bytes": 125432,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/24-Samara X - Smooth Classy British-19STyYD15bswVz51nqLf.mp3",
+    "sample_sha256": "8d60010123ca1d4a63aadd8695bba85a786d9ad8b517eb37f10035ff75701560"
   },
   {
     "name": "Christopher - Gentle and Trustworthy",
@@ -1347,7 +1495,9 @@
       "path": "audio\\83\\837a71f173f5cd33db016e17524879c63ae5d755b6c6e061af91cec6805fbfc6.mp3",
       "bytes": 148375,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/25-Christopher - Gentle and Trustworthy-G17SuINrv2H9FC6nvetn.mp3",
+    "sample_sha256": "837a71f173f5cd33db016e17524879c63ae5d755b6c6e061af91cec6805fbfc6"
   },
   {
     "name": "Adam - American, Dark and Tough",
@@ -1365,7 +1515,9 @@
       "path": "audio\\49\\498157b71d28fa1c90f9a0e530e12d8e1f3b0fdd428986fbf6f8cc1fff10d721.wav",
       "bytes": 282668,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/26-Adam - American_ Dark and Tough-IRHApOXLvnW57QJPQH2P.wav",
+    "sample_sha256": "498157b71d28fa1c90f9a0e530e12d8e1f3b0fdd428986fbf6f8cc1fff10d721"
   },
   {
     "name": "James - Husky, Engaging and Bold",
@@ -1383,7 +1535,9 @@
       "path": "audio\\1a\\1a3b0dae8b69bf4f27fb5ccb0195c5c690c26bd23b8f81579337898f617cfc6c.mp3",
       "bytes": 145449,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/27-James - Husky_ Engaging and Bold-EkK5I93UQWFDigLMpZcX.mp3",
+    "sample_sha256": "1a3b0dae8b69bf4f27fb5ccb0195c5c690c26bd23b8f81579337898f617cfc6c"
   },
   {
     "name": "Andrea - Polite, Cheerful and Calm",
@@ -1401,7 +1555,9 @@
       "path": "audio\\a7\\a7010a0bfbb18dfde90a6aecd2da8d45c51b3fed17a2bcff39b70846418afb1e.mp3",
       "bytes": 70635,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/28-Andrea - Polite_ Cheerful and Calm-qHkrJuifPpn95wK3rm2A.mp3",
+    "sample_sha256": "a7010a0bfbb18dfde90a6aecd2da8d45c51b3fed17a2bcff39b70846418afb1e"
   },
   {
     "name": "Michael C. Vincent - Confident, Expressive",
@@ -1419,7 +1575,9 @@
       "path": "audio\\ac\\ac6faac598ff96d62c0726225d90e07e14f14aa9b8ea8d38b862842b925df87b.mp3",
       "bytes": 114102,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/29-Michael C. Vincent - Confident_ Expressive-uju3wxzG5OhpWcoi3SMy.mp3",
+    "sample_sha256": "ac6faac598ff96d62c0726225d90e07e14f14aa9b8ea8d38b862842b925df87b"
   },
   {
     "name": "Mark - Casual, Relaxed and Light",
@@ -1437,7 +1595,9 @@
       "path": "audio\\6a\\6a8b2293da8f5a219e7f9f47cd042a2c28f4f9c30e342bb9e0572cf25c4d5cda.mp3",
       "bytes": 101564,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/30-Mark - Casual_ Relaxed and Light-1SM7GgM6IMuvQlz2BwM3.mp3",
+    "sample_sha256": "6a8b2293da8f5a219e7f9f47cd042a2c28f4f9c30e342bb9e0572cf25c4d5cda"
   },
   {
     "name": "Keren - Sweet, Vibrant and Rhythmic",
@@ -1455,7 +1615,9 @@
       "path": "audio\\f2\\f21414644efae6d4d4443457cbe7066f240f863ac11a16d8423de2fb548c17bf.mp3",
       "bytes": 67291,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/31-Keren - Sweet_ Vibrant and Rhythmic-33B4UnXyTNbgLmdEDh5P.mp3",
+    "sample_sha256": "f21414644efae6d4d4443457cbe7066f240f863ac11a16d8423de2fb548c17bf"
   },
   {
     "name": "Zara – Efficient Recovery Agent",
@@ -1473,7 +1635,9 @@
       "path": "audio\\2e\\2e4aa1753847e6fd29633fa4d8fc29ae902eb92fb601c342876220a7f33013e0.wav",
       "bytes": 846380,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/32-Zara _ Efficient Recovery Agent-6VrKLjZfyBIk9AEmnZBI.wav",
+    "sample_sha256": "2e4aa1753847e6fd29633fa4d8fc29ae902eb92fb601c342876220a7f33013e0"
   },
   {
     "name": "Adam - Engaging, Friendly and Bright",
@@ -1491,7 +1655,9 @@
       "path": "audio\\ba\\bac5f87f9b0d66260bf0baf621019358f1db6f1c0aa5a5aa97dc2d4513ab5d1a.mp3",
       "bytes": 92831,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/33-Adam - Engaging_ Friendly and Bright-s3TPKV1kjDlVtZbl4Ksh.mp3",
+    "sample_sha256": "bac5f87f9b0d66260bf0baf621019358f1db6f1c0aa5a5aa97dc2d4513ab5d1a"
   },
   {
     "name": "Jessa - Easygoing and Effortless",
@@ -1509,7 +1675,9 @@
       "path": "audio\\13\\135604b5a80487435c7985a97fe0f73d42dcf351a02147f6eb91dda2e499818b.mp3",
       "bytes": 127104,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/34-Jessa - Easygoing and Effortless-yj30vwTGJxSHezdAGsv9.mp3",
+    "sample_sha256": "135604b5a80487435c7985a97fe0f73d42dcf351a02147f6eb91dda2e499818b"
   },
   {
     "name": "Raju - Clear, Natural and Warm",
@@ -1527,7 +1695,9 @@
       "path": "audio\\1a\\1abe7edb79bc56c1fbc67bde7e5cc472794308a973e18d312a4cb664265cd7a1.mp3",
       "bytes": 145668,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/35-Raju - Clear_ Natural and Warm-zT03pEAEi0VHKciJODfn.mp3",
+    "sample_sha256": "1abe7edb79bc56c1fbc67bde7e5cc472794308a973e18d312a4cb664265cd7a1"
   },
   {
     "name": "Alberto Rodríguez - Serious, Narrative",
@@ -1545,7 +1715,9 @@
       "path": "audio\\bb\\bb7984569b80adb470f8b80d7139d47b0229d98e51ada1fafce063a2549a7790.mp3",
       "bytes": 139598,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/36-Alberto Rodríguez - Serious_ Narrative-l1zE9xgNpUTaQCZzpNJa.mp3",
+    "sample_sha256": "bb7984569b80adb470f8b80d7139d47b0229d98e51ada1fafce063a2549a7790"
   },
   {
     "name": "Ms. Walker – Warm, Reassuring, and Round",
@@ -1563,7 +1735,9 @@
       "path": "audio\\bf\\bf63d3b294648c393a6ab3804df9e9e259f2136609aa3a653e6d92d8dac4a56e.mp3",
       "bytes": 107460,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/37-Ms. Walker _ Warm_ Reassuring_ and Round-DLsHlh26Ugcm6ELvS0qi.mp3",
+    "sample_sha256": "bf63d3b294648c393a6ab3804df9e9e259f2136609aa3a653e6d92d8dac4a56e"
   },
   {
     "name": "Ivanna - Young, Versatile and Casual",
@@ -1581,7 +1755,9 @@
       "path": "audio\\58\\58b67fa5bb888d0dc233f6bf53436e40b7323ecc0c2304dc4acfaca558bd7668.mp3",
       "bytes": 109087,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/38-Ivanna - Young_ Versatile and Casual-yM93hbw8Qtvdma2wCnJG.mp3",
+    "sample_sha256": "58b67fa5bb888d0dc233f6bf53436e40b7323ecc0c2304dc4acfaca558bd7668"
   },
   {
     "name": "Alex - Upbeat, Energetic and Clear",
@@ -1599,7 +1775,9 @@
       "path": "audio\\a1\\a15d4bb63645c082520d402d6fa391db085936c97a3df67a6f52c206d7d27082.mp3",
       "bytes": 91951,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/39-Alex - Upbeat_ Energetic and Clear-yl2ZDV1MzN4HbQJbMihG.mp3",
+    "sample_sha256": "a15d4bb63645c082520d402d6fa391db085936c97a3df67a6f52c206d7d27082"
   },
   {
     "name": "Ana Rita - Smooth, Expressive and Bright",
@@ -1617,7 +1795,9 @@
       "path": "audio\\41\\41d84afc53f73cf57212cfc40f43e435386f650796e2e54b9c57f3568064bacb.mp3",
       "bytes": 24677,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/40-Ana Rita - Smooth_ Expressive and Bright-wJqPPQ618aTW29mptyoc.mp3",
+    "sample_sha256": "41d84afc53f73cf57212cfc40f43e435386f650796e2e54b9c57f3568064bacb"
   },
   {
     "name": "Archer - Conversational",
@@ -1635,7 +1815,9 @@
       "path": "audio\\c2\\c28b3401ec58440ddb82d228d16f95abda8bb32f4558929e7e26bf3073c8b54f.mp3",
       "bytes": 81502,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/41-Archer - Conversational-Fahco4VZzobUeiPqni1S.mp3",
+    "sample_sha256": "c28b3401ec58440ddb82d228d16f95abda8bb32f4558929e7e26bf3073c8b54f"
   },
   {
     "name": "Nicolas - Narrator",
@@ -1653,7 +1835,9 @@
       "path": "audio\\63\\6382586f31b7794b13e1936a093a99b56a753d0ea93434de2521c548414fa232.mp3",
       "bytes": 95757,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/42-Nicolas - Narrator-aQROLel5sQbj1vuIVi6B.mp3",
+    "sample_sha256": "6382586f31b7794b13e1936a093a99b56a753d0ea93434de2521c548414fa232"
   },
   {
     "name": "Bradford - Expressive and Articulate",
@@ -1671,7 +1855,9 @@
       "path": "audio\\43\\43154affa1f30a0d9d1e00f9ab350794562da100ad5744fd9456d37b3660c655.mp3",
       "bytes": 34899,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/43-Bradford - Expressive and Articulate-NNl6r8mD7vthiJatiJt1.mp3",
+    "sample_sha256": "43154affa1f30a0d9d1e00f9ab350794562da100ad5744fd9456d37b3660c655"
   },
   {
     "name": "Jessica Anne Bogart - A VO Professional; now cloned!",
@@ -1689,7 +1875,9 @@
       "path": "audio\\8e\\8ecf97dee536da9fe3a05f89784ad09ddd38d9f1a917df07808871006a16b332.mp3",
       "bytes": 175479,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/44-Jessica Anne Bogart - A VO Professional_ now cloned_-lxYfHSkYm1EzQzGhdbfc.mp3",
+    "sample_sha256": "8ecf97dee536da9fe3a05f89784ad09ddd38d9f1a917df07808871006a16b332"
   },
   {
     "name": "Chrissy - Animated, Rapid and Inviting",
@@ -1707,7 +1895,9 @@
       "path": "audio\\ec\\ec3554598a1ffdcba131a6047b06e2224f41a89ddf3a4d2b2bec1a4b0bc8afb3.mp3",
       "bytes": 88189,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/45-Chrissy - Animated_ Rapid and Inviting-3eIAPRQVsX0VrSFmqoTf.mp3",
+    "sample_sha256": "ec3554598a1ffdcba131a6047b06e2224f41a89ddf3a4d2b2bec1a4b0bc8afb3"
   },
   {
     "name": "Siren - Natural realistic conversational voice",
@@ -1725,7 +1915,9 @@
       "path": "audio\\46\\468cac27e4ccc1d3204157fd90a95005f5652730e638f6b06908fb928ca8f2ca.mp3",
       "bytes": 110804,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/46-Siren - Natural realistic conversational voice-eXpIbVcVbLo8ZJQDlDnl.mp3",
+    "sample_sha256": "468cac27e4ccc1d3204157fd90a95005f5652730e638f6b06908fb928ca8f2ca"
   },
   {
     "name": "Nichalia Schwartz - Bright and Friendly",
@@ -1743,7 +1935,9 @@
       "path": "audio\\0c\\0cd738b615249834b8caacc8532569fd17c9b704898ea3ea88e5f82c5ab55dee.mp3",
       "bytes": 132075,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/47-Nichalia Schwartz - Bright and Friendly-XfNU2rGpBa01ckF309OY.mp3",
+    "sample_sha256": "0cd738b615249834b8caacc8532569fd17c9b704898ea3ea88e5f82c5ab55dee"
   },
   {
     "name": "Cindy - casual narrator",
@@ -1761,7 +1955,9 @@
       "path": "audio\\08\\08539dec4b35aff767c50cb5c54e5d4fe0dbb6d89010a5b7c43faf24f7863b4a.mp3",
       "bytes": 122298,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/48-Cindy - casual narrator-vCHG6sKIqAbXWNNm5vpY.mp3",
+    "sample_sha256": "08539dec4b35aff767c50cb5c54e5d4fe0dbb6d89010a5b7c43faf24f7863b4a"
   },
   {
     "name": "Adam - Radio Announcer",
@@ -1779,7 +1975,9 @@
       "path": "audio\\49\\49e9ff8ac73e06d40c1c35182ab3ffa30f8e29f7fbe5d5e75c3e89a0e65e818c.wav",
       "bytes": 376876,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/49-Adam - Radio Announcer-wBXNqKUATyqu0RtYt25i.wav",
+    "sample_sha256": "49e9ff8ac73e06d40c1c35182ab3ffa30f8e29f7fbe5d5e75c3e89a0e65e818c"
   },
   {
     "name": "Arabella - Mysterious and Emotive",
@@ -1797,7 +1995,9 @@
       "path": "audio\\d5\\d56a06b8eab625bbca477edda983e431347d8d19314806208b0bbcd28a6d4b22.mp3",
       "bytes": 147539,
       "error": null
-    }
+    },
+    "sample_file": "usage_global_50/50-Arabella - Mysterious and Emotive-Z3R5wn05IrDiVCyEkUrK.mp3",
+    "sample_sha256": "d56a06b8eab625bbca477edda983e431347d8d19314806208b0bbcd28a6d4b22"
   },
   {
     "name": "Tuan Anh - Deep & Powerful Vietnamese",
@@ -1815,7 +2015,9 @@
       "path": "audio\\ca\\ca771233a725a4b64ef4c22f8de73aa1baeac7c590fa69fa8e59a8466f2b7814.mp3",
       "bytes": 140788,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/01-Tuan Anh - Deep _ Powerful Vietnamese-47rM9DW5VmjOw23BVHWi.mp3",
+    "sample_sha256": "ca771233a725a4b64ef4c22f8de73aa1baeac7c590fa69fa8e59a8466f2b7814"
   },
   {
     "name": "Mai Anh - Vietnamese News Anchor",
@@ -1833,7 +2035,9 @@
       "path": "audio\\03\\039c529da3c9631e5da4531861c1f9c9905083f8e33780f7a4c3d7313d58538d.mp3",
       "bytes": 163640,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/02-Mai Anh - Vietnamese News Anchor-Hq7udsaTAvCBrAg8DSP2.mp3",
+    "sample_sha256": "039c529da3c9631e5da4531861c1f9c9905083f8e33780f7a4c3d7313d58538d"
   },
   {
     "name": "Thieuthattha - Casual",
@@ -1851,7 +2055,9 @@
       "path": "audio\\14\\14656bf9751ada5d54a0abac79a9ee8dde70ab7b2513de1b2f578486b4c8bf57.mp3",
       "bytes": 195884,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/03-Thieuthattha - Casual-VnlraNGkeLNUIQm7PPQ7.mp3",
+    "sample_sha256": "14656bf9751ada5d54a0abac79a9ee8dde70ab7b2513de1b2f578486b4c8bf57"
   },
   {
     "name": "Quang Toan - Deep Vietnamese Storyteller",
@@ -1869,7 +2075,9 @@
       "path": "audio\\22\\2267c80fee37b744c4a4be06fdebacf2bee15f45e1776b9a8c7499e4d5db30c0.mp3",
       "bytes": 128698,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/04-Quang Toan - Deep Vietnamese Storyteller-ZsjEJaLQy3sgvwxicmDx.mp3",
+    "sample_sha256": "2267c80fee37b744c4a4be06fdebacf2bee15f45e1776b9a8c7499e4d5db30c0"
   },
   {
     "name": "Ba Luc - Warm, Clear, Storytelling",
@@ -1887,7 +2095,9 @@
       "path": "audio\\be\\beb9f93b4d9ae457a48520af44b86ca816dedbff1f2102466950c0ca080a5147.mp3",
       "bytes": 172418,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/05-Ba Luc - Warm_ Clear_ Storytelling-KJmTHSk3TjHp87WObL98.mp3",
+    "sample_sha256": "beb9f93b4d9ae457a48520af44b86ca816dedbff1f2102466950c0ca080a5147"
   },
   {
     "name": "Thảo - Soft, Calm and Gentle",
@@ -1905,7 +2115,9 @@
       "path": "audio\\9d\\9d041e6f19efe96afc53aadb2cd98954f04ff9118f0642252139c88eba63a78b.mp3",
       "bytes": 117491,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/06-Thảo - Soft_ Calm and Gentle-558B1EcdabtcSdleer40.mp3",
+    "sample_sha256": "9d041e6f19efe96afc53aadb2cd98954f04ff9118f0642252139c88eba63a78b"
   },
   {
     "name": "Giang - Podcast",
@@ -1923,7 +2135,9 @@
       "path": "audio\\10\\1081140fc17140e7aec3ef1a8f35c001b124fced00638316e3e417c4ee91e482.mp3",
       "bytes": 115323,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/07-Giang - Podcast-CQAD6iKxS73fEAGjSwt5.mp3",
+    "sample_sha256": "1081140fc17140e7aec3ef1a8f35c001b124fced00638316e3e417c4ee91e482"
   },
   {
     "name": "Trieu Duong - Deep, Calm and Resonant",
@@ -1941,7 +2155,9 @@
       "path": "audio\\7b\\7b9992cecf7ca79dce62cc989642bf506f26010f5f654e310e0bf04dc0cba634.mp3",
       "bytes": 131702,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/08-Trieu Duong - Deep_ Calm and Resonant-UsgbMVmY3U59ijwK5mdh.mp3",
+    "sample_sha256": "7b9992cecf7ca79dce62cc989642bf506f26010f5f654e310e0bf04dc0cba634"
   },
   {
     "name": "Hạ Vi - Calm & Trustworthy",
@@ -1959,7 +2175,9 @@
       "path": "audio\\29\\29684a3120d5889694b02be551e27559efac0736fbac40e926559143317c57c7.mp3",
       "bytes": 139147,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/09-Hạ Vi - Calm _ Trustworthy-iSV1G4KvpGE3D8qzAzwG.mp3",
+    "sample_sha256": "29684a3120d5889694b02be551e27559efac0736fbac40e926559143317c57c7"
   },
   {
     "name": "Gia Huy - Southern TV Host",
@@ -1977,7 +2195,9 @@
       "path": "audio\\3a\\3ad8a5f1421ed37c23249f7d1c7b46d2724e04434e31ea80971e3e445d1022d6.mp3",
       "bytes": 160714,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/10-Gia Huy - Southern TV Host-2gohBomXaprQ214IIpWp.mp3",
+    "sample_sha256": "3ad8a5f1421ed37c23249f7d1c7b46d2724e04434e31ea80971e3e445d1022d6"
   },
   {
     "name": "Trường - Calm & Clear Educator",
@@ -1995,7 +2215,9 @@
       "path": "audio\\0b\\0b5fba27ce617a8e570e5cd8a0e83dc0a55e4629f020661adef4da3c153ef185.mp3",
       "bytes": 128565,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/11-Trường - Calm _ Clear Educator-U0vnF55XGy05G83azOfJ.mp3",
+    "sample_sha256": "0b5fba27ce617a8e570e5cd8a0e83dc0a55e4629f020661adef4da3c153ef185"
   },
   {
     "name": "Thảo - Sweet Southern Female",
@@ -2013,7 +2235,9 @@
       "path": "audio\\72\\727332205654a02aef2f8b46617e7c94a5ebe92b809975193ce517ab8f97744a.mp3",
       "bytes": 132429,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/12-Thảo - Sweet Southern Female-cn9QbYLDiF52pxTcyPCR.mp3",
+    "sample_sha256": "727332205654a02aef2f8b46617e7c94a5ebe92b809975193ce517ab8f97744a"
   },
   {
     "name": "Sang Truong - Deep, Calm and Resonant",
@@ -2031,7 +2255,9 @@
       "path": "audio\\52\\5221cf7b8bd10b56a2e886462d5db50b01917f61569bc2b4257e7dec0b59ef4d.mp3",
       "bytes": 34481,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/13-Sang Truong - Deep_ Calm and Resonant-7WNWm0yUcEolHsfg5Bhk.mp3",
+    "sample_sha256": "5221cf7b8bd10b56a2e886462d5db50b01917f61569bc2b4257e7dec0b59ef4d"
   },
   {
     "name": "Tony Hoang ",
@@ -2049,7 +2275,9 @@
       "path": "audio\\56\\56a3e36c565d644f22a24d471a83ac2ddf815d5817b6e1973311c4016d1731ca.mp3",
       "bytes": 82692,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/14-Tony Hoang-K7ewtjKRNtwwt3lKQ6M0.mp3",
+    "sample_sha256": "56a3e36c565d644f22a24d471a83ac2ddf815d5817b6e1973311c4016d1731ca"
   },
   {
     "name": "Ninh Đôn – Deep & Warm",
@@ -2067,7 +2295,9 @@
       "path": "audio\\92\\9223559b92fe6ffdebb7efb6ff1d33851a1dae3d81c77f8b19b525bcdb8ab3c2.mp3",
       "bytes": 75695,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/15-Ninh Đôn _ Deep _ Warm-aN7cv9yXNrfIR87bDmyD.mp3",
+    "sample_sha256": "9223559b92fe6ffdebb7efb6ff1d33851a1dae3d81c77f8b19b525bcdb8ab3c2"
   },
   {
     "name": "Tâm - Vietnamese Male",
@@ -2085,7 +2315,9 @@
       "path": "audio\\c7\\c7047fc4a1e365f626884cf31f2e4a38589ddf3755f7befdc906218dffd03d89.mp3",
       "bytes": 219438,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/16-Tâm - Vietnamese Male-JwqRvOqFdGeQNu7UjKjw.mp3",
+    "sample_sha256": "c7047fc4a1e365f626884cf31f2e4a38589ddf3755f7befdc906218dffd03d89"
   },
   {
     "name": "An - Warm Storyteller",
@@ -2103,7 +2335,9 @@
       "path": "audio\\80\\806673a2ceebd3a3499392ab86f4f5036afaf6b0e43797ca9b1e1f728266d958.mp3",
       "bytes": 145285,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/17-An - Warm Storyteller-Q7XJO40lrbzqrkrnlA7V.mp3",
+    "sample_sha256": "806673a2ceebd3a3499392ab86f4f5036afaf6b0e43797ca9b1e1f728266d958"
   },
   {
     "name": "Alice - Education",
@@ -2121,7 +2355,9 @@
       "path": "audio\\71\\71b0501f3b6497cff6a07bfd12bc3ae60b0de22ccf2b5bcc4ee6d0dea0baa92d.mp3",
       "bytes": 125430,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/18-Alice - Education-zYnH9CW4Vfh7aJx0S0Tt.mp3",
+    "sample_sha256": "71b0501f3b6497cff6a07bfd12bc3ae60b0de22ccf2b5bcc4ee6d0dea0baa92d"
   },
   {
     "name": "Hoang - Standard Vietnamese",
@@ -2139,7 +2375,9 @@
       "path": "audio\\1f\\1f7781e2625ea5e6524853f318596252a4d3fa3e83a6ef793066513754784c4f.mp3",
       "bytes": 94084,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/19-Hoang - Standard Vietnamese-QPhp6ljuPlP06G78LHQ8.mp3",
+    "sample_sha256": "1f7781e2625ea5e6524853f318596252a4d3fa3e83a6ef793066513754784c4f"
   },
   {
     "name": "Phú Hảo - Confident tone",
@@ -2157,7 +2395,9 @@
       "path": "audio\\8d\\8dd8ebfd2a139648dcfcd494fdce367ca0d2c485b3cbfa4d7c22272c62978996.mp3",
       "bytes": 115244,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/20-Phú Hảo - Confident tone-5GISLLu6Q4uERcqYn3us.mp3",
+    "sample_sha256": "8dd8ebfd2a139648dcfcd494fdce367ca0d2c485b3cbfa4d7c22272c62978996"
   },
   {
     "name": "Luci - Vietnamese Narrator",
@@ -2175,7 +2415,9 @@
       "path": "audio\\e7\\e727ffdf441bfef0d4b2c67b7648f33038ab8c0696c1791cb1c76f16f20d86e6.mp3",
       "bytes": 83218,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/21-Luci - Vietnamese Narrator-Wzj3w9OuQFcoiuKPnk3j.mp3",
+    "sample_sha256": "e727ffdf441bfef0d4b2c67b7648f33038ab8c0696c1791cb1c76f16f20d86e6"
   },
   {
     "name": "Thuy Duong- Vietnamese",
@@ -2193,7 +2435,9 @@
       "path": "audio\\46\\465348e5608d28407f8bfcaccd50baaf3b5d6a89efc5f9daf0826dda137992d2.mp3",
       "bytes": 134836,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/22-Thuy Duong- Vietnamese-MfXXiGR0HCVHHuMqcUJM.mp3",
+    "sample_sha256": "465348e5608d28407f8bfcaccd50baaf3b5d6a89efc5f9daf0826dda137992d2"
   },
   {
     "name": "Trung Caha - Articulate and Informative",
@@ -2211,7 +2455,9 @@
       "path": "audio\\9a\\9a830dba728db2eeca77087fc75f2cd154fc7ffbbad060bdbc5f563ce219f4d0.mp3",
       "bytes": 107669,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/23-Trung Caha - Articulate and Informative-FfC8yOt3HaUlZaet6DPx.mp3",
+    "sample_sha256": "9a830dba728db2eeca77087fc75f2cd154fc7ffbbad060bdbc5f563ce219f4d0"
   },
   {
     "name": "Hoai An - Natural & Warm",
@@ -2229,7 +2475,9 @@
       "path": "audio\\7e\\7e87709a83cb14d6b58929919ce5dd18f8271edcc6b762bbcb4b24b9da315af6.mp3",
       "bytes": 113485,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/24-Hoai An - Natural _ Warm-C4xUSMOXl50ZXgdM27PO.mp3",
+    "sample_sha256": "7e87709a83cb14d6b58929919ce5dd18f8271edcc6b762bbcb4b24b9da315af6"
   },
   {
     "name": "Thai Phuong - Narration",
@@ -2247,7 +2495,9 @@
       "path": "audio\\fb\\fb1bfc41fd880ff90b0c37f9434b4a07fd36d6391d4cbf26d36b5450abd1aebd.mp3",
       "bytes": 166181,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/25-Thai Phuong - Narration-UTvS4kKvxVmZZlJbE97P.mp3",
+    "sample_sha256": "fb1bfc41fd880ff90b0c37f9434b4a07fd36d6391d4cbf26d36b5450abd1aebd"
   },
   {
     "name": "Tri Thuong - Warm",
@@ -2265,7 +2515,9 @@
       "path": "audio\\33\\33149b783eea468bba624cd5a62f5ff2442e14e2e777c422c50e3eaa92c091d2.mp3",
       "bytes": 154124,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/26-Tri Thuong - Warm-i4CYqSzvHo9TqdCeE399.mp3",
+    "sample_sha256": "33149b783eea468bba624cd5a62f5ff2442e14e2e777c422c50e3eaa92c091d2"
   },
   {
     "name": "Hung - Clear, Distinct and Emphatic",
@@ -2283,7 +2535,9 @@
       "path": "audio\\21\\2119410a1267ab929c902cb288aba43615c78a6f33cb29a523968968608f20d3.mp3",
       "bytes": 144241,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/27-Hung - Clear_ Distinct and Emphatic-DTLhW2kDOWq9IAPipCcu.mp3",
+    "sample_sha256": "2119410a1267ab929c902cb288aba43615c78a6f33cb29a523968968608f20d3"
   },
   {
     "name": "Tran Thanh",
@@ -2301,7 +2555,9 @@
       "path": "audio\\a6\\a6b6d5927d416aee78681652b998b9c2e361d4880cbecd0850f82d6eb0896223.mp3",
       "bytes": 144658,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/28-Tran Thanh-kPNz4WRTiKDplS7jAwHu.mp3",
+    "sample_sha256": "a6b6d5927d416aee78681652b998b9c2e361d4880cbecd0850f82d6eb0896223"
   },
   {
     "name": "Mai - Natural, Bright and Authentic",
@@ -2319,7 +2575,9 @@
       "path": "audio\\06\\06ea25f33c6a5263ed9c9d985b50d7e6a1992b7cec97090a75418ef12192e28d.mp3",
       "bytes": 107460,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/29-Mai - Natural_ Bright and Authentic-d5HVupAWCwe4e6GvMCAL.mp3",
+    "sample_sha256": "06ea25f33c6a5263ed9c9d985b50d7e6a1992b7cec97090a75418ef12192e28d"
   },
   {
     "name": "Ly Bình - Presentation",
@@ -2337,7 +2595,9 @@
       "path": "audio\\59\\594d595934d5ed4a2941df2ed7238bc75b1b54a9bed3695bef4dfbc2b3b58f14.mp3",
       "bytes": 121251,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/30-Ly Bình - Presentation-g2Dg3l1IfbzR3AoSy9jg.mp3",
+    "sample_sha256": "594d595934d5ed4a2941df2ed7238bc75b1b54a9bed3695bef4dfbc2b3b58f14"
   },
   {
     "name": "Đất - Calm",
@@ -2355,7 +2615,9 @@
       "path": "audio\\0c\\0c97bcc360f70df9dd928f5a5b23cb98cf51dc7050dca060bfb999ec3dc89d00.mp3",
       "bytes": 180044,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/31-Đất - Calm-aEQHb3has84MZ9Noo4vP.mp3",
+    "sample_sha256": "0c97bcc360f70df9dd928f5a5b23cb98cf51dc7050dca060bfb999ec3dc89d00"
   },
   {
     "name": "Toàn ",
@@ -2373,7 +2635,9 @@
       "path": "audio\\a7\\a778aae2cfbe33b97da050b52cf6e8a66a12d02c7c86c520af391cb9dfc59bd1.mp3",
       "bytes": 99309,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/32-Toàn-MugHa7C5tESbPq5Jrv8i.mp3",
+    "sample_sha256": "a778aae2cfbe33b97da050b52cf6e8a66a12d02c7c86c520af391cb9dfc59bd1"
   },
   {
     "name": "Ân - Casual, Bubbly and Energetic",
@@ -2391,7 +2655,9 @@
       "path": "audio\\c2\\c2aac86f23fc462fa0d53f3b0d7de95799ea88417c6cc4fc99faf6ad4f7b0949.mp3",
       "bytes": 112849,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/33-Ân - Casual_ Bubbly and Energetic-zIusdI28yOZPwIBus0aI.mp3",
+    "sample_sha256": "c2aac86f23fc462fa0d53f3b0d7de95799ea88417c6cc4fc99faf6ad4f7b0949"
   },
   {
     "name": "Henry Nguyen - Warm, active & friendly",
@@ -2409,7 +2675,9 @@
       "path": "audio\\20\\2050c34e0ef98ecaee23f4d1571bb21665e2ec75416c58fd72a6bf9fcc7c47a6.mp3",
       "bytes": 168272,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/34-Henry Nguyen - Warm_ active _ friendly-9OkfZUfSSXvew1flIzTP.mp3",
+    "sample_sha256": "2050c34e0ef98ecaee23f4d1571bb21665e2ec75416c58fd72a6bf9fcc7c47a6"
   },
   {
     "name": "Tuyến - Formal, Serious and Respectful",
@@ -2427,7 +2695,9 @@
       "path": "audio\\83\\838348ed7555636b5bb8c8d175feaaed5ab29c9c75dc68bbfddb07b080e1af62.mp3",
       "bytes": 155062,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/35-Tuyến - Formal_ Serious and Respectful-mMa5ygDNluQLD1EaTZLI.mp3",
+    "sample_sha256": "838348ed7555636b5bb8c8d175feaaed5ab29c9c75dc68bbfddb07b080e1af62"
   },
   {
     "name": "Man Nghi - Radio",
@@ -2445,7 +2715,9 @@
       "path": "audio\\ce\\ce7274a179d564af477398f1f21b81f6f0d19dfe3a16c5233a9bf247272c2a1f.mp3",
       "bytes": 185928,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/36-Man Nghi - Radio-KqbkuMVLVelcCTkFXEbE.mp3",
+    "sample_sha256": "ce7274a179d564af477398f1f21b81f6f0d19dfe3a16c5233a9bf247272c2a1f"
   },
   {
     "name": "Co Giang - Vietnam",
@@ -2463,7 +2735,9 @@
       "path": "audio\\4e\\4efd6b81da7ff08b32fd677616ee4f70c988e9387e6ac02eb7eec8daa7fb801f.mp3",
       "bytes": 111848,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/37-Co Giang - Vietnam-BNdqbMgt3iZONYMkKMzH.mp3",
+    "sample_sha256": "4efd6b81da7ff08b32fd677616ee4f70c988e9387e6ac02eb7eec8daa7fb801f"
   },
   {
     "name": "Minh Son - Commentary & Review",
@@ -2481,7 +2755,9 @@
       "path": "audio\\e7\\e77bb48826314ae08c3418602c4df86ad1d7183ab091bb5d2057042e5dd1ef74.mp3",
       "bytes": 118501,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/38-Minh Son - Commentary _ Review-ObhtJZSfI8Ps4i8lwyVx.mp3",
+    "sample_sha256": "e77bb48826314ae08c3418602c4df86ad1d7183ab091bb5d2057042e5dd1ef74"
   },
   {
     "name": "Tung Dang - Deep, Warm and Resonant",
@@ -2499,7 +2775,9 @@
       "path": "audio\\ef\\eff29116b38aa53b4f7e6f2a44715875c4ddf1fff9f2a0e32dd001407f78481b.mp3",
       "bytes": 80711,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/39-Tung Dang - Deep_ Warm and Resonant-3VnrjnYrskPMDsapTr8X.mp3",
+    "sample_sha256": "eff29116b38aa53b4f7e6f2a44715875c4ddf1fff9f2a0e32dd001407f78481b"
   },
   {
     "name": "Phuong - Smooth, Comforting and Gentle",
@@ -2517,7 +2795,9 @@
       "path": "audio\\67\\675bca2261a8d3286ec15b1ec350dd9fc86104633dec632a9132ff54d92d8be5.mp3",
       "bytes": 81547,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/40-Phuong - Smooth_ Comforting and Gentle-deC6NEXcbavaVWbzjgzb.mp3",
+    "sample_sha256": "675bca2261a8d3286ec15b1ec350dd9fc86104633dec632a9132ff54d92d8be5"
   },
   {
     "name": "Duyen - Sweet, Calm and Gentle",
@@ -2535,7 +2815,9 @@
       "path": "audio\\f3\\f31f39541aceebe182aa28ce80289c5d9a8b914d2dde4987e10c8c4e6f490dc6.mp3",
       "bytes": 77785,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/41-Duyen - Sweet_ Calm and Gentle-1rqNHUqUbBGpY3OyzPMI.mp3",
+    "sample_sha256": "f31f39541aceebe182aa28ce80289c5d9a8b914d2dde4987e10c8c4e6f490dc6"
   },
   {
     "name": "Thanh Ngọc - Warm & Trusted Expert",
@@ -2553,7 +2835,9 @@
       "path": "audio\\a3\\a3dad6e447c118fdd5b7080fdc592006a17ff75471971b76be95eb1cebea4f97.mp3",
       "bytes": 145804,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/42-Thanh Ngọc - Warm _ Trusted Expert-Na15FlRRkMEDtEW4nVVP.mp3",
+    "sample_sha256": "a3dad6e447c118fdd5b7080fdc592006a17ff75471971b76be95eb1cebea4f97"
   },
   {
     "name": "Hien - Warm and Deep Broadcaster",
@@ -2571,7 +2855,9 @@
       "path": "audio\\b4\\b47f3bc44b761656509a0e81992ca29a9eba811841abb4383e95658b45346666.mp3",
       "bytes": 158033,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/43-Hien - Warm and Deep Broadcaster-jdlxsPOZOHdGEfcItXVu.mp3",
+    "sample_sha256": "b47f3bc44b761656509a0e81992ca29a9eba811841abb4383e95658b45346666"
   },
   {
     "name": "Linh Sensei - Teacher",
@@ -2589,7 +2875,9 @@
       "path": "audio\\a9\\a9f88ff38eefc13a5af377a4f634e8605942f6419d2c2e5d4f468f629a07f3ca.mp3",
       "bytes": 132746,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/44-Linh Sensei - Teacher-7iUjM4919D20JYbu4ISi.mp3",
+    "sample_sha256": "a9f88ff38eefc13a5af377a4f634e8605942f6419d2c2e5d4f468f629a07f3ca"
   },
   {
     "name": "Zenson - Clear, Calm and Confident",
@@ -2607,7 +2895,9 @@
       "path": "audio\\83\\83955fd9cfe150948fbb81fbe2d77a38bfa36fb493eb6f83c5be869d0b8db737.mp3",
       "bytes": 179767,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/45-Zenson - Clear_ Calm and Confident-hfQXFFMygx7xoaljt9aE.mp3",
+    "sample_sha256": "83955fd9cfe150948fbb81fbe2d77a38bfa36fb493eb6f83c5be869d0b8db737"
   },
   {
     "name": "My - Soft and Warm Narrator",
@@ -2625,7 +2915,9 @@
       "path": "audio\\b9\\b936966bb2db37887036db67ceddd5708f164265f4fc2218f7057c2d83b0f7c5.mp3",
       "bytes": 121671,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/46-My - Soft and Warm Narrator-RmcV9cAq1TByxNSgbii7.mp3",
+    "sample_sha256": "b936966bb2db37887036db67ceddd5708f164265f4fc2218f7057c2d83b0f7c5"
   },
   {
     "name": "Son Tran - Casual and Conversational",
@@ -2643,7 +2935,9 @@
       "path": "audio\\ec\\eca08ab7dc16792880beac7248ae61c99fa4e94b6ffd83b31e386c31c5d77491.mp3",
       "bytes": 117864,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/47-Son Tran - Casual and Conversational-JxmKvRaNYFidf0N27Vng.mp3",
+    "sample_sha256": "eca08ab7dc16792880beac7248ae61c99fa4e94b6ffd83b31e386c31c5d77491"
   },
   {
     "name": "Xuan Hung - Vietnamese Documentary Male",
@@ -2661,7 +2955,9 @@
       "path": "audio\\13\\13e15d3f72742293b66d99060425440dc4a56419de73cc83fd406b924ffdcfa7.mp3",
       "bytes": 170464,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/48-Xuan Hung - Vietnamese Documentary Male-047Dj7L3DxuCp5mNG76T.mp3",
+    "sample_sha256": "13e15d3f72742293b66d99060425440dc4a56419de73cc83fd406b924ffdcfa7"
   },
   {
     "name": "Linh",
@@ -2679,7 +2975,9 @@
       "path": "audio\\ef\\ef6e3ef346992f7e4388f316f5c469710f1a4558199b84475b6e7ba3856d4435.mp3",
       "bytes": 158868,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/49-Linh-4jsOeH77EQG67sG0KIPH.mp3",
+    "sample_sha256": "ef6e3ef346992f7e4388f316f5c469710f1a4558199b84475b6e7ba3856d4435"
   },
   {
     "name": "Phan Anh - Clear, Confident, Composed",
@@ -2697,6 +2995,8 @@
       "path": "audio\\57\\571cc00ee113004872871c47093ffb0852234fafe5be71084465c9e0714b7e02.mp3",
       "bytes": 138982,
       "error": null
-    }
+    },
+    "sample_file": "vietnamese_primary_50/50-Phan Anh - Clear_ Confident_ Composed-mgBpvrNosWzExdPuRbXP.mp3",
+    "sample_sha256": "571cc00ee113004872871c47093ffb0852234fafe5be71084465c9e0714b7e02"
   }
 ]

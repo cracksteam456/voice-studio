@@ -7,37 +7,39 @@ import subprocess
 import tempfile
 import time
 import zipfile
-from urllib.request import urlretrieve
 
 import gradio as gr
 import numpy as np
 import soundfile as sf
 import torch
 
-VOICES = {
-    'Nam công nghệ': 'nam-cong-nghe',
-    'Minh Anh': 'minh-anh',
-    'Thanh niên tự tin': 'thanh-nien-tu-tin',
-    'Nam trầm ấm': 'nam-tram-am',
-    'Adam': 'adam',
-    'Ngọc Huyền': 'ngoc-huyen',
-    'Nhỏ Ngọt Ngào': 'nho-ngot-ngao',
-}
+if 'load_voice_pack' not in globals():
+    from voice_assets import load_voice_pack, GROUP_NAMES
+SAMPLE_ROOT, CATALOG = load_voice_pack()
+VOICES = {entry['voice_id']: entry for entry in CATALOG}
+DEFAULT_GROUP = 'Tiếng Việt · Top 50'
 LANGUAGES = {'Tiếng Việt': 'vi', 'English': 'en', '日本語': 'ja', '한국어': 'ko',
              '中文': 'zh', 'Français': 'fr', 'Deutsch': 'de', 'Español': 'es'}
-SAMPLE_ROOT = Path('samples')
-SAMPLE_ROOT.mkdir(exist_ok=True)
 PROMPTS = OrderedDict()
 SR = model.sampling_rate
 
 
-def sample_path(name):
-    if name not in VOICES:
+def sample_path(voice_id):
+    if voice_id not in VOICES:
         raise gr.Error('Chọn một giọng trong danh sách.')
-    path = SAMPLE_ROOT / (VOICES[name] + '.mp3')
-    if not path.exists():
-        urlretrieve('https://raw.githubusercontent.com/doanquangkien/voice-notebooks/main/samples/' + path.name, path)
-    return str(path)
+    return str(SAMPLE_ROOT / VOICES[voice_id]['sample_file'])
+
+
+def voice_choices(group, language):
+    return [(f"{v['rank']:02d} · {v['name']} [{v.get('primary_language') or '?'}]", v['voice_id'])
+            for v in CATALOG if (group == 'Tất cả' or GROUP_NAMES[v['group']] == group)
+            and (language == 'Tất cả' or v.get('primary_language') == language)]
+
+
+def filter_voices(group, language):
+    choices = voice_choices(group, language)
+    selected = choices[0][1] if choices else None
+    return gr.Dropdown(choices=choices, value=selected), sample_path(selected) if selected else None
 
 
 def import_text(path):
@@ -145,7 +147,8 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
         sf.write(wav, np.concatenate(audio_parts), SR, subtype='PCM_16')
         (output / 'kich-ban.txt').write_text(text, encoding='utf-8')
         (output / 'cac-doan.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
-        settings = dict(voice='Giọng riêng' if custom else name, language=language, speed=speed,
+        settings = dict(voice='Giọng riêng' if custom else VOICES[name]['name'],
+                        voice_id=None if custom else name, language=language, speed=speed,
                         pause=pause, steps=steps, guidance=guidance, denoise=denoise,
                         seed=seed, chunk_size=chunk_size, sample_rate=SR)
         (output / 'thiet-lap.json').write_text(json.dumps(settings, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -172,7 +175,7 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
 
 
 with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
-    gr.Markdown('# cracksteam456 Voice Studio\nTạo lời thuyết minh cho video · Phát triển bởi cracksteam456 · 7 giọng có sẵn hoặc giọng mẫu của bạn')
+    gr.Markdown('# cracksteam456 Voice Studio\n150 giọng hot · 50 tiếng Việt · 50 Trending · 50 được dùng nhiều')
     with gr.Row():
         with gr.Column(scale=3, min_width=280):
             script = gr.Textbox(label='Kịch bản', lines=12, placeholder='Dán nội dung cần đọc. Dùng dòng trống để tách đoạn.')
@@ -186,7 +189,12 @@ with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
             result = gr.Audio(label='Nghe kết quả', type='filepath', format='wav')
             files = gr.File(label='Tải WAV / MP3 / ZIP từng đoạn', file_count='multiple', interactive=False)
         with gr.Column(scale=2, min_width=280):
-            voice = gr.Dropdown(list(VOICES), value='Nam công nghệ', label='Giọng có sẵn')
+            with gr.Row():
+                group = gr.Dropdown(['Tất cả', *GROUP_NAMES.values()], value=DEFAULT_GROUP, label='Nhóm giọng')
+                voice_language = gr.Dropdown(['Tất cả', *sorted({v.get('primary_language') for v in CATALOG if v.get('primary_language')})],
+                                             value='Tất cả', label='Ngôn ngữ mẫu')
+            initial_choices = voice_choices(DEFAULT_GROUP, 'Tất cả')
+            voice = gr.Dropdown(initial_choices, value=initial_choices[0][1], label='Giọng trong bộ 150 mẫu', filterable=True)
             preview = gr.Button('Nghe giọng mẫu')
             sample = gr.Audio(label='Giọng mẫu có sẵn', interactive=False)
             with gr.Accordion('Dùng giọng mẫu riêng', open=False):
@@ -207,6 +215,9 @@ with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
     gr.Markdown('ZIP gồm WAV từng đoạn, kịch bản, thiết lập và mốc thời gian từng đoạn (không phải phụ đề theo từ). '
                 'File tạo ra nằm tạm trên Colab; tải về trước khi phiên kết thúc.')
     preview.click(sample_path, voice, sample, queue=False)
+    group.change(filter_voices, [group, voice_language], [voice, sample], queue=False)
+    voice_language.change(filter_voices, [group, voice_language], [voice, sample], queue=False)
+    voice.change(lambda selected: sample_path(selected) if selected else None, voice, sample, queue=False)
     load_text.click(import_text, text_file, script, queue=False)
     create.click(synthesize, [script, voice, custom, ref_text, lang, speed, pause, steps, guidance,
                              denoise, seed, chunk_size, mp3], [result, files, status], concurrency_limit=1)

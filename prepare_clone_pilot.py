@@ -77,6 +77,7 @@ def build_pilot_notebook(results):
     setup = source['cells'][1]
     startup = ''.join(source['cells'][3]['source'])
     experiment = (ROOT / 'run_clone_pilot.py').read_text(encoding='utf-8')
+    experiment = 'if model._asr_pipe is None:\n    model.load_asr_model()\n\n' + experiment
     evaluation = (ROOT / 'evaluate_clone_pilot.py').read_text(encoding='utf-8')
     experiment = 'CANDIDATES = ' + repr(results) + '\n\n' + experiment
     notebook = {'cells': [

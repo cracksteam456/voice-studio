@@ -19,9 +19,18 @@ Repo hiện là private. Nếu Colab không truy cập được repo private, t�
 1. Chọn runtime GPU T4.
 2. Chạy ô cài đặt, rồi **Runtime → Restart session**.
 3. Chạy ô nạp model, sau đó ô giao diện.
-4. Nhập nội dung, chọn giọng hoặc tải giọng mẫu riêng, rồi tạo WAV/MP3.
+4. Nạp bộ 150 mẫu từ GitHub Release hoặc ZIP trên máy, chọn giọng và tạo WAV/MP3.
 
-Giao diện có 7 lựa chọn mẫu từ upstream, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Các giọng catalog ElevenLabs chưa được thêm vào bộ chọn clone.
+Notebook kiểm tra thiết bị thực tế bằng PyTorch. Nếu Colab chỉ cấp CPU, model dùng float32 và vẫn có thể tổng hợp, nhưng chậm hơn T4. Whisper được tải khi cần chép giọng mẫu; điền đúng lời trong mẫu để tránh tải ASR. Sau khi ô cài đặt thay NumPy/SciPy, cần Restart session một lần trước khi nạp model.
+
+Giao diện dùng bộ **150 preview trong repo này**, có tìm giọng theo tên, lọc ba nhóm và ngôn ngữ mẫu, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ đầu ra, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Mặc định chọn nhóm 50 giọng tiếng Việt; không tải 7 mẫu từ repo cũ.
+
+Vì repo là private, có hai cách nạp bộ mẫu vào Colab:
+
+- Tự tải từ GitHub: đặt `GITHUB_TOKEN` trong Colab Secrets và cho notebook quyền truy cập secret. Token cần **Contents: Read** cho riêng repo `cracksteam456/voice-studio`. Nếu chưa đặt secret, notebook có ô nhập token ẩn; token không ghi vào file.
+- Không dùng token: để trống ô nhập rồi chọn `hot-voices-150.zip` đã tải từ Release. Gói chỉ khoảng 24 MB, nạp một lần mỗi máy ảo Colab. Đây là upload cục bộ, không cần gọi repo khác.
+
+Chạy trên checkout có `outputs/hot-voices/` sẽ dùng file cục bộ ngay. Catalog kiểm tra SHA256 và đường dẫn cả 150 mẫu trước khi mở giao diện. Muốn cập nhật gói: `python build_voice_pack.py`, rồi `python build_notebook.py`.
 
 Notebook chứa toàn bộ code giao diện nên không cần tải file `voice_studio.py` riêng. File Python đó là nguồn để sửa; chạy `python build_notebook.py` để cập nhật notebook. Model weights không được lưu trong repo; bộ 150 preview nằm riêng ở `outputs/hot-voices/`.
 
@@ -72,10 +81,10 @@ Công cụ chỉ gọi GET API Voice Library chính thức, lưu 3 danh sách v�
 ## Kiểm tra
 
 ```text
-python -m unittest test_voice_studio.py test_collect_catalog.py test_clone_pilot.py
+python -m unittest test_voice_assets.py test_voice_studio.py test_collect_catalog.py test_clone_pilot.py
 ```
 
-Các test CPU kiểm tra chia đoạn, input tùy chọn, phân trang và xử lý key. Tạo giọng cần runtime Colab và GPU. Đã thử giọng Nam công nghệ, Minh Anh, tải reference riêng và xuất WAV/MP3/ZIP trong phiên Colab trước; chưa thử đủ 7 giọng hoặc mọi ngôn ngữ.
+Các test CPU kiểm tra chia đoạn, input tùy chọn, phân trang và xử lý key. Tạo giọng chạy trên runtime Colab CPU hoặc GPU; CPU chậm hơn đáng kể. Đã thử bộ 10 giọng tiếng Việt và xuất WAV/MP3/ZIP ở các phiên trước; chưa chạy tổng hợp đủ 150 giọng hoặc mọi ngôn ngữ.
 
 ## Nguồn và quyền sử dụng
 
