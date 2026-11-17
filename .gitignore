@@ -18,3 +18,4 @@ pilot/**/preview.*
 pilot/**/reference*.txt
 pilot/results/
 pilot/**/transcription.json
+voice-library/archive/

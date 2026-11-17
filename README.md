@@ -37,6 +37,18 @@ Catalog chỉ chứa metadata và liên kết audio. Chưa nghe chấm chất l�
 
 ## Làm mới catalog
 
+### Tải toàn bộ preview khả dụng
+
+```text
+python download_voice_library.py
+```
+
+Cần `ELEVENLABS_API_KEY` trong môi trường để duyệt catalog chia sẻ. Công cụ duyệt `created_date` đến `has_more=false`, hợp metadata đã có, rồi tải preview chung và các preview ngôn ngữ/model. Không gọi TTS tạo audio mới. Phạm vi là danh mục chia sẻ API trả về tại thời điểm duyệt, không phải giọng riêng tư/toàn bộ nền tảng.
+
+Dữ liệu cục bộ ở `voice-library/archive/`: `inventory.sqlite` nối ID giọng/ngôn ngữ/model với URL và checksum; `audio/` chứa file gốc; `summary.json` ghi tiến độ. Chạy lại tiếp tục các URL pending. Audio trùng checksum dùng chung file. Tác vụ dừng khi có 401/403/429 hoặc dung lượng trống dưới 10 GiB; không tự chuyển tài khoản hay vượt giới hạn. File lỗi được giữ trạng thái failed để xem riêng, không tự retry vô hạn.
+
+Giữ thư mục archive ngoài Git. Tải được preview không xác nhận quyền clone/phân phối; trường quyền hiện vẫn là unknown. Công cụ chỉ kiểm tra dấu hiệu định dạng audio khi tải, không chạy benchmark hoặc tổng hợp thử.
+
 Mở `collect-voices.cmd` trên Windows để nhập API key ẩn, hoặc đặt `ELEVENLABS_API_KEY` trong môi trường rồi chạy:
 
 ```text
