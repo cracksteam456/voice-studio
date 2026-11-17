@@ -43,6 +43,8 @@ Catalog chỉ chứa metadata và liên kết audio. Chưa nghe chấm chất l�
 python download_voice_library.py
 ```
 
+Để tải ngay trong khi tiếp tục duyệt danh mục, chạy hai tiến trình: `python download_voice_library.py --catalog-only` (có API key) và `python download_voice_library.py --audio-only` (không cần key). Hai tiến trình dùng SQLite WAL, lưu tiến độ riêng trong `catalog-progress.json` và `summary.json`. Bộ tải ưu tiên preview đại diện của từng giọng trước các biến thể ngôn ngữ/model.
+
 Cần `ELEVENLABS_API_KEY` trong môi trường để duyệt catalog chia sẻ. Công cụ duyệt `created_date` đến `has_more=false`, hợp metadata đã có, rồi tải preview chung và các preview ngôn ngữ/model. Không gọi TTS tạo audio mới. Phạm vi là danh mục chia sẻ API trả về tại thời điểm duyệt, không phải giọng riêng tư/toàn bộ nền tảng.
 
 Dữ liệu cục bộ ở `voice-library/archive/`: `inventory.sqlite` nối ID giọng/ngôn ngữ/model với URL và checksum; `audio/` chứa file gốc; `summary.json` ghi tiến độ. Chạy lại tiếp tục các URL pending. Audio trùng checksum dùng chung file. Tác vụ dừng khi có 401/403/429 hoặc dung lượng trống dưới 10 GiB; không tự chuyển tài khoản hay vượt giới hạn. File lỗi được giữ trạng thái failed để xem riêng, không tự retry vô hạn.

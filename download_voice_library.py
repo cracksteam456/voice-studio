@@ -1,5 +1,6 @@
 """Resume official shared-catalog discovery and download available preview audio."""
 import concurrent.futures
+import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -60,9 +61,10 @@ def summary(db, phase, extra=None):
         'downloaded_bytes': db.execute("SELECT COALESCE(SUM(bytes),0) FROM downloads WHERE status='downloaded'").fetchone()[0],
         'catalog_complete': db.execute("SELECT value FROM state WHERE key='catalog_complete'").fetchone() == ('true',),
         'clone_permission': 'unknown', **(extra or {})}
-    temporary = ROOT / 'summary.json.part'
+    filename = 'catalog-progress.json' if phase == 'catalog' else 'summary.json'
+    temporary = ROOT / (filename + '.part')
     temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
-    temporary.replace(ROOT / 'summary.json')
+    temporary.replace(ROOT / filename)
     print(json.dumps(value, ensure_ascii=True), flush=True)
 
 
@@ -116,9 +118,15 @@ def fetch_audio(url):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument('--catalog-only', action='store_true')
+    modes.add_argument('--audio-only', action='store_true')
+    args = parser.parse_args()
     key = os.environ.get('ELEVENLABS_API_KEY')
     ROOT.mkdir(parents=True, exist_ok=True)
-    db = sqlite3.connect(ROOT / 'inventory.sqlite')
+    db = sqlite3.connect(ROOT / 'inventory.sqlite', timeout=60)
+    db.execute('PRAGMA journal_mode=WAL')
     db.executescript('''
       CREATE TABLE IF NOT EXISTS voices(owner TEXT,id TEXT,metadata TEXT,PRIMARY KEY(owner,id));
       CREATE TABLE IF NOT EXISTS downloads(url TEXT PRIMARY KEY,status TEXT,path TEXT,bytes INTEGER DEFAULT 0,sha256 TEXT,error TEXT);
@@ -131,7 +139,7 @@ def main():
             add_voice(db, voice)
         db.commit()
     done = db.execute("SELECT value FROM state WHERE key='catalog_complete'").fetchone() == ('true',)
-    if not done:
+    if not done and not args.audio_only:
         if not key:
             summary(db, 'needs_api_key')
             return 2
@@ -167,14 +175,26 @@ def main():
         else:
             summary(db, 'stopped', {'reason': '1000-page safety bound'})
             return 1
+    if args.catalog_only:
+        summary(db, 'catalog')
+        return 0
     summary(db, 'audio')
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
         while True:
             if shutil.disk_usage(ROOT).free < 10 * 1024**3:
                 summary(db, 'stopped', {'reason': 'Less than 10 GiB free space'})
                 return 1
-            rows = db.execute("SELECT url FROM downloads WHERE status='pending' LIMIT 30").fetchall()
+            # Download a representative preview per voice before language/model variants.
+            rows = db.execute("SELECT DISTINCT d.url FROM voices v JOIN downloads d "
+                              "ON d.url=json_extract(v.metadata,'$.preview_url') "
+                              "WHERE d.status='pending' LIMIT 30").fetchall()
             if not rows:
+                rows = db.execute("SELECT url FROM downloads WHERE status='pending' LIMIT 30").fetchall()
+            if not rows:
+                complete = db.execute("SELECT value FROM state WHERE key='catalog_complete'").fetchone() == ('true',)
+                if args.audio_only and not complete:
+                    time.sleep(2)
+                    continue
                 break
             futures = {pool.submit(fetch_audio, row[0]): row[0] for row in rows}
             stop = None
