@@ -1,0 +1,22 @@
+{
+  "fetched_at": "20261117T103929553845Z",
+  "rankings": [
+    {
+      "label": "trending-global",
+      "count": 1000,
+      "stopped": "requested_limit"
+    },
+    {
+      "label": "usage-global",
+      "count": 1000,
+      "stopped": "requested_limit"
+    },
+    {
+      "label": "trending-vi",
+      "count": 1000,
+      "stopped": "requested_limit"
+    }
+  ],
+  "unique_voices": 2274,
+  "audio_downloaded": false
+}

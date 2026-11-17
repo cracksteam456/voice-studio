@@ -1,0 +1,9 @@
+Các câu dưới đây do dự án đề xuất để thử, không phải câu tối ưu được OmniVoice chứng minh.
+Chỉ dùng để tạo/thu mẫu mới khi có quyền tương ứng. Với preview có sẵn, transcript phải là lời thực sự trong audio.
+Đo thời lượng thực tế và chọn câu hoàn chỉnh 3–10 giây; không ép tốc độ để vừa giới hạn.
+
+Tiếng Việt:
+Buổi sáng, nắng nhẹ qua cửa sổ. Tôi mở trang sách, lắng nghe câu chuyện và bắt đầu một ngày mới.
+
+English:
+Morning light comes through the window. I open a book, listen to the story, and begin a new day.
