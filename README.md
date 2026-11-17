@@ -23,6 +23,8 @@ Repo hiện là private. Nếu Colab không truy cập được repo private, t�
 
 Notebook kiểm tra thiết bị thực tế bằng PyTorch. Nếu Colab chỉ cấp CPU, model dùng float32 và vẫn có thể tổng hợp, nhưng chậm hơn T4. Whisper được tải khi cần chép giọng mẫu; điền đúng lời trong mẫu để tránh tải ASR. Sau khi ô cài đặt thay NumPy/SciPy, cần Restart session một lần trước khi nạp model.
 
+Giao diện hiện thiết bị và thời gian từng giai đoạn; CPU mặc định 16 bước thay vì 32. [Phép đo CPU thực tế](research/cpu-runtime-performance.md): câu ngắn với prompt đã cache vẫn mất khoảng 198 giây. Không bấm tạo nhiều lần khi đang xử lý vì các yêu cầu sẽ phải xếp hàng.
+
 Giao diện dùng bộ **150 preview trong repo này**, có tìm giọng theo tên, lọc ba nhóm và ngôn ngữ mẫu, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ đầu ra, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Mặc định chọn nhóm 50 giọng tiếng Việt; không tải 7 mẫu từ repo cũ.
 
 Vì repo là private, có hai cách nạp bộ mẫu vào Colab:

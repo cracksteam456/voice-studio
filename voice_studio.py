@@ -75,7 +75,7 @@ def split_text(text, limit):
     return chunks
 
 
-def get_prompt(name, custom, reference_text):
+def get_prompt(name, custom, reference_text, progress=gr.Progress()):
     reference_text = reference_text or ''
     path = custom if custom else sample_path(name)
     if not Path(path).is_file():
@@ -87,6 +87,10 @@ def get_prompt(name, custom, reference_text):
         kwargs = {'ref_audio': str(path)}
         if reference_text.strip():
             kwargs['ref_text'] = reference_text.strip()
+        elif not getattr(model, '_asr_pipe', None):
+            progress(0.02, desc='Tải Whisper để nhận dạng lời trong mẫu (chỉ lần đầu)…')
+            model.load_asr_model()
+        progress(0.06, desc='Mã hóa mẫu giọng (lần đầu cho giọng này)…')
         PROMPTS[key] = model.create_voice_clone_prompt(**kwargs)
         if len(PROMPTS) > 8:
             PROMPTS.popitem(last=False)
@@ -110,7 +114,10 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
     progress(0, desc='Chuẩn bị giọng mẫu…')
     started = time.monotonic()
     try:
-        prompt = get_prompt(name, custom, reference_text)
+        device = 'GPU' if torch.cuda.is_available() else 'CPU'
+        status = f'Khởi tạo mẫu giọng trên {device}…'
+        prompt = get_prompt(name, custom, reference_text, progress)
+        prompt_seconds = time.monotonic() - started
         config = OmniVoiceGenerationConfig(
             num_step=int(steps), guidance_scale=float(guidance), denoise=bool(denoise),
             preprocess_prompt=True, postprocess_output=True,
@@ -124,7 +131,8 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
             if int(seed) >= 0:
                 torch.manual_seed(int(seed))
             for index, chunk in enumerate(chunks):
-                progress(index / len(chunks), desc=f'Đang đọc đoạn {index + 1}/{len(chunks)}')
+                status = f'Đang đọc đoạn {index + 1}/{len(chunks)} trên {device}…'
+                progress(0.08 + index / len(chunks) * 0.88, desc=status)
                 audio = np.asarray(model.generate(
                     text=chunk, voice_clone_prompt=prompt, language=LANGUAGES[language],
                     speed=float(speed), generation_config=config,
@@ -132,6 +140,7 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
                 if not audio.size or not np.isfinite(audio).all():
                     raise RuntimeError(f'Âm thanh đoạn {index + 1} không hợp lệ.')
                 audio = np.clip(audio, -1, 1)
+                generation_seconds = time.monotonic() - started - prompt_seconds
                 segment = output / f'doan-{index + 1:03d}.wav'
                 sf.write(segment, audio, SR, subtype='PCM_16')
                 segment_files.append(segment)
@@ -168,7 +177,9 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
                 bundle.write(path, path.name)
         downloads.append(str(archive))
         progress(1, desc='Hoàn tất')
-        return str(wav), downloads, f'Đã tạo {cursor:.1f} giây • {len(chunks)} đoạn • {time.monotonic() - started:.1f} giây xử lý.{export_notice}'
+        return str(wav), downloads, (f'Hoàn tất trên {device} • audio {cursor:.1f} giây • '
+            f'{prompt_seconds:.1f} giây chuẩn bị mẫu • {generation_seconds:.1f} giây tạo giọng • '
+            f'{len(chunks)} đoạn.{export_notice}')
     except torch.cuda.OutOfMemoryError:
         torch.cuda.empty_cache()
         raise gr.Error('GPU hết bộ nhớ. Giảm độ dài mỗi đoạn hoặc khởi động lại phiên.') from None
@@ -176,6 +187,8 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
 
 with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
     gr.Markdown('# cracksteam456 Voice Studio\n150 giọng hot · 50 tiếng Việt · 50 Trending · 50 được dùng nhiều')
+    gr.Textbox(label='Thiết bị xử lý', interactive=False,
+               value=torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU · không có GPU · tạo giọng có thể mất vài phút mỗi câu')
     with gr.Row():
         with gr.Column(scale=3, min_width=280):
             script = gr.Textbox(label='Kịch bản', lines=12, placeholder='Dán nội dung cần đọc. Dùng dòng trống để tách đoạn.')
@@ -207,7 +220,7 @@ with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
             pause = gr.Slider(0, 2, value=0.3, step=0.1, label='Khoảng nghỉ giữa các đoạn (giây)')
             mp3 = gr.Checkbox(value=True, label='Xuất thêm MP3')
             with gr.Accordion('Chất lượng và văn bản dài', open=False):
-                steps = gr.Radio([16, 32, 64], value=32, label='Số bước (16 nhanh · 32 cân bằng · 64 chậm hơn)')
+                steps = gr.Radio([16, 32, 64], value=32 if torch.cuda.is_available() else 16, label='Số bước (16 nhanh · 32 cân bằng · 64 chậm hơn)')
                 guidance = gr.Slider(1, 4, value=1.8, step=0.1, label='Guidance — mức bám giọng mẫu')
                 denoise = gr.Checkbox(value=True, label='Giảm nhiễu giọng đọc')
                 chunk_size = gr.Slider(150, 1000, value=400, step=50, label='Độ dài tối đa mỗi đoạn (ký tự)')
