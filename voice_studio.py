@@ -171,8 +171,8 @@ def synthesize(text, name, custom, reference_text, language, speed, pause,
         raise gr.Error('GPU hết bộ nhớ. Giảm độ dài mỗi đoạn hoặc khởi động lại phiên.') from None
 
 
-with gr.Blocks(title='Voice Studio — Giọng đọc tiếng Việt') as demo:
-    gr.Markdown('# Voice Studio\nTạo lời thuyết minh cho video · 7 giọng có sẵn hoặc giọng mẫu của bạn')
+with gr.Blocks(title='cracksteam456 Voice Studio') as demo:
+    gr.Markdown('# cracksteam456 Voice Studio\nTạo lời thuyết minh cho video · Phát triển bởi cracksteam456 · 7 giọng có sẵn hoặc giọng mẫu của bạn')
     with gr.Row():
         with gr.Column(scale=3, min_width=280):
             script = gr.Textbox(label='Kịch bản', lines=12, placeholder='Dán nội dung cần đọc. Dùng dòng trống để tách đoạn.')

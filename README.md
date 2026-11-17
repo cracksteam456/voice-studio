@@ -1,4 +1,6 @@
-# Voice Studio
+# cracksteam456 Voice Studio
+
+Phát triển và duy trì bởi **[cracksteam456](https://github.com/cracksteam456)** tại **[cracksteam456/voice-studio](https://github.com/cracksteam456/voice-studio)**. Đây là repo độc lập của cracksteam456.
 
 Giao diện tiếng Việt chạy trên Google Colab với OmniVoice: chọn giọng, nhập kịch bản, tạo và tải âm thanh cho video.
 
@@ -21,7 +23,7 @@ Repo hiện là private. Nếu Colab không truy cập được repo private, t�
 
 Giao diện có 7 lựa chọn mẫu từ upstream, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Các giọng catalog ElevenLabs chưa được thêm vào bộ chọn clone.
 
-Notebook chứa toàn bộ code giao diện nên không cần tải file `voice_studio.py` riêng. File Python đó là nguồn để sửa; chạy `python build_notebook.py` để cập nhật notebook. Model weights và audio không được lưu trong repo này.
+Notebook chứa toàn bộ code giao diện nên không cần tải file `voice_studio.py` riêng. File Python đó là nguồn để sửa; chạy `python build_notebook.py` để cập nhật notebook. Model weights không được lưu trong repo; bộ 150 preview nằm riêng ở `outputs/hot-voices/`.
 
 ## Kế hoạch clone
 
@@ -77,6 +79,4 @@ Các test CPU kiểm tra chia đoạn, input tùy chọn, phân trang và xử l
 
 ## Nguồn và quyền sử dụng
 
-Giao diện ban đầu được phát triển từ notebook [doanquangkien/voice-notebooks](https://github.com/doanquangkien/voice-notebooks). Các lựa chọn giọng có sẵn vẫn tải mẫu từ upstream khi người dùng chọn. Không sao chép các file mẫu đó vào repo này; sự hiện diện công khai của mẫu không tự cấp quyền clone hoặc phân phối lại.
-
-OmniVoice: [k2-fsa/OmniVoice](https://github.com/k2-fsa/OmniVoice), package đang khóa 0.2.1. Giấy phép code/model, quyền giọng nói và điều khoản dịch vụ nguồn là các phạm vi riêng. Chưa gán giấy phép mở chung cho repo vì quyền của mọi tài sản upstream chưa được xác nhận.
+Thông tin nguồn notebook ban đầu, model OmniVoice và các mẫu giọng được ghi trong [ATTRIBUTION.md](ATTRIBUTION.md). Tên hiển thị và phần phát triển của dự án là **cracksteam456 Voice Studio**. Chưa gán giấy phép mở chung cho mọi tài sản trong repo.

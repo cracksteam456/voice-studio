@@ -14,7 +14,9 @@ if "if 'model' not in globals():" not in startup:
         "if 'model' not in globals():\n    model = OmniVoice.from_pretrained('k2-fsa/OmniVoice', device_map=device, dtype=torch.float16, load_asr=True)",
     )
 notebook['cells'][0]['source'] = [
-    '# Voice Studio — Bản riêng\n',
+    '# cracksteam456 Voice Studio\n',
+    '\n',
+    'Phát triển và duy trì bởi [cracksteam456](https://github.com/cracksteam456/voice-studio).\n',
     '\n',
     '7 giọng có sẵn · tải giọng mẫu riêng · nhập TXT · chỉnh tốc độ và khoảng nghỉ · WAV/MP3 · ZIP từng đoạn.\n',
     '\n',
@@ -27,6 +29,7 @@ notebook['cells'][0]['source'] = [
     'Giữ Colab hoạt động khi dùng link giao diện. Các file âm thanh là file tạm; tải về trước khi ngắt phiên.\n',
 ]
 notebook['cells'][3]['source'] = startup.splitlines(keepends=True)
+notebook['metadata']['authors'] = [{'name': 'cracksteam456'}]
 notebook['cells'] = notebook['cells'][:4]
 notebook['cells'].extend([
     {'cell_type': 'markdown', 'metadata': {}, 'source': ['## Mở Voice Studio\n', 'Chạy sau khi ô model hoàn tất. Có thể chạy lại ô này để mở lại giao diện mà không tải lại model.']},

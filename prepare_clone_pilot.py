@@ -81,7 +81,7 @@ def build_pilot_notebook(results):
     experiment = 'CANDIDATES = ' + repr(results) + '\n\n' + experiment
     notebook = {'cells': [
         {'cell_type': 'markdown', 'metadata': {}, 'source': [
-            '# Voice Studio — Thử nghiệm 10 giọng tiếng Việt\n',
+            '# cracksteam456 Voice Studio — Thử nghiệm 10 giọng tiếng Việt\n',
             'Chạy ô cài đặt, Restart session, sau đó chạy ô model và ô thử nghiệm.\n',
             'Dùng preview gốc để đánh giá kỹ thuật; quyền clone ngoài ElevenLabs chưa xác minh. '
             'Kết quả không tự được thêm vào thư viện phát hành. Mẫu được chọn theo mốc câu từ Whisper, cần nghe kiểm tra lại.\n']},
