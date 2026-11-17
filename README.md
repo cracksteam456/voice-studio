@@ -39,6 +39,8 @@ Catalog chỉ chứa metadata và liên kết audio. Chưa nghe chấm chất l�
 
 ### Tải toàn bộ preview khả dụng
 
+**Phạm vi đang ưu tiên: giọng hot.** Dùng `python download_voice_library.py --hot-only` để chỉ hoàn tất mẫu đại diện của 3 shortlist top 50 (Trending toàn cầu, usage toàn cầu, tiếng Việt). Tác vụ này tái sử dụng file đã tải và dừng khi hoàn tất shortlist; không tiếp tục hàng đợi toàn bộ. Kết quả ánh xạ trong `voice-library/archive/hot-voices.json`.
+
 ```text
 python download_voice_library.py
 ```

@@ -122,6 +122,7 @@ def main():
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument('--catalog-only', action='store_true')
     modes.add_argument('--audio-only', action='store_true')
+    modes.add_argument('--hot-only', action='store_true', help='Only representative previews from the three top-50 shortlists')
     args = parser.parse_args()
     key = os.environ.get('ELEVENLABS_API_KEY')
     ROOT.mkdir(parents=True, exist_ok=True)
@@ -133,13 +134,24 @@ def main():
       CREATE TABLE IF NOT EXISTS links(owner TEXT,id TEXT,url TEXT,language TEXT,model TEXT,PRIMARY KEY(owner,id,url,language,model));
       CREATE TABLE IF NOT EXISTS state(key TEXT PRIMARY KEY,value TEXT);
     ''')
+    if args.hot_only:
+        shortlist = ROOT.parent / 'snapshots/20261117T103929553845Z/shortlists.json'
+        groups = json.loads(shortlist.read_text(encoding='utf-8'))
+        db.execute('CREATE TEMP TABLE hot_urls(url TEXT PRIMARY KEY)')
+        for entries in groups.values():
+            for voice in entries:
+                url = voice.get('preview_url')
+                if url and safe_url(url):
+                    db.execute('INSERT OR IGNORE INTO hot_urls VALUES(?)', (url,))
+                    db.execute("INSERT OR IGNORE INTO downloads(url,status) VALUES(?,'pending')", (url,))
+        db.commit()
     if not db.execute('SELECT 1 FROM voices LIMIT 1').fetchone():
         original = ROOT.parent / 'snapshots/20261117T103929553845Z/catalog.json'
         for voice in json.loads(original.read_text(encoding='utf-8')):
             add_voice(db, voice)
         db.commit()
     done = db.execute("SELECT value FROM state WHERE key='catalog_complete'").fetchone() == ('true',)
-    if not done and not args.audio_only:
+    if not done and not (args.audio_only or args.hot_only):
         if not key:
             summary(db, 'needs_api_key')
             return 2
@@ -185,11 +197,15 @@ def main():
                 summary(db, 'stopped', {'reason': 'Less than 10 GiB free space'})
                 return 1
             # Download a representative preview per voice before language/model variants.
-            rows = db.execute("SELECT DISTINCT d.url FROM voices v JOIN downloads d "
-                              "ON d.url=json_extract(v.metadata,'$.preview_url') "
-                              "WHERE d.status='pending' LIMIT 30").fetchall()
-            if not rows:
-                rows = db.execute("SELECT url FROM downloads WHERE status='pending' LIMIT 30").fetchall()
+            if args.hot_only:
+                rows = db.execute("SELECT d.url FROM downloads d JOIN hot_urls h ON h.url=d.url "
+                                  "WHERE d.status='pending' LIMIT 30").fetchall()
+            else:
+                rows = db.execute("SELECT DISTINCT d.url FROM voices v JOIN downloads d "
+                                  "ON d.url=json_extract(v.metadata,'$.preview_url') "
+                                  "WHERE d.status='pending' LIMIT 30").fetchall()
+                if not rows:
+                    rows = db.execute("SELECT url FROM downloads WHERE status='pending' LIMIT 30").fetchall()
             if not rows:
                 complete = db.execute("SELECT value FROM state WHERE key='catalog_complete'").fetchone() == ('true',)
                 if args.audio_only and not complete:
@@ -209,7 +225,19 @@ def main():
             if stop:
                 summary(db, 'stopped', {'reason': stop + '; no account rotation or automatic bypass'})
                 return 1
-    summary(db, 'finished')
+    if args.hot_only:
+        selection = []
+        for group, entries in groups.items():
+            for voice in entries:
+                result = db.execute('SELECT status,path,bytes,error FROM downloads WHERE url=?',
+                                    (voice.get('preview_url'),)).fetchone()
+                selection.append({**voice, 'group': group,
+                    'download': dict(zip(('status','path','bytes','error'), result)) if result else None})
+        (ROOT / 'hot-voices.json').write_text(json.dumps(selection, ensure_ascii=False, indent=2), encoding='utf-8')
+        counts = dict(db.execute('SELECT d.status,COUNT(*) FROM downloads d JOIN hot_urls h ON h.url=d.url GROUP BY d.status'))
+        summary(db, 'hot_finished', {'hot_status_counts': counts, 'all_audio_complete': False})
+    else:
+        summary(db, 'finished')
     return 0
 
 
