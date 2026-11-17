@@ -6,7 +6,8 @@ __pycache__/
 .venv/
 venv/
 samples/
-outputs/
+outputs/*
+!outputs/hot-voices/
 *.wav
 *.mp3
 *.flac
@@ -19,3 +20,8 @@ pilot/**/reference*.txt
 pilot/results/
 pilot/**/transcription.json
 voice-library/archive/
+!outputs/hot-voices/**/*.mp3
+!outputs/hot-voices/**/*.wav
+!outputs/hot-voices/**/*.ogg
+!outputs/hot-voices/**/*.flac
+!outputs/hot-voices/**/*.m4a

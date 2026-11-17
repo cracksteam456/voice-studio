@@ -2,6 +2,12 @@
 
 Giao diện tiếng Việt chạy trên Google Colab với OmniVoice: chọn giọng, nhập kịch bản, tạo và tải âm thanh cho video.
 
+## Bộ 150 mẫu giọng hot
+
+Đã lưu 150 preview đại diện trong [outputs/hot-voices](outputs/hot-voices), chia thành ba nhóm top 50: Trending toàn cầu, lượt sử dụng toàn cầu và tiếng Việt. [Catalog](outputs/hot-voices/catalog.json) giữ nguồn, ID, thứ hạng và trạng thái quyền sử dụng; [trang nghe](outputs/hot-voices/listen.html) dùng sau khi clone hoặc tải thư mục về máy. GitHub hiển thị mã HTML, không chạy trang nghe trực tiếp.
+
+Gói ZIP tải sẵn nằm trong [GitHub Releases](https://github.com/cracksteam456/voice-studio/releases). Đây là snapshot preview gốc, không phải model giọng và chưa xác minh quyền clone/phân phối bên ngoài ElevenLabs. Bộ 150 mẫu này được lưu riêng trong repo private theo yêu cầu; archive toàn bộ và audio thử clone vẫn bị loại khỏi Git.
+
 [Mở notebook trong Colab](https://colab.research.google.com/github/cracksteam456/voice-studio/blob/main/colab_nam-cong-nghe-ban-rieng.ipynb)
 
 Repo hiện là private. Nếu Colab không truy cập được repo private, tải file `.ipynb` về rồi dùng **File → Upload notebook** trong Colab. Không cần công khai repo để sử dụng.
