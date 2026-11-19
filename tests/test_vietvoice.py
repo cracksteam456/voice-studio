@@ -239,7 +239,7 @@ class NotebookTests(unittest.TestCase):
                      and any(isinstance(t, ast.Name) and t.id == "FILES" for t in n.targets))
         for name, content in files.items():
             self.assertEqual(content, (ROOT / name).read_text(encoding="utf-8"))
-        self.assertEqual(set(files), {"voice_core.py", "engine.py", "colab_ui.py", "reference_library.py"})
+        self.assertEqual(set(files), {"voice_core.py", "engine.py", "colab_ui.py", "reference_library.py", "prompt_pack.py"})
         self.assertNotIn("launch_app", "\n".join(code_cells))
         self.assertNotIn("share=True", "\n".join(code_cells))
 

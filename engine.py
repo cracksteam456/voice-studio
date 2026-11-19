@@ -2,7 +2,6 @@
 
 from pathlib import Path
 from collections import OrderedDict
-import hashlib
 import tempfile
 import threading
 import time
@@ -11,8 +10,7 @@ import uuid
 import soundfile as sf
 
 from voice_core import Settings, join_audio, read_reference, split_text
-
-MODEL_ID = "k2-fsa/OmniVoice"
+from prompt_pack import MODEL_ID, MODEL_REVISION, audio_key, load_prompt
 
 
 class VoiceEngine:
@@ -25,6 +23,11 @@ class VoiceEngine:
         self._output = getattr(previous, "_output", None) or tempfile.TemporaryDirectory(prefix="vietvoice-")
         self._prompts = getattr(previous, "_prompts", OrderedDict())
         self._prompt_model = getattr(previous, "_prompt_model", None)
+        self._saved_prompts = getattr(previous, "_saved_prompts", {})
+
+    def use_prepared_library(self, library):
+        self._saved_prompts = {entry["prompt_key"]: entry["prompt_path"] for entry in library
+                               if entry.get("prompt_key") and entry.get("prompt_path")}
 
     @property
     def output_dir(self) -> str:
@@ -36,6 +39,7 @@ class VoiceEngine:
         try:
             import torch
             from omnivoice import OmniVoice
+            from huggingface_hub import snapshot_download
         except ImportError as exc:
             raise RuntimeError("Chưa đủ thư viện AI. Hãy cài requirements.txt và PyTorch theo README.") from exc
         device = self.device
@@ -49,12 +53,44 @@ class VoiceEngine:
             if major < 7:
                 raise RuntimeError("GPU này quá cũ. Hãy dùng Colab T4 hoặc chạy với --device cpu.")
         self.model = OmniVoice.from_pretrained(
-            MODEL_ID,
+            snapshot_download(MODEL_ID, revision=MODEL_REVISION),
             device_map=device,
             dtype=torch.float32 if device == "cpu" else torch.float16,
             load_asr=False,
             asr_device="cpu",
         )
+
+    def _get_prompt(self, ref_audio, transcript, settings, report):
+        import torch
+
+        if self._prompt_model is not self.model:
+            self._prompts.clear()
+            self._prompt_model = self.model
+        key = audio_key(ref_audio, transcript)
+        if key in self._prompts:
+            prompt = self._prompts[key]
+            self._prompts.move_to_end(key)
+            report(0.05, "Dùng giọng đã lưu — bỏ qua phân tích mẫu.")
+            return prompt
+        if key in self._saved_prompts:
+            if MODEL_REVISION not in str(getattr(getattr(self.model, "config", None), "_name_or_path", "")):
+                raise ValueError("Checkpoint mô hình khác gói prompt; khởi động lại phiên và chạy ô 1–3.")
+            report(0.05, "Dùng prompt GitHub đã phân tích sẵn — không chạy Whisper.")
+            prompt = load_prompt(self._saved_prompts[key])
+        else:
+            report(0.05, "Phân tích giọng lần đầu; kết quả sẽ được lưu trong phiên…")
+            cuda_devices = ([torch.cuda.current_device()]
+                            if str(self.model.device).startswith("cuda") else [])
+            # Keep prompt preparation from shifting synthesis RNG on cache hits.
+            with torch.random.fork_rng(devices=cuda_devices), torch.inference_mode():
+                torch.manual_seed(int(settings.seed))
+                prompt = self.model.create_voice_clone_prompt(
+                    ref_audio=ref_audio, ref_text=transcript.strip() or None,
+                )
+        self._prompts[key] = prompt
+        if len(self._prompts) > 200:
+            self._prompts.popitem(last=False)
+        return prompt
 
     def synthesize(self, text: str, reference: str, transcript: str,
                    settings: Settings, report=None) -> tuple[str, str]:
@@ -74,26 +110,7 @@ class VoiceEngine:
 
             cuda_devices = ([torch.cuda.current_device()]
                             if str(self.model.device).startswith("cuda") else [])
-            if self._prompt_model is not self.model:
-                self._prompts.clear()
-                self._prompt_model = self.model
-            audio, sample_rate = ref_audio
-            key = (hashlib.sha256(audio.tobytes()).digest(), sample_rate, transcript.strip())
-            if key in self._prompts:
-                prompt = self._prompts[key]
-                self._prompts.move_to_end(key)
-                report(0.05, "Dùng giọng đã lưu — bỏ qua phân tích mẫu.")
-            else:
-                report(0.05, "Phân tích giọng lần đầu; kết quả sẽ được lưu trong phiên…")
-                # Keep prompt preparation from shifting synthesis RNG on cache hits.
-                with torch.random.fork_rng(devices=cuda_devices), torch.inference_mode():
-                    torch.manual_seed(int(settings.seed))
-                    prompt = self.model.create_voice_clone_prompt(
-                        ref_audio=ref_audio, ref_text=transcript.strip() or None,
-                    )
-                self._prompts[key] = prompt
-                if len(self._prompts) > 200:
-                    self._prompts.popitem(last=False)
+            prompt = self._get_prompt(ref_audio, transcript, settings, report)
             random_context = torch.random.fork_rng(devices=cuda_devices)
             with random_context, torch.inference_mode():
                 torch.manual_seed(int(settings.seed))
@@ -126,5 +143,6 @@ class VoiceEngine:
 
     def close(self):
         self._prompts.clear()
+        self._saved_prompts.clear()
         self._prompt_model = None
         self._output.cleanup()

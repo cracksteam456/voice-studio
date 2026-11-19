@@ -16,6 +16,32 @@ lại. Cache theo nội dung audio và lời mẫu, nên tải lại cùng tệp
 dùng được; thay tệp/lời mẫu sẽ phân tích mới. Chạy lại ô 2 hoặc ô 3 giữ cache và mô hình;
 khởi động lại/xóa runtime sẽ mất cache. Lần đầu dùng một giọng mới vẫn cần phân tích.
 
+### Lưu prompt đã phân tích để dùng qua nhiều phiên
+
+OmniVoice hỗ trợ lưu `VoiceClonePrompt` gồm token âm thanh, lời nhận dạng và RMS.
+VietVoice có thể tải các prompt này từ GitHub Release ở ô 2 để bỏ qua Whisper và mã hóa mẫu
+ngay từ lần chọn giọng đầu tiên của phiên mới. Gói chỉ dùng với OmniVoice 0.2.1 và checkpoint
+`c5fdb5ccb189668d56333f77ba2629f4cd7535f4`; mỗi mẫu/prompt đều có checksum.
+Đổi âm thanh, lời mẫu hoặc checkpoint sẽ không dùng nhầm prompt cũ.
+
+Chuẩn bị gói thật một lần bằng
+[Prepare_Voice_Prompts_Colab.ipynb](https://colab.research.google.com/github/cracksteam456/voice-studio/blob/main/Prepare_Voice_Prompts_Colab.ipynb).
+Chạy bốn ô trên T4. Ô 3 nhận dạng bằng GPU, lưu tiến độ sau từng giọng;
+chạy lại ô đó sẽ bỏ qua các giọng đã hoàn thành trong cùng runtime. Ô 4 tải ZIP kết quả.
+Notebook chỉ xuất 158 giọng trong thư viện, không thu thập giọng người dùng tải lên.
+
+Sau khi kiểm tra đủ 158 giọng trong manifest, đưa gói kết quả lên repo:
+
+```text
+gh release create vietvoice-prompts-v1 vietvoice-prompts.zip --repo cracksteam456/voice-studio --target main --title "158 prepared voice prompts" --notes "OmniVoice 0.2.1; checkpoint c5fdb5ccb189668d56333f77ba2629f4cd7535f4" --latest=false
+```
+
+Đặt dữ liệu nhị phân ở Release để tránh tăng lịch sử Git. Notebook dùng tên asset cố định
+`vietvoice-prompts.zip`, đọc tensor với `weights_only=True` trên CPU và kiểm tra phiên bản,
+đường dẫn, kích thước, checksum trước khi dùng. Không cần token trong Colab.
+Nếu release chưa có, notebook nói rõ và tiếp tục với cache trong phiên; việc có mã hỗ trợ
+không có nghĩa 158 prompt thật đã được tạo. Bộ prompt này không bao gồm trọng số mô hình TTS.
+
 Nếu gặp `OSError ... torchcodec ... undefined symbol: torch_list_size`, đó là TorchCodec
 cài sẵn của Colab không khớp PyTorch 2.8. Notebook mới cài riêng **TorchCodec 0.7.0 CPU**
 và kiểm tra import trong một tiến trình mới ngay ở ô 1. Chạy lại ô 1, khởi động lại

@@ -20,7 +20,7 @@ def cell(kind, source):
 def build():
     requirements = (ROOT / "requirements.txt").read_text(encoding="utf-8")
     files = {name: (ROOT / name).read_text(encoding="utf-8")
-             for name in ("voice_core.py", "engine.py", "colab_ui.py", "reference_library.py")}
+             for name in ("voice_core.py", "engine.py", "colab_ui.py", "reference_library.py", "prompt_pack.py")}
     setup = '''
         #@title 1. Cài thư viện (chạy một lần trên phiên mới)
         import importlib.metadata as metadata
@@ -88,15 +88,17 @@ def build():
         "import torch\n"
         "from omnivoice import OmniVoice\n"
         "from transformers import AutoFeatureExtractor\n"
-        "import voice_core, engine, reference_library\n"
-        "for module in (voice_core, engine, reference_library):\n"
+        "import voice_core, prompt_pack, engine, reference_library\n"
+        "for module in (voice_core, prompt_pack, engine, reference_library):\n"
         "    importlib.reload(module)\n"
         "from engine import VoiceEngine\n"
         "from reference_library import load_library\n"
+        "from prompt_pack import download_prompts\n"
         "if not torch.cuda.is_available():\n"
         "    raise RuntimeError('Chưa có GPU. Chọn Runtime → Change runtime type → T4 GPU.')\n"
         "voice_engine = VoiceEngine('cuda', previous=globals().get('voice_engine'))\n"
-        "voice_library = load_library()\n"
+        "voice_library = download_prompts(load_library())\n"
+        "voice_engine.use_prepared_library(voice_library)\n"
         "print('GPU:', torch.cuda.get_device_name(0))\n"
         "print('Sẵn sàng. Trọng số sẽ tải khi bạn tạo giọng lần đầu.')\n"
     )
@@ -144,6 +146,8 @@ def build():
                 Lần tạo đầu tiên sẽ tải trọng số từ Hugging Face.
                 Mỗi giọng chỉ phân tích lần đầu trong phiên. Đổi giọng rồi quay lại, sửa nội dung,
                 tốc độ hoặc số bước sẽ dùng giọng đã lưu; đổi tệp mẫu/lời mẫu sẽ phân tích lại.
+                Khi gói prompt GitHub đã được xuất bản, ô 2 tải cả prompt tương thích để bỏ qua
+                nhận dạng và mã hóa giọng ngay từ lần dùng đầu tiên trong phiên mới.
             '''),
             cell("code", '''
                 #@title 3. Mở giao diện VietVoice Studio
@@ -183,6 +187,42 @@ def build():
     target = ROOT / "VietVoice_Studio_Colab.ipynb"
     target.write_text(json.dumps(notebook, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Created {target.name}: {len(notebook['cells'])} cells")
+    preparation = {
+        **notebook,
+        "cells": [
+            cell("markdown", '''
+                # Phân tích một lần và xuất toàn bộ 158 giọng
+                Notebook quản trị: chạy trên **Colab T4** để tạo prompt lưu lâu dài cho thư viện công khai.
+                Chạy lần lượt bốn ô mã. Ô 3 dùng Whisper trên GPU, mã hóa từng mẫu và lưu tiến độ
+                sau từng giọng vào `/content/vietvoice-prepared`. Chạy lại ô 3 sẽ tiếp tục phần còn thiếu.
+                Không xử lý hoặc xuất giọng tự tải lên của bạn.
+
+                Khi xong, ô 4 tải `vietvoice-prompts.zip` về máy. Đưa gói lên GitHub Release
+                **vietvoice-prompts-v1** của **cracksteam456/voice-studio** với đúng tên asset đó.
+                Notebook tạo giọng sẽ tự tải prompt ở ô 2 và bỏ qua phân tích mẫu.
+                Không có token GitHub trong notebook. Xóa runtime sẽ mất phần chuẩn bị chưa tải về.
+            '''),
+            cell("code", setup),
+            cell("code", extract),
+            cell("code", '''
+                #@title 3. Phân tích và xuất 158 prompt (dùng GPU)
+                from prompt_pack import prepare_pack
+
+                voice_engine._load_model()
+                # Tải Whisper lên GPU cho đợt chuẩn bị; không tạo 158 bản đọc thử.
+                voice_engine.model.load_asr_model(device="cuda:0")
+                prompt_archive = prepare_pack(voice_engine, voice_library)
+            '''),
+            cell("code", '''
+                #@title 4. Tải gói đã phân tích
+                from google.colab import files
+                files.download(prompt_archive)
+            '''),
+        ],
+    }
+    preparation_target = ROOT / "Prepare_Voice_Prompts_Colab.ipynb"
+    preparation_target.write_text(json.dumps(preparation, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Created {preparation_target.name}: {len(preparation['cells'])} cells")
     return notebook
 
 
