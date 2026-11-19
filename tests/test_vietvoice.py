@@ -127,6 +127,24 @@ class PipelineTests(unittest.TestCase):
 
 
 class NotebookTests(unittest.TestCase):
+    def test_setup_repairs_incompatible_preinstalled_torchcodec(self):
+        import importlib.metadata
+        import subprocess
+        notebook = json.loads((ROOT / "VietVoice_Studio_Colab.ipynb").read_text(encoding="utf-8"))
+        setup = next("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
+        versions = {"torch": "2.8.0+cu128", "torchaudio": "2.8.0+cu128",
+                    "torchvision": "0.23.0+cu128", "torchcodec": "0.17.0+cu130"}
+        with patch("importlib.util.find_spec", return_value=object()), \
+                patch("importlib.metadata.version", side_effect=lambda name: versions[name]), \
+                patch("subprocess.run", return_value=SimpleNamespace(returncode=0, stdout="Tesla T4\n")), \
+                patch("subprocess.check_call") as install, patch.object(Path, "write_text"):
+            exec(compile(setup, "colab-setup", "exec"), {})
+        commands = [call.args[0] for call in install.call_args_list]
+        codec = [command for command in commands if "torchcodec==0.7.0" in command]
+        self.assertEqual(len(codec), 1, "Repair TorchCodec even when torch/torchaudio are already pinned")
+        self.assertIn("https://download.pytorch.org/whl/cpu", codec[0])
+        self.assertIn("--no-deps", codec[0])
+
     def test_embedded_sources_match_and_cells_compile(self):
         notebook = json.loads((ROOT / "VietVoice_Studio_Colab.ipynb").read_text(encoding="utf-8"))
         code_cells = ["".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code"]

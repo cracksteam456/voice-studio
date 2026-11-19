@@ -126,6 +126,15 @@ def build_ui(engine=None, library=None):
             progress.bar_style = "danger"
             with output:
                 print(str(exc))
+        except OSError as exc:
+            message = str(exc).lower()
+            if "torchcodec" in message or "undefined symbol" in message:
+                status.value = "Lỗi thư viện giải mã âm thanh. Chạy lại ô 1, khởi động lại phiên, rồi chạy ô 2 và 3."
+            else:
+                status.value = "Không đọc/ghi được âm thanh. Hãy thử giọng mẫu khác hoặc chạy lại ô 2."
+            progress.bar_style = "danger"
+            with output:
+                print(status.value)
         except Exception as exc:
             status.value = "Chưa tạo được giọng. Kiểm tra kết nối tải mô hình và bộ nhớ GPU."
             progress.bar_style = "danger"

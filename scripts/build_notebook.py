@@ -58,6 +58,18 @@ def build():
         subprocess.check_call([
             sys.executable, "-m", "pip", "install", "-r", "vietvoice-requirements.txt"
         ])
+        # Colab's preinstalled TorchCodec may target a different PyTorch ABI.
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", "--only-binary=:all:", "--no-deps",
+            "--force-reinstall", "torchcodec==0.7.0",
+            "--index-url", "https://download.pytorch.org/whl/cpu",
+        ])
+        codec_probe = subprocess.run(
+            [sys.executable, "-c", "from torchcodec.decoders import AudioDecoder"],
+            capture_output=True, text=True,
+        )
+        if codec_probe.returncode:
+            raise RuntimeError("TorchCodec chưa khớp PyTorch. Khởi động lại phiên rồi chạy lại ô 1.")
         print("Đã cài xong. Nếu Colab yêu cầu khởi động lại phiên, khởi động lại rồi chạy ô 2 và 3.")
     '''
     setup = "REQUIREMENTS = " + repr(requirements) + "\n" + textwrap.dedent(setup).strip()

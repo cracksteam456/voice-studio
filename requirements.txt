@@ -1,6 +1,7 @@
 # GPU wheels are selected in the Colab setup cell.
 torch==2.8.0
 torchaudio==2.8.0
+# TorchCodec 0.7.0 is installed separately from the PyTorch CPU index in Colab.
 omnivoice==0.2.1
 transformers==5.10.1
 setuptools==84.2.1
