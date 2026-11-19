@@ -4,6 +4,37 @@ Phát triển và duy trì bởi **[cracksteam456](https://github.com/cracksteam
 
 Giao diện tiếng Việt chạy trên Google Colab với OmniVoice: chọn giọng, nhập kịch bản, tạo và tải âm thanh cho video.
 
+## VietVoice Studio — giao diện ngay trong Colab
+
+[Mở notebook VietVoice Studio](https://colab.research.google.com/github/cracksteam456/voice-studio/blob/main/VietVoice_Studio_Colab.ipynb).
+Notebook có 3 ô mã, đã chạy mô hình thật trên T4; giao diện chọn giọng, văn bản, tốc độ,
+khoảng nghỉ, nghe và tải WAV nằm ngay trong notebook, không cần liên kết Gradio.
+
+**8 mẫu từ thư mục `samples/`:** Nam công nghệ, Minh Anh, Thanh niên tự tin, Nam trầm ấm,
+Adam, Ngọc Huyền, Nhỏ Ngọt Ngào và Kiên. Các tệp gốc cùng SHA256 nằm trong
+[samples/catalog.json](samples/catalog.json); bộ 150 preview phía dưới được giữ nguyên.
+
+Mỗi lần chạy ô 2, Colab tải gói `vietvoice-references.zip` từ release `vietvoice-references`
+của chính repo này, kiểm tra SHA256 rồi đưa các giọng vào danh sách chọn. Không đọc đường dẫn
+ổ E: của máy cá nhân và không tải mẫu từ repo của tác giả gốc.
+
+Vì repo riêng tư, vào biểu tượng chìa khóa **Secrets** trong Colab, thêm **GITHUB_TOKEN**
+có quyền **Contents: Read** cho `cracksteam456/voice-studio`, bật **Notebook access**.
+Các phiên tiếp theo tự dùng secret. Nếu chưa có, notebook hỏi token qua ô nhập ẩn;
+token không ghi vào notebook hoặc truyền sang máy chủ chuyển hướng tải asset.
+
+Khi thay các mẫu: sửa tệp trong `samples/`, chạy lệnh dưới, commit/push các tệp rồi tải ZIP
+lên cùng release (asset mới thay thế asset cũ). Colab nhận bộ mới khi chạy lại ô 2:
+
+```text
+python scripts/build_reference_pack.py samples samples vietvoice-references.zip
+gh release upload vietvoice-references vietvoice-references.zip --clobber --repo cracksteam456/voice-studio
+```
+
+Khi sửa mã VietVoice, chạy `python scripts/build_notebook.py`. Kiểm tra bằng
+`python -m unittest discover -s tests -v` (cần ipywidgets, numpy, soundfile và PyTorch).
+Mẫu tham chiếu và giọng tạo ra giữ nguồn/quyền sử dụng riêng, xem ATTRIBUTION.md.
+
 ## Bộ 150 mẫu giọng hot
 
 Đã lưu 150 preview đại diện trong [outputs/hot-voices](outputs/hot-voices), chia thành ba nhóm top 50: Trending toàn cầu, lượt sử dụng toàn cầu và tiếng Việt. [Catalog](outputs/hot-voices/catalog.json) giữ nguồn, ID, thứ hạng và trạng thái quyền sử dụng; [trang nghe](outputs/hot-voices/listen.html) dùng sau khi clone hoặc tải thư mục về máy. GitHub hiển thị mã HTML, không chạy trang nghe trực tiếp.

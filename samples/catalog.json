@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Nam công nghệ",
+    "file": "nam-cong-nghe.mp3",
+    "transcript": "",
+    "sha256": "dca5defc701800dc55ff447630cd13c19199731b5582301d20f39c511d20e253"
+  },
+  {
+    "name": "Minh Anh",
+    "file": "minh-anh.mp3",
+    "transcript": "",
+    "sha256": "b420043115f9f322a382784ef3c792aedc1aeeb4b198f88e6f18e101b7bcd5e7"
+  },
+  {
+    "name": "Thanh niên tự tin",
+    "file": "thanh-nien-tu-tin.mp3",
+    "transcript": "",
+    "sha256": "ce7a19faa6a69b951794f6226e8caf4ba06ff8844be8582e2267cbf4bcfa55d6"
+  },
+  {
+    "name": "Nam trầm ấm",
+    "file": "nam-tram-am.mp3",
+    "transcript": "",
+    "sha256": "46d816931703bb9c809cd52b71ab7e41b656ff728dcf91581e1bd97b8d103f26"
+  },
+  {
+    "name": "Adam",
+    "file": "adam.mp3",
+    "transcript": "",
+    "sha256": "67b0e1ede223eafe78125877e478b7a22f5a6fee371861e41f64b32ce5b6effd"
+  },
+  {
+    "name": "Ngọc Huyền",
+    "file": "ngoc-huyen.mp3",
+    "transcript": "",
+    "sha256": "17c6fa3a248bbf791f597813deee76d89e729b8caf6e5d557e6f8c9932713989"
+  },
+  {
+    "name": "Nhỏ Ngọt Ngào",
+    "file": "nho-ngot-ngao.mp3",
+    "transcript": "",
+    "sha256": "3e6b237b2e1d40050272f55b2713920be0f63c98e1e419936710cb639a9dad09"
+  },
+  {
+    "name": "Kiên",
+    "file": "kien.mp3",
+    "transcript": "",
+    "sha256": "62fb09b19d5596628eb1166f223723617397548e7d08b239f68d22086628ea26"
+  }
+]

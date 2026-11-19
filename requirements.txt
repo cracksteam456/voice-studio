@@ -1,0 +1,10 @@
+# GPU wheels are selected in the Colab setup cell.
+torch==2.8.0
+torchaudio==2.8.0
+omnivoice==0.2.1
+transformers==5.10.1
+setuptools==84.2.1
+gradio==6.32.0
+numpy==2.2.6
+soundfile==0.13.1
+# Use Colab's preloaded ipywidgets; upgrading it mid-session breaks widget views.

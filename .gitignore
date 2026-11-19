@@ -5,7 +5,6 @@ __pycache__/
 !.env.example
 .venv/
 venv/
-samples/
 outputs/*
 !outputs/hot-voices/
 *.wav
@@ -25,3 +24,4 @@ voice-library/archive/
 !outputs/hot-voices/**/*.ogg
 !outputs/hot-voices/**/*.flac
 !outputs/hot-voices/**/*.m4a
+!samples/*.mp3
