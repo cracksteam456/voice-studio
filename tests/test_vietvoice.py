@@ -231,12 +231,43 @@ class NotebookUITests(unittest.TestCase):
                 self.assertEqual(calls, [str(sample)])
                 self.assertTrue(sample.is_file())
                 self.assertFalse(row.children[1].disabled)
-                dropdown = next(w for w in panel.children if isinstance(w, widgets.Dropdown))
+                dropdown = next(w for w in panel.children if isinstance(w, widgets.Dropdown)
+                                and w.description == "Chọn giọng")
                 dropdown.value = ""
                 self.assertFalse(upload.disabled)
             finally:
                 panel._vietvoice_resources[1].cleanup()
                 panel.close()
+
+    def test_library_group_filter_keeps_all_158_voices_available(self):
+        import ipywidgets as widgets
+        from colab_ui import build_ui
+        from reference_library import GROUPS
+
+        with tempfile.TemporaryDirectory() as folder:
+            sample = Path(folder) / "sample.wav"
+            sf.write(sample, np.ones(8000) * 0.1, 8000)
+            library = []
+            for group, count in zip(GROUPS, [8, 50, 50, 50]):
+                library.extend({"name": f"{group}-{i}", "group": group,
+                                "path": str(sample) + f"-{group}-{i}"} for i in range(count))
+            with patch("colab_ui.Audio", return_value="preview"), patch("colab_ui.display"):
+                panel = build_ui(SimpleNamespace(), library)
+                try:
+                    group = next(w for w in panel.children if isinstance(w, widgets.Dropdown)
+                                 and w.description == "Nhóm giọng")
+                    voice = next(w for w in panel.children if isinstance(w, widgets.Dropdown)
+                                 and w.description == "Chọn giọng")
+                    self.assertEqual(len(voice.options), 159)  # Plus own upload.
+                    group.value = "vietnamese_primary_50"
+                    self.assertEqual(len(voice.options), 51)
+                    group.value = "preset"
+                    self.assertEqual(len(voice.options), 9)
+                    group.value = "all"
+                    self.assertEqual(len(voice.options), 159)
+                finally:
+                    panel._vietvoice_resources[1].cleanup()
+                    panel.close()
 
 
 class ReferenceLibraryTests(unittest.TestCase):

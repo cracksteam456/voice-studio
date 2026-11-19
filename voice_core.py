@@ -80,8 +80,8 @@ def read_reference(filename: str) -> tuple[np.ndarray, int]:
             rate = source.samplerate
             if not 8000 <= rate <= 192000 or source.channels not in (1, 2):
                 raise ValueError("Giọng mẫu cần mono/stereo, tần số 8–192 kHz.")
-            if not 3 <= len(source) / rate <= 20:
-                raise ValueError("Giọng mẫu cần dài 3–20 giây; nên dùng 3–10 giây.")
+            if not 2 <= len(source) / rate <= 20:
+                raise ValueError("Giọng mẫu cần dài 2–20 giây; nên dùng 3–10 giây.")
             samples = source.read(dtype="float32", always_2d=True)
     except (RuntimeError, OSError) as exc:
         raise ValueError("Không đọc được âm thanh. Hãy thử xuất lại thành WAV.") from exc

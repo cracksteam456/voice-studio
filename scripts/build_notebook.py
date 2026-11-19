@@ -76,6 +76,9 @@ def build():
         "import torch\n"
         "from omnivoice import OmniVoice\n"
         "from transformers import AutoFeatureExtractor\n"
+        "import voice_core, engine, reference_library\n"
+        "for module in (voice_core, engine, reference_library):\n"
+        "    importlib.reload(module)\n"
         "from engine import VoiceEngine\n"
         "from reference_library import load_library\n"
         "if not torch.cuda.is_available():\n"
@@ -111,6 +114,7 @@ def build():
                 Cần Internet để cài thư viện/tải trọng số. Không cam kết thời gian tạo vì tùy GPU và độ dài.
                 Văn bản và âm thanh được tải lên và xử lý trong phiên Colab của bạn.
                 Tải bản đọc về trước khi xóa/ngắt phiên. Chưa có bước huấn luyện mô hình mới.
+                **158 mẫu**: 8 giọng ban đầu + 50 tiếng Việt + 50 thịnh hành toàn cầu + 50 dùng nhiều toàn cầu.
                 Bộ giọng tự tải từ kho công khai **cracksteam456/voice-studio** mỗi phiên;
                 không cần GitHub token hoặc tải giọng mẫu từ máy lên.
                 Dùng giọng của bạn hoặc giọng được chủ sở hữu cho phép sử dụng.
@@ -122,7 +126,8 @@ def build():
             cell("markdown", '''
                 ## 3. Tạo giọng ngay tại đây
                 Chọn giọng có sẵn, nhập nội dung rồi bấm **Tạo giọng nói**.
-                Hoặc chọn **Giọng tải lên của tôi** để dùng mẫu riêng **3–20 giây**.
+                Dùng **Nhóm giọng** để lọc đủ 158 mẫu.
+                Hoặc chọn **Giọng tải lên của tôi** để dùng mẫu riêng **2–20 giây**.
                 Bạn có thể sửa nội dung và bấm tạo nhiều lần mà không cần chạy lại ô cài đặt.
                 **16 bước** để thử nhanh; **32 bước** là mặc định. Tối đa **4.000 ký tự/lần**.
                 Lần tạo đầu tiên sẽ tải trọng số từ Hugging Face.

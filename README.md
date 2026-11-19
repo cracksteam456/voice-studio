@@ -12,9 +12,11 @@ khoảng nghỉ, nghe và tải WAV nằm ngay trong notebook, không cần liê
 
 **8 mẫu từ thư mục `samples/`:** Nam công nghệ, Minh Anh, Thanh niên tự tin, Nam trầm ấm,
 Adam, Ngọc Huyền, Nhỏ Ngọt Ngào và Kiên. Các tệp gốc cùng SHA256 nằm trong
-[samples/catalog.json](samples/catalog.json); bộ 150 preview phía dưới được giữ nguyên.
+[samples/catalog.json](samples/catalog.json). **150 preview cũng đã tích hợp trong cùng giao diện**:
+50 tiếng Việt, 50 thịnh hành toàn cầu, 50 được dùng nhiều toàn cầu — tổng cộng **158 mẫu**.
+Chọn **Nhóm giọng** để lọc hoặc **Tất cả (158 giọng)** để xem toàn bộ.
 
-Mỗi lần chạy ô 2, Colab tải gói `vietvoice-references.zip` từ release `vietvoice-references`
+Mỗi lần chạy ô 2, Colab tải gói `vietvoice-library-158.zip` từ release `vietvoice-library-158`
 của chính repo này, kiểm tra SHA256 rồi đưa các giọng vào danh sách chọn. Không đọc đường dẫn
 ổ E: của máy cá nhân và không tải mẫu từ repo của tác giả gốc.
 
@@ -25,8 +27,8 @@ Khi thay các mẫu: sửa tệp trong `samples/`, chạy lệnh dưới, commit
 lên cùng release (asset mới thay thế asset cũ). Colab nhận bộ mới khi chạy lại ô 2:
 
 ```text
-python scripts/build_reference_pack.py samples samples vietvoice-references.zip
-gh release upload vietvoice-references vietvoice-references.zip --clobber --repo cracksteam456/voice-studio
+python scripts/build_reference_pack.py samples samples vietvoice-library-158.zip --hot-voices outputs/hot-voices
+gh release upload vietvoice-library-158 vietvoice-library-158.zip --clobber --repo cracksteam456/voice-studio
 ```
 
 Khi sửa mã VietVoice, chạy `python scripts/build_notebook.py`. Kiểm tra bằng
@@ -41,7 +43,7 @@ Gói ZIP tải sẵn nằm trong [GitHub Releases](https://github.com/cracksteam
 
 [Mở notebook trong Colab](https://colab.research.google.com/github/cracksteam456/voice-studio/blob/main/colab_nam-cong-nghe-ban-rieng.ipynb)
 
-Repo hiện công khai; mở trực tiếp các liên kết Colab phía trên. Bản VietVoice Studio mới tự tải 8 mẫu, còn notebook Gradio cũ phía dưới sử dụng bộ 150 mẫu.
+Repo hiện công khai; mở trực tiếp các liên kết Colab phía trên. Bản VietVoice Studio mới tự tải đủ 158 mẫu; notebook Gradio cũ phía dưới tiếp tục sử dụng bộ 150 mẫu.
 
 ## Sử dụng
 
@@ -56,7 +58,7 @@ Giao diện hiện thiết bị và thời gian từng giai đoạn; CPU mặc �
 
 Giao diện dùng bộ **150 preview trong repo này**, có tìm giọng theo tên, lọc ba nhóm và ngôn ngữ mẫu, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ đầu ra, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Mặc định chọn nhóm 50 giọng tiếng Việt; không tải 7 mẫu từ repo cũ.
 
-Notebook Gradio cũ giữ hai cách nạp bộ 150 mẫu (VietVoice Studio mới tự tải 8 mẫu và không cần các bước này):
+Notebook Gradio cũ giữ hai cách nạp bộ 150 mẫu (VietVoice Studio mới tự tải đủ 158 mẫu và không cần các bước này):
 
 - Tự tải từ GitHub: đặt `GITHUB_TOKEN` trong Colab Secrets và cho notebook quyền truy cập secret. Token cần **Contents: Read** cho riêng repo `cracksteam456/voice-studio`. Nếu chưa đặt secret, notebook có ô nhập token ẩn; token không ghi vào file.
 - Không dùng token: để trống ô nhập rồi chọn `hot-voices-150.zip` đã tải từ Release. Gói chỉ khoảng 24 MB, nạp một lần mỗi máy ảo Colab. Đây là upload cục bộ, không cần gọi repo khác.

@@ -7,6 +7,7 @@ import ipywidgets as widgets
 from IPython.display import Audio, display
 
 from engine import VoiceEngine
+from reference_library import GROUPS
 from voice_core import MAX_TEXT, MAX_UPLOAD, Settings, split_text
 
 EXAMPLE = (
@@ -25,6 +26,12 @@ def build_ui(engine=None, library=None):
                             layout=widgets.Layout(width="100%", height="180px"))
     reference = widgets.FileUpload(accept=".wav,.mp3,.flac,.ogg", multiple=False,
                                    description="Tải giọng mẫu", layout=widgets.Layout(width="200px"))
+    group_counts = {key: sum(entry.get("group", "preset") == key for entry in library) for key in GROUPS}
+    group = widgets.Dropdown(
+        options=[(f"Tất cả ({len(library)} giọng)", "all")] + [
+            (f"{label} ({group_counts[key]})", key) for key, label in GROUPS.items() if group_counts[key]
+        ], value="all", description="Nhóm giọng", layout=full,
+    )
     voice = widgets.Dropdown(
         options=[("Giọng tải lên của tôi", "")] + [(entry["name"], entry["path"]) for entry in library],
         value=library[0]["path"] if library else "", description="Chọn giọng", layout=full,
@@ -66,6 +73,15 @@ def build_ui(engine=None, library=None):
         if selected:
             with preview:
                 display(Audio(filename=selected["path"]))
+
+    def filter_voices(change=None):
+        selected = [entry for entry in library
+                    if group.value == "all" or entry.get("group", "preset") == group.value]
+        previous = voice.value
+        voice.options = [("Giọng tải lên của tôi", "")] + [(entry["name"], entry["path"]) for entry in selected]
+        voice.value = previous if previous in {entry["path"] for entry in selected} else (
+            selected[0]["path"] if selected else ""
+        )
 
     def generate(_):
         create.disabled = True
@@ -130,6 +146,7 @@ def build_ui(engine=None, library=None):
 
     text.observe(update_summary, names="value")
     voice.observe(change_voice, names="value")
+    group.observe(filter_voices, names="value")
     create.on_click(generate)
     download.on_click(save)
     update_summary()
@@ -138,7 +155,7 @@ def build_ui(engine=None, library=None):
         widgets.HTML("<h2>1. Văn bản cần đọc</h2>"), text, summary,
         widgets.HTML("<h2>2. Giọng mẫu của bạn</h2><p>Chọn một tệp WAV, MP3, FLAC hoặc OGG, "
                      "tối đa 20 MB. Nên dùng 3–10 giây, rõ tiếng, một người nói.</p>"),
-        voice, preview, reference,
+        group, voice, preview, reference,
         widgets.HTML("<b>Lời nói trong giọng mẫu</b><p>Điền chính xác để tránh tải thêm Whisper. "
                      "Để trống sẽ nhận dạng trên CPU và chậm hơn.</p>"),
         transcript, options, widgets.HBox([create, download]), progress, status,

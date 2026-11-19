@@ -10,9 +10,15 @@ from urllib.request import Request, urlopen
 import zipfile
 
 REPOSITORY = "cracksteam456/voice-studio"
-RELEASE_TAG = "vietvoice-references"
-PACK_NAME = "vietvoice-references.zip"
-MAX_PACK = 25 * 1024 * 1024
+RELEASE_TAG = "vietvoice-library-158"
+PACK_NAME = "vietvoice-library-158.zip"
+MAX_PACK = 50 * 1024 * 1024
+GROUPS = {
+    "preset": "8 giọng ban đầu",
+    "vietnamese_primary_50": "50 giọng tiếng Việt",
+    "trending_global_50": "50 giọng thịnh hành toàn cầu",
+    "usage_global_50": "50 giọng dùng nhiều toàn cầu",
+}
 
 
 def read_library(root):
@@ -25,7 +31,8 @@ def read_library(root):
         filename = entry.get("file", "")
         if (not re.fullmatch(r"[a-z0-9-]+\.(mp3|wav|flac|ogg)", filename)
                 or filename in seen or not isinstance(entry.get("name"), str)
-                or not 0 < len(entry["name"]) <= 150):
+                or not 0 < len(entry["name"]) <= 150
+                or entry.get("group", "preset") not in GROUPS):
             raise ValueError("Tên hoặc đường dẫn giọng mẫu không hợp lệ.")
         seen.add(filename)
         path = root / filename
@@ -61,7 +68,7 @@ def download_library(destination):
         while block := response.read(256 * 1024):
             count += len(block)
             if count > MAX_PACK:
-                raise ValueError("Gói tải vượt 25 MB.")
+                raise ValueError("Gói tải vượt 50 MB.")
             archive.write(block)
         archive.seek(0)
         return unpack_library(archive, destination)
