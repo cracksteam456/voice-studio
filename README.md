@@ -18,10 +18,8 @@ Mỗi lần chạy ô 2, Colab tải gói `vietvoice-references.zip` từ releas
 của chính repo này, kiểm tra SHA256 rồi đưa các giọng vào danh sách chọn. Không đọc đường dẫn
 ổ E: của máy cá nhân và không tải mẫu từ repo của tác giả gốc.
 
-Vì repo riêng tư, vào biểu tượng chìa khóa **Secrets** trong Colab, thêm **GITHUB_TOKEN**
-có quyền **Contents: Read** cho `cracksteam456/voice-studio`, bật **Notebook access**.
-Các phiên tiếp theo tự dùng secret. Nếu chưa có, notebook hỏi token qua ô nhập ẩn;
-token không ghi vào notebook hoặc truyền sang máy chủ chuyển hướng tải asset.
+Repo hiện **công khai**. Notebook VietVoice tải bộ mẫu trực tiếp từ GitHub Release,
+không cần `GITHUB_TOKEN`, không cần đăng nhập GitHub hay tải mẫu từ máy lên.
 
 Khi thay các mẫu: sửa tệp trong `samples/`, chạy lệnh dưới, commit/push các tệp rồi tải ZIP
 lên cùng release (asset mới thay thế asset cũ). Colab nhận bộ mới khi chạy lại ô 2:
@@ -39,11 +37,11 @@ Mẫu tham chiếu và giọng tạo ra giữ nguồn/quyền sử dụng riêng
 
 Đã lưu 150 preview đại diện trong [outputs/hot-voices](outputs/hot-voices), chia thành ba nhóm top 50: Trending toàn cầu, lượt sử dụng toàn cầu và tiếng Việt. [Catalog](outputs/hot-voices/catalog.json) giữ nguồn, ID, thứ hạng và trạng thái quyền sử dụng; [trang nghe](outputs/hot-voices/listen.html) dùng sau khi clone hoặc tải thư mục về máy. GitHub hiển thị mã HTML, không chạy trang nghe trực tiếp.
 
-Gói ZIP tải sẵn nằm trong [GitHub Releases](https://github.com/cracksteam456/voice-studio/releases). Đây là snapshot preview gốc, không phải model giọng và chưa xác minh quyền clone/phân phối bên ngoài ElevenLabs. Bộ 150 mẫu này được lưu riêng trong repo private theo yêu cầu; archive toàn bộ và audio thử clone vẫn bị loại khỏi Git.
+Gói ZIP tải sẵn nằm trong [GitHub Releases](https://github.com/cracksteam456/voice-studio/releases). Đây là snapshot preview gốc, không phải model giọng và chưa xác minh quyền clone/phân phối bên ngoài ElevenLabs. Repo được chuyển sang công khai theo yêu cầu; archive toàn bộ và audio thử clone vẫn bị loại khỏi Git.
 
 [Mở notebook trong Colab](https://colab.research.google.com/github/cracksteam456/voice-studio/blob/main/colab_nam-cong-nghe-ban-rieng.ipynb)
 
-Repo hiện là private. Nếu Colab không truy cập được repo private, tải file `.ipynb` về rồi dùng **File → Upload notebook** trong Colab. Không cần công khai repo để sử dụng.
+Repo hiện công khai; mở trực tiếp các liên kết Colab phía trên. Bản VietVoice Studio mới tự tải 8 mẫu, còn notebook Gradio cũ phía dưới sử dụng bộ 150 mẫu.
 
 ## Sử dụng
 
@@ -58,7 +56,7 @@ Giao diện hiện thiết bị và thời gian từng giai đoạn; CPU mặc �
 
 Giao diện dùng bộ **150 preview trong repo này**, có tìm giọng theo tên, lọc ba nhóm và ngôn ngữ mẫu, nạp TXT, chỉnh tốc độ/khoảng nghỉ, 8 ngôn ngữ đầu ra, chia văn bản dài, chất lượng/seed, tải WAV/MP3 và ZIP từng đoạn. Mặc định chọn nhóm 50 giọng tiếng Việt; không tải 7 mẫu từ repo cũ.
 
-Vì repo là private, có hai cách nạp bộ mẫu vào Colab:
+Notebook Gradio cũ giữ hai cách nạp bộ 150 mẫu (VietVoice Studio mới tự tải 8 mẫu và không cần các bước này):
 
 - Tự tải từ GitHub: đặt `GITHUB_TOKEN` trong Colab Secrets và cho notebook quyền truy cập secret. Token cần **Contents: Read** cho riêng repo `cracksteam456/voice-studio`. Nếu chưa đặt secret, notebook có ô nhập token ẩn; token không ghi vào file.
 - Không dùng token: để trống ô nhập rồi chọn `hot-voices-150.zip` đã tải từ Release. Gói chỉ khoảng 24 MB, nạp một lần mỗi máy ảo Colab. Đây là upload cục bộ, không cần gọi repo khác.

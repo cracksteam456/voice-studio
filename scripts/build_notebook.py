@@ -111,9 +111,8 @@ def build():
                 Cần Internet để cài thư viện/tải trọng số. Không cam kết thời gian tạo vì tùy GPU và độ dài.
                 Văn bản và âm thanh được tải lên và xử lý trong phiên Colab của bạn.
                 Tải bản đọc về trước khi xóa/ngắt phiên. Chưa có bước huấn luyện mô hình mới.
-                Kho GitHub riêng tư: đặt secret **GITHUB_TOKEN** (Contents: Read cho
-                `cracksteam456/voice-studio`) và bật **Notebook access** để tự tải mỗi phiên.
-                Nếu chưa có secret, ô 2 sẽ hỏi token ẩn; không ghi token vào mã hoặc đầu ra.
+                Bộ giọng tự tải từ kho công khai **cracksteam456/voice-studio** mỗi phiên;
+                không cần GitHub token hoặc tải giọng mẫu từ máy lên.
                 Dùng giọng của bạn hoặc giọng được chủ sở hữu cho phép sử dụng.
             '''),
             cell("markdown", "## 1. Cài thư viện\nChạy trên một phiên Colab mới để tránh xung đột thư viện đã nạp."),

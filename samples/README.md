@@ -4,7 +4,7 @@
 Không thay đổi âm thanh. `catalog.json` lưu tên hiển thị, đường dẫn và SHA256.
 
 Colab tải các mẫu qua GitHub Release `vietvoice-references`, asset `vietvoice-references.zip`.
-Kho giữ riêng tư; notebook đọc secret `GITHUB_TOKEN` có quyền Contents: Read.
+Kho công khai; notebook tải tự động, không cần GitHub token.
 
 Các mẫu có nguồn từ bộ voice-notebooks mà người dùng cung cấp, gồm giọng Kiên.
 Chúng là tài sản âm thanh riêng với điều khoản tương ứng, không được cấp lại giấy phép

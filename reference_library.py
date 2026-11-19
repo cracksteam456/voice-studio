@@ -1,14 +1,12 @@
-"""Fetch the private reference pack without persisting GitHub credentials."""
+"""Fetch the public reference pack from GitHub on each Colab session."""
 
 import hashlib
 import json
-import os
 from pathlib import Path
 import re
 import tempfile
 from urllib.error import HTTPError
-from urllib.parse import urlsplit
-from urllib.request import HTTPRedirectHandler, Request, build_opener
+from urllib.request import Request, urlopen
 import zipfile
 
 REPOSITORY = "cracksteam456/voice-studio"
@@ -55,35 +53,10 @@ def unpack_library(archive, destination):
     return read_library(destination)
 
 
-def download_library(token, destination):
-    class NoRedirect(HTTPRedirectHandler):
-        def redirect_request(self, *args, **kwargs):
-            return None
-
-    opener = build_opener(NoRedirect())
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "VietVoice-Studio"}
-    if token:
-        headers["Authorization"] = "Bearer " + token
-    release_url = f"https://api.github.com/repos/{REPOSITORY}/releases/tags/{RELEASE_TAG}"
-    with opener.open(Request(release_url, headers=headers), timeout=30) as response:
-        release = json.loads(response.read(1_000_000))
-    asset = next((a for a in release.get("assets", []) if a["name"] == PACK_NAME), None)
-    if not asset or not 0 < asset.get("size", 0) <= MAX_PACK:
-        raise ValueError("Chưa có gói giọng mẫu hợp lệ trên GitHub Release.")
-    url = asset["url"]
-    if not re.fullmatch(r"https://api\.github\.com/repos/cracksteam456/voice-studio/releases/assets/[0-9]+", url):
-        raise ValueError("Địa chỉ tải mẫu không hợp lệ.")
-    headers["Accept"] = "application/octet-stream"
-    try:
-        response = opener.open(Request(url, headers=headers), timeout=45)
-    except HTTPError as exc:
-        parsed = urlsplit(exc.headers.get("Location", ""))
-        if (exc.code not in (301, 302, 303, 307, 308) or parsed.scheme != "https"
-                or parsed.hostname not in {"release-assets.githubusercontent.com", "objects.githubusercontent.com"}):
-            raise
-        # Never forward Authorization across the release CDN redirect.
-        response = opener.open(Request(parsed.geturl(), headers={"User-Agent": headers["User-Agent"]}), timeout=45)
-    with response, tempfile.TemporaryFile() as archive:
+def download_library(destination):
+    url = f"https://github.com/{REPOSITORY}/releases/download/{RELEASE_TAG}/{PACK_NAME}"
+    request = Request(url, headers={"User-Agent": "VietVoice-Studio"})
+    with urlopen(request, timeout=60) as response, tempfile.TemporaryFile() as archive:
         count = 0
         while block := response.read(256 * 1024):
             count += len(block)
@@ -96,27 +69,11 @@ def download_library(token, destination):
 
 def load_library():
     """Check the current GitHub Release every time the preparation cell runs."""
-    token = os.environ.get("GITHUB_TOKEN", "")
-    if not token:
-        try:
-            from google.colab import userdata
-            token = userdata.get("GITHUB_TOKEN")
-        except Exception:
-            pass
-    if not token:
-        from getpass import getpass
-        print("Repo riêng tư: thêm GITHUB_TOKEN trong Colab Secrets để các phiên sau tự tải. "
-              "Token cần Contents: Read cho cracksteam456/voice-studio.")
-        token = getpass("GitHub token (nhập ẩn, không lưu): ").strip()
-    if not token:
-        raise RuntimeError("Cần GITHUB_TOKEN để tải bộ giọng mẫu từ kho riêng tư.")
     folder = Path(tempfile.mkdtemp(prefix="vietvoice-library-"))
     target = folder / "samples"
     try:
-        entries = download_library(token, target)
+        entries = download_library(target)
     except HTTPError as exc:
-        raise RuntimeError(f"GitHub HTTP {exc.code}: kiểm tra quyền đọc kho của GITHUB_TOKEN.") from None
-    finally:
-        token = None
+        raise RuntimeError(f"Không tải được bộ mẫu từ GitHub (HTTP {exc.code}). Hãy chạy lại ô 2.") from None
     print(f"Đã tải và kiểm tra {len(entries)} giọng từ {REPOSITORY}.")
     return entries
