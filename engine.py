@@ -1,6 +1,8 @@
 """Lazy OmniVoice adapter. The UI can start without downloading any weights."""
 
 from pathlib import Path
+from collections import OrderedDict
+import hashlib
 import tempfile
 import threading
 import time
@@ -14,13 +16,15 @@ MODEL_ID = "k2-fsa/OmniVoice"
 
 
 class VoiceEngine:
-    def __init__(self, device: str = "auto"):
+    def __init__(self, device: str = "auto", previous=None):
         if device not in {"auto", "cpu", "cuda", "mps"}:
             raise ValueError("Thiết bị không được hỗ trợ.")
         self.device = device
-        self.model = None
-        self._lock = threading.Lock()
-        self._output = tempfile.TemporaryDirectory(prefix="vietvoice-")
+        self.model = getattr(previous, "model", None)
+        self._lock = getattr(previous, "_lock", None) or threading.Lock()
+        self._output = getattr(previous, "_output", None) or tempfile.TemporaryDirectory(prefix="vietvoice-")
+        self._prompts = getattr(previous, "_prompts", OrderedDict())
+        self._prompt_model = getattr(previous, "_prompt_model", None)
 
     @property
     def output_dir(self) -> str:
@@ -70,15 +74,31 @@ class VoiceEngine:
 
             cuda_devices = ([torch.cuda.current_device()]
                             if str(self.model.device).startswith("cuda") else [])
+            if self._prompt_model is not self.model:
+                self._prompts.clear()
+                self._prompt_model = self.model
+            audio, sample_rate = ref_audio
+            key = (hashlib.sha256(audio.tobytes()).digest(), sample_rate, transcript.strip())
+            if key in self._prompts:
+                prompt = self._prompts[key]
+                self._prompts.move_to_end(key)
+                report(0.05, "Dùng giọng đã lưu — bỏ qua phân tích mẫu.")
+            else:
+                report(0.05, "Phân tích giọng lần đầu; kết quả sẽ được lưu trong phiên…")
+                # Keep prompt preparation from shifting synthesis RNG on cache hits.
+                with torch.random.fork_rng(devices=cuda_devices), torch.inference_mode():
+                    torch.manual_seed(int(settings.seed))
+                    prompt = self.model.create_voice_clone_prompt(
+                        ref_audio=ref_audio, ref_text=transcript.strip() or None,
+                    )
+                self._prompts[key] = prompt
+                if len(self._prompts) > 200:
+                    self._prompts.popitem(last=False)
             random_context = torch.random.fork_rng(devices=cuda_devices)
             with random_context, torch.inference_mode():
                 torch.manual_seed(int(settings.seed))
                 if str(self.model.device).startswith("mps"):
                     torch.mps.manual_seed(int(settings.seed))
-                report(0.05, "Đang phân tích giọng mẫu…")
-                prompt = self.model.create_voice_clone_prompt(
-                    ref_audio=ref_audio, ref_text=transcript.strip() or None,
-                )
                 audios = []
                 for index, chunk in enumerate(chunks):
                     report(0.1 + 0.85 * index / len(chunks),
@@ -105,4 +125,6 @@ class VoiceEngine:
             return str(output), status
 
     def close(self):
+        self._prompts.clear()
+        self._prompt_model = None
         self._output.cleanup()

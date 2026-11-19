@@ -95,8 +95,7 @@ def build():
         "from reference_library import load_library\n"
         "if not torch.cuda.is_available():\n"
         "    raise RuntimeError('Chưa có GPU. Chọn Runtime → Change runtime type → T4 GPU.')\n"
-        "if 'voice_engine' not in globals():\n"
-        "    voice_engine = VoiceEngine('cuda')\n"
+        "voice_engine = VoiceEngine('cuda', previous=globals().get('voice_engine'))\n"
         "voice_library = load_library()\n"
         "print('GPU:', torch.cuda.get_device_name(0))\n"
         "print('Sẵn sàng. Trọng số sẽ tải khi bạn tạo giọng lần đầu.')\n"
@@ -143,6 +142,8 @@ def build():
                 Bạn có thể sửa nội dung và bấm tạo nhiều lần mà không cần chạy lại ô cài đặt.
                 **16 bước** để thử nhanh; **32 bước** là mặc định. Tối đa **4.000 ký tự/lần**.
                 Lần tạo đầu tiên sẽ tải trọng số từ Hugging Face.
+                Mỗi giọng chỉ phân tích lần đầu trong phiên. Đổi giọng rồi quay lại, sửa nội dung,
+                tốc độ hoặc số bước sẽ dùng giọng đã lưu; đổi tệp mẫu/lời mẫu sẽ phân tích lại.
             '''),
             cell("code", '''
                 #@title 3. Mở giao diện VietVoice Studio
@@ -166,6 +167,7 @@ def build():
                 - **Giọng chưa giống:** dùng mẫu rõ, một người nói, không nhạc nền; chép lời mẫu thật chính xác.
                 - **Số và chữ viết tắt đọc chưa đúng:** viết thành cách đọc mong muốn trước khi tạo.
                 - **Lời mẫu để trống:** ứng dụng tải thêm Whisper để nhận dạng trên CPU; sẽ chậm hơn.
+                  Kết quả prompt được giữ trong RAM cho tối đa 200 mẫu; xóa/khởi động lại runtime sẽ mất bộ đệm.
                 - **Giao diện không hiện:** chạy lại ô 3 sau khi ô 1 và 2 đã thành công.
                 - **Xóa dữ liệu:** tải WAV về rồi chọn **Runtime → Disconnect and delete runtime**.
                   Không chia sẻ notebook kèm đầu ra hoặc giọng mẫu nếu có thông tin riêng tư.

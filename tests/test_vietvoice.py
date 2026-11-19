@@ -80,6 +80,87 @@ class CoreTests(unittest.TestCase):
 
 @unittest.skipUnless(importlib.util.find_spec("torch"), "PyTorch not installed")
 class PipelineTests(unittest.TestCase):
+    def test_switching_back_reuses_prompt_across_settings_and_paths(self):
+        from engine import VoiceEngine
+        import torch
+        prompt_calls, generate_calls = [], []
+
+        def prompt(**kwargs):
+            prompt_calls.append(kwargs)
+            torch.rand(7)  # Prompt work must not change synthesis RNG on cache hits.
+            return object()
+
+        def generate(**kwargs):
+            generate_calls.append((kwargs["voice_clone_prompt"], torch.rand(1).item()))
+            return [np.ones(800, dtype=np.float32) * 0.1]
+
+        engine = VoiceEngine("cpu")
+        engine.model = SimpleNamespace(device="cpu", sampling_rate=8000,
+                                       create_voice_clone_prompt=prompt, generate=generate)
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                a, b, same_a = [Path(folder) / name for name in ("a.wav", "b.wav", "new-path.wav")]
+                sf.write(a, np.ones(4 * 8000) * 0.1, 8000)
+                sf.write(b, np.ones(4 * 8000) * 0.2, 8000)
+                same_a.write_bytes(a.read_bytes())
+                reports = []
+                for reference, settings in [(a, Settings()), (b, Settings()),
+                                             (same_a, Settings(speed=1.1, steps=16, pause=0.1))]:
+                    engine.synthesize("Xin chào.", str(reference), "", settings,
+                                      report=lambda value, message: reports.append(message))
+                self.assertEqual(len(prompt_calls), 2, "A → B → A must only analyze A once")
+                self.assertIs(generate_calls[0][0], generate_calls[2][0])
+                self.assertEqual(generate_calls[0][1], generate_calls[2][1])
+                self.assertTrue(any("đã lưu" in message for message in reports))
+        finally:
+            engine.close()
+
+    def test_prompt_cache_invalidates_on_audio_transcript_and_model_change(self):
+        from engine import VoiceEngine
+        from unittest.mock import Mock
+        create_prompt = Mock(side_effect=lambda **kw: object())
+        model = SimpleNamespace(device="cpu", sampling_rate=8000, create_voice_clone_prompt=create_prompt,
+                                generate=lambda **kw: [np.ones(800, dtype=np.float32) * 0.1])
+        engine = VoiceEngine("cpu")
+        engine.model = model
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                reference = Path(folder) / "ref.wav"
+                sf.write(reference, np.ones(4 * 8000) * 0.1, 8000)
+                for transcript in ["", "", "Lời mẫu.", " Lời mẫu. "]:
+                    engine.synthesize("Xin chào.", str(reference), transcript, Settings())
+                self.assertEqual(create_prompt.call_count, 2)
+                sf.write(reference, np.ones(4 * 8000) * 0.3, 8000)
+                engine.synthesize("Xin chào.", str(reference), "Lời mẫu.", Settings())
+                self.assertEqual(create_prompt.call_count, 3)
+                engine.model = SimpleNamespace(**model.__dict__)
+                engine.synthesize("Xin chào.", str(reference), "Lời mẫu.", Settings())
+                self.assertEqual(create_prompt.call_count, 4)
+        finally:
+            engine.close()
+
+    def test_notebook_refresh_retains_cached_voices_and_loaded_model(self):
+        from engine import VoiceEngine
+        from unittest.mock import Mock
+        creator = Mock(return_value=object())
+        old = VoiceEngine("cpu")
+        old.model = SimpleNamespace(device="cpu", sampling_rate=8000, create_voice_clone_prompt=creator,
+                                    generate=lambda **kw: [np.ones(800, dtype=np.float32) * 0.1])
+        current = None
+        try:
+            with tempfile.TemporaryDirectory() as folder:
+                reference = Path(folder) / "ref.wav"
+                sf.write(reference, np.ones(4 * 8000) * 0.1, 8000)
+                output, _ = old.synthesize("Xin chào.", str(reference), "", Settings())
+                current = VoiceEngine("cpu", previous=old)
+                self.assertIs(current.model, old.model)
+                self.assertIs(current._lock, old._lock)
+                self.assertTrue(Path(output).is_file())
+                current.synthesize("Đọc nội dung khác.", str(reference), "", Settings())
+                self.assertEqual(creator.call_count, 1)
+        finally:
+            (current or old).close()
+
     def test_fake_model_exports_real_wav_and_reuses_prompt(self):
         from engine import VoiceEngine
 

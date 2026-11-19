@@ -10,6 +10,12 @@ Giao diện tiếng Việt chạy trên Google Colab với OmniVoice: chọn gi�
 Notebook có 3 ô mã, đã chạy mô hình thật trên T4; giao diện chọn giọng, văn bản, tốc độ,
 khoảng nghỉ, nghe và tải WAV nằm ngay trong notebook, không cần liên kết Gradio.
 
+Giọng đã phân tích được giữ trong RAM của phiên Colab (tối đa 200 mẫu). Đổi A → B → A,
+đổi nội dung, tốc độ, khoảng nghỉ hoặc số bước sẽ tái sử dụng prompt thay vì nhận dạng
+lại. Cache theo nội dung audio và lời mẫu, nên tải lại cùng tệp ở đường dẫn khác vẫn
+dùng được; thay tệp/lời mẫu sẽ phân tích mới. Chạy lại ô 2 hoặc ô 3 giữ cache và mô hình;
+khởi động lại/xóa runtime sẽ mất cache. Lần đầu dùng một giọng mới vẫn cần phân tích.
+
 Nếu gặp `OSError ... torchcodec ... undefined symbol: torch_list_size`, đó là TorchCodec
 cài sẵn của Colab không khớp PyTorch 2.8. Notebook mới cài riêng **TorchCodec 0.7.0 CPU**
 và kiểm tra import trong một tiến trình mới ngay ở ô 1. Chạy lại ô 1, khởi động lại
